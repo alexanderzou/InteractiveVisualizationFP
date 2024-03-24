@@ -1,0 +1,58 @@
+Round,Indicator,Group,Subgroup,Sample Size,Percent,Standard Error,Suppression,Significant 1,Significant 2
+1,Unable to work due to self or family member having COVID-19,Total,Total,6794,0.9,0.2,,,
+1,Unable to work due to self or family member having COVID-19,Age group,18-44 years,2606,1.5,0.3,,,
+1,Unable to work due to self or family member having COVID-19,Age group,45-64 years,2386,0.5,0.1,,,
+1,Unable to work due to self or family member having COVID-19,Age group,65 years and over,1802,0,0,,,
+1,Unable to work due to self or family member having COVID-19,Race/Hispanic origin,White non-Hispanic,4514,0.5,0.2,,,
+1,Unable to work due to self or family member having COVID-19,Race/Hispanic origin,Black non-Hispanic,810,2.5,0.6,,,
+1,Unable to work due to self or family member having COVID-19,Race/Hispanic origin,Other non-Hispanic,528,0.5,0.3,,,
+1,Unable to work due to self or family member having COVID-19,Race/Hispanic origin,Hispanic,942,1.3,0.6,,,
+1,Unable to work due to self or family member having COVID-19,Sex,Male,2968,0.7,0.2,,,
+1,Unable to work due to self or family member having COVID-19,Sex,Female,3826,1,0.2,,,
+1,Unable to work due to self or family member having COVID-19,Education,High school graduate or less,1295,0.8,0.2,,,
+1,Unable to work due to self or family member having COVID-19,Education,Some college,2552,1.6,0.4,,,
+1,Unable to work due to self or family member having COVID-19,Education,Bachelor's degree or above,2947,0.2,0.1,,,
+1,Unable to work due to self or family member having COVID-19,Urbanization,Metropolitan,6056,0.8,0.1,,,
+1,Unable to work due to self or family member having COVID-19,Urbanization,Non-Metropolitan,738,1.6,0.8,,,
+1,Unable to work due to self or family member having COVID-19,Chronic conditions,One or more chronic conditions,4085,1,0.2,,,
+1,Unable to work due to self or family member having COVID-19,Chronic conditions,Diagnosed diabetes,767,0.7,0.3,,,
+1,Unable to work due to self or family member having COVID-19,Chronic conditions,Diagnosed hypertension,2425,0.9,0.3,,,
+1,Unable to work due to self or family member having COVID-19,Chronic conditions,Current asthma,697,1,0.4,,,
+2,Unable to work due to self or family member having COVID-19,Total,Total,5974,1.1,0.2,,0,
+2,Unable to work due to self or family member having COVID-19,Age group,18-44 years,2214,1.9,0.4,,0,
+2,Unable to work due to self or family member having COVID-19,Age group,45-64 years,2083,0.6,0.2,,0,
+2,Unable to work due to self or family member having COVID-19,Age group,65 years and over,1677,0.1,0.1,,0,
+2,Unable to work due to self or family member having COVID-19,Race/Hispanic origin,White non-Hispanic,4074,0.3,0.1,,0,
+2,Unable to work due to self or family member having COVID-19,Race/Hispanic origin,Black non-Hispanic,691,2.6,1.1,,0,
+2,Unable to work due to self or family member having COVID-19,Race/Hispanic origin,Other non-Hispanic,461,2.1,1,,0,
+2,Unable to work due to self or family member having COVID-19,Race/Hispanic origin,Hispanic,748,2.8,0.8,,0,
+2,Unable to work due to self or family member having COVID-19,Sex,Male,2589,1,0.3,,0,
+2,Unable to work due to self or family member having COVID-19,Sex,Female,3385,1.3,0.2,,0,
+2,Unable to work due to self or family member having COVID-19,Education,High school graduate or less,1102,1.2,0.5,,0,
+2,Unable to work due to self or family member having COVID-19,Education,Some college,2226,1.6,0.4,,0,
+2,Unable to work due to self or family member having COVID-19,Education,Bachelor's degree or above,2646,0.6,0.2,,0,
+2,Unable to work due to self or family member having COVID-19,Urbanization,Metropolitan,5317,1.2,0.2,,0,
+2,Unable to work due to self or family member having COVID-19,Urbanization,Non-Metropolitan,657,0.7,0.3,,0,
+2,Unable to work due to self or family member having COVID-19,Chronic conditions,One or more chronic conditions,3648,1.3,0.3,,0,
+2,Unable to work due to self or family member having COVID-19,Chronic conditions,Diagnosed diabetes,691,1.1,0.4,,0,
+2,Unable to work due to self or family member having COVID-19,Chronic conditions,Diagnosed hypertension,2189,1.1,0.3,,0,
+2,Unable to work due to self or family member having COVID-19,Chronic conditions,Current asthma,619,2.7,1,,0,
+3,Unable to work due to self or family member having COVID-19,Total,Total,5450,1.2,0.3,,0,0
+3,Unable to work due to self or family member having COVID-19,Age group,18-44 years,1975,1.9,0.5,,0,0
+3,Unable to work due to self or family member having COVID-19,Age group,45-64 years,1735,0.8,0.3,,0,0
+3,Unable to work due to self or family member having COVID-19,Age group,65 years and over,1740,0.4,0.2,,0,0
+3,Unable to work due to self or family member having COVID-19,Race/Hispanic origin,White non-Hispanic,3476,0.4,0.1,,0,0
+3,Unable to work due to self or family member having COVID-19,Race/Hispanic origin,Black non-Hispanic,762,,,*,,
+3,Unable to work due to self or family member having COVID-19,Race/Hispanic origin,Other non-Hispanic,393,2,1,,0,0
+3,Unable to work due to self or family member having COVID-19,Race/Hispanic origin,Hispanic,819,2.5,1,,0,0
+3,Unable to work due to self or family member having COVID-19,Sex,Male,2464,1.3,0.3,,0,0
+3,Unable to work due to self or family member having COVID-19,Sex,Female,2986,1.1,0.3,,0,0
+3,Unable to work due to self or family member having COVID-19,Education,High school graduate or less,1277,1.7,0.5,,0,0
+3,Unable to work due to self or family member having COVID-19,Education,Some college,2579,1.3,0.4,,0,0
+3,Unable to work due to self or family member having COVID-19,Education,Bachelor's degree or above,1594,0.4,0.2,,0,0
+3,Unable to work due to self or family member having COVID-19,Urbanization,Metropolitan,4617,1.3,0.3,,0,0
+3,Unable to work due to self or family member having COVID-19,Urbanization,Non-Metropolitan,833,0.9,0.5,,0,0
+3,Unable to work due to self or family member having COVID-19,Chronic conditions,One or more chronic conditions,3414,1.2,0.4,,0,0
+3,Unable to work due to self or family member having COVID-19,Chronic conditions,Diagnosed diabetes,739,2.5,1.1,,0,0
+3,Unable to work due to self or family member having COVID-19,Chronic conditions,Diagnosed hypertension,2102,1.8,0.6,,0,0
+3,Unable to work due to self or family member having COVID-19,Chronic conditions,Current asthma,563,2.5,1.1,,0,0
