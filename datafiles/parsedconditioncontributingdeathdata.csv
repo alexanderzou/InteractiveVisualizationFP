@@ -1,4 +1,4 @@
-State,Condition Group,Condition,Age Group,COVID-19 Deaths
+State,ConditionGroup,Condition,AgeGroup,COVID19Deaths
 United States,Respiratory diseases,Influenza and pneumonia,0-24,1569.0
 United States,Respiratory diseases,Influenza and pneumonia,25-34,5804.0
 United States,Respiratory diseases,Influenza and pneumonia,35-44,15080.0
