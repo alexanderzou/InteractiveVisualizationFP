@@ -1,5 +1,7 @@
 import pprint
 
+#https://eds.p.ebscohost.com/eds/pdfviewer/pdfviewer?vid=4&sid=de3db832-4381-4401-aa27-9ac11c4aebc5%40redis
+
 f = open("../datafiles/Archive__COVID-19_Vaccination_and_Case_Trends_by_Age_Group__United_States.csv")
 lines = f.readlines()
 f.close()
