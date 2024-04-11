@@ -7,35 +7,84 @@
 
 <body>
 
-<div id="vax_graph"></div>
-<div id="unemploy_graph"></div>
-<select id="LoWselect">
-    <option value=0>Age</option>
-    <option value=1>Chronic Conditions</option>
-    <option value=2>Education</option>
-    <option value=3>Gender</option>
-    <option value=4>Race</option>
-</select>
-<div id="loss_of_work"></div>
-<select id="conditionSelect">
-    <option value=0>0-24</option>
-    <option value=1>25-34</option>
-    <option value=2>35-44</option>
-    <option value=3>45-54</option>
-    <option value=4>55-64</option>
-    <option value=5>65-74</option>
-    <option value=6>75-84</option>
-    <option value=8>85+</option>
-    <option value=9>All Ages</option>
-</select>
-<div id="conditions"></div>
+<form>
+    <p>Colorblind Mode</p>
+    <input type="radio" id="CBMode" name="CB" value="on">
+    <label for="CBMode">On</label> <br>
+    <input type="radio" id="CBMode" name="CB" value="off" checked="checked">
+    <label for="CBMode">Off</label>
+</form>
+
+<div style="text-align: center;">
+    <h1 >Vaccination Rates by Age Group</h1>
+    <div id="vax_graph"></div>
+</div>
+
+<div style="text-align: center;">
+    <h1 >Unemployment Rate, 2014 - 2024</h1>
+    <div id="unemploy_graph"></div>
+</div>
+
+<div style="text-align: center;">
+    <h1>Loss of Work Due to COVID-19</h1>
+    <select id="LoWselect">
+        <option value=0>Age</option>
+        <option value=1>Chronic Conditions</option>
+        <option value=2>Education</option>
+        <option value=3>Gender</option>
+        <option value=4>Race</option>
+    </select>
+    <div id="loss_of_work"></div>
+</div>
+
+<div style="text-align: center;">
+    <h1>Deaths Due to Conditions, 2020-2023</h1>
+    <select id="conditionSelect">
+        <option value=0>0-24</option>
+        <option value=1>25-34</option>
+        <option value=2>35-44</option>
+        <option value=3>45-54</option>
+        <option value=4>55-64</option>
+        <option value=5>65-74</option>
+        <option value=6>75-84</option>
+        <option value=7>85+</option>
+        <option value=8>All Ages</option>
+    </select>
+    <div id="conditions"></div>
+</div>
 
 <script>
 
-    var margin = {top: 10, right: 20, bottom: 30, left: 60},
-        width = 750 - margin.left - margin.right,
-        height = 400 - margin.top - margin.bottom;
-    function makeVax(file) {
+var margin = {top: 10, right: 20, bottom: 30, left: 60},
+    width = 750 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
+
+var color = d3.scaleOrdinal()
+    .range(["gold", "blue", "green", "darkgreen", "pink", "brown", "slateblue"]);
+
+var vaxFile = "../datafiles/processed_vax.csv",
+    unemployFile = "../datafiles/processed_unemploy.csv",
+    LoWFile = "../datafiles/processed_loss.csv",
+    conditionsFile = "../datafiles/parsedconditioncontributingdeathdata.csv";
+
+d3.selectAll("#CBMode").on("change", change)
+    function change() {
+        //console.log(this.value)
+        if (this.value === "on") {
+            color = d3.scaleOrdinal().range(["black"]);
+        };
+        if (this.value === "off") {
+            color = d3.scaleOrdinal().range(["gold", "blue", "green", "darkgreen", "pink", "brown", "slateblue"]);
+        };
+        d3.selectAll("svg").remove();
+        makeAll(Lmode,"#loss_of_work","#unemploy_graph",Cmode,"#conditions",color);
+    }
+
+</script>
+
+<script>
+
+    function makeVax(file, colors) {
         var svg1 = d3.select("#vax_graph")
             .append("svg")
                 .attr("width", width + margin.left + margin.right)
@@ -61,18 +110,13 @@
             .range([ height, 0 ]);
         svg1.append("g")
             .call(d3.axisLeft(y));
-        //color palette
-        var res = sumstat.map(function(d){ return d.key })
-        var color = d3.scaleOrdinal()
-            .domain(res)
-            .range(['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#a65628','#f781bf','#999999'])
         //draw lines
         svg1.selectAll(".line")
             .data(sumstat)
             .enter()
             .append("path")
                 .attr("fill", "none")
-                .attr("stroke", function(d){ return color(d.key) })
+                .attr("stroke", function(d){ return colors(d.key) })
                 .attr("stroke-width", 1.5)
                 .attr("d", function(d){
                 return d3.line()
@@ -90,7 +134,7 @@
                 .attr("y", function(d,i){ return i*(legendSize+legendSpacing)})
                 .attr("width", legendSize)
                 .attr("height", legendSize)
-                .style("fill", function(d){ return color(d.key)});
+                .style("fill", function(d){ return colors(d.key)});
 
             svg1.selectAll("legend-labels")
                 .data(sumstat)
@@ -98,17 +142,17 @@
                 .append("text")
                 .attr("x", margin.right + legendSize * 1.2)
                 .attr("y", function(d,i){ return i*(legendSize+legendSpacing) + (legendSize/2)})
-                .style("fill", function(d){ return color(d.key)})
+                .style("fill", function(d){ return colors(d.key)})
                 .text(function(d){ return d.key})
                 .attr("text-anchor", "left")
                 .style("alignment-baseline", "middle")
                 .attr("class", "legend");
         });
     };
-    makeVax("../datafiles/processed_vax.csv");
 
 </script>
 <script>
+
     function makeUnemploy(file, tag) {
         var svg2 = d3.select(tag)
             .append("svg")
@@ -135,7 +179,7 @@
         svg2.append("path")
             .datum(data)
             .attr("fill", "none")
-            .attr("stroke", "steelblue")
+            .attr("stroke", "black")
             .attr("stroke-width", 1.5)
             .attr("d", d3.line()
                 .x(function(d) { return x(new Date(d.year)) })
@@ -143,26 +187,25 @@
                 )
         })
     };
-    makeUnemploy("../datafiles/processed_unemploy.csv", "#unemploy_graph");
     
 </script>
 <script>
 
     var tag = "#loss_of_work",
     LoW = d3.select(tag),
-    file = "../datafiles/processed_loss.csv"
-    mode = "age";
-    d3.select("#LoWselect").on("change", change)
+    file = "../datafiles/processed_loss.csv",
+    Lmode = "age";
+    d3.select("#LoWselect").on("change", change);
     function change() {
-        if (this.value == 0) {mode = "age";}
-        if (this.value == 1) {mode = "chronic";}
-        if (this.value == 2) {mode = "education";}
-        if (this.value == 3) {mode = "gender";}
-        if (this.value == 4) {mode = "race";}
+        if (this.value == 0) {Lmode = "age";}
+        if (this.value == 1) {Lmode = "chronic";}
+        if (this.value == 2) {Lmode = "education";}
+        if (this.value == 3) {Lmode = "gender";}
+        if (this.value == 4) {Lmode = "race";}
         LoW.selectAll("*").remove();
-        makeLoW(file, mode, tag);
+        makeLoW(file, Lmode, tag, color);
     }
-    function makeLoW(file, mode, tag) {
+    function makeLoW(file, mode, tag, colors) {
         var svg3 = d3.select(tag)
             .append("svg")
                 .attr("width", width + margin.left + margin.right)
@@ -178,9 +221,6 @@
             data = data.filter(d => d.group === mode);
             xScale.domain(data.map(function(d) { return d.subgroup; }));
             yScale.domain([0, d3.max(data, function(d) { return d.percent; })]);
-            
-            var color = d3.scaleOrdinal().domain(data)
-                .range(["gold", "blue", "green", "darkgreen", "pink", "brown", "slateblue", "grey1", "orange"]);
 
             svg3.append("g")
             .attr("transform", "translate(0," + height + ")")
@@ -200,52 +240,49 @@
             .attr("class", "bar")
             .attr("x", function(d) { return xScale(d.subgroup); })
             .attr("y", function(d) { return yScale(d.percent); })
-            .attr("fill", function(d){ return color(d.subgroup) })
+            .attr("fill", function(d){ return colors(d.subgroup) })
             .attr("width", xScale.bandwidth())
             .attr("height", function(d) { return height - yScale(d.percent); });
         });
     }
-    makeLoW("../datafiles/processed_loss.csv",mode,tag);
 
 </script>
 
 <script>
-
-    var svg4 = d3.select("#conditions")
-        .append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom + 75)
-        .append("g")
-            .attr("transform",
-                "translate(" + margin.left + "," + margin.top + ")");
-
     var xScale1 = d3.scaleBand().range([0, width]).padding(0.4),
-        yScale1 = d3.scaleLinear().range([height, 0]);
+        yScale1 = d3.scaleLinear().range([height, 0]),
+    
+    condTag = "#conditions",
+    condition = d3.select(condTag),
 
-    mode = "0-24";
+    Cmode = "0-24";
     d3.select("#conditionSelect").on("change", change)
     function change() {
-        if (this.value == 0) {mode = "0-24";}
-        if (this.value == 1) {mode = "25-34";}
-        if (this.value == 2) {mode = "35-44";}
-        if (this.value == 3) {mode = "45-54";}
-        if (this.value == 4) {mode = "55-64";}
-        if (this.value == 5) {mode = "65-74";}
-        if (this.value == 6) {mode = "75-84";}
-        if (this.value == 7) {mode = "85+";}
-        if (this.value == 8) {mode = "All Ages";}
-        svg4.selectAll("*").remove();
-        makeConditions(mode);
+        if (this.value == 0) {Cmode = "0-24";}
+        if (this.value == 1) {Cmode = "25-34";}
+        if (this.value == 2) {Cmode = "35-44";}
+        if (this.value == 3) {Cmode = "45-54";}
+        if (this.value == 4) {Cmode = "55-64";}
+        if (this.value == 5) {Cmode = "65-74";}
+        if (this.value == 6) {Cmode = "75-84";}
+        if (this.value == 7) {Cmode = "85+";}
+        if (this.value == 8) {Cmode = "All Ages";}
+        condition.selectAll("*").remove();
+        makeConditions(conditionsFile,Cmode,condTag,color);
     }
-    function makeConditions(mode) {
-        d3.csv("../datafiles/parsedconditioncontributingdeathdata.csv", function(error, data) {
+    function makeConditions(file, mode, tag, colors) {
+        var svg4 = d3.select(tag)
+            .append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom + 75)
+            .append("g")
+                .attr("transform",
+                    "translate(" + margin.left + "," + margin.top + ")");
+        d3.csv(file, function(error, data) {
             data = data.filter(d => d.AgeGroup === mode && d.State === "United States");
             //console.log(data);
             xScale1.domain(data.map(function(d) { return d.ConditionGroup; }));
             yScale1.domain([0, d3.max(data, function(d) { return Number(d.COVID19Deaths); })]);
-            
-            var color = d3.scaleOrdinal().domain(data)
-                .range(["gold", "blue", "green", "darkgreen", "pink", "brown", "slateblue", "grey1", "orange"]);
 
             svg4.append("g")
             .attr("transform", "translate(0," + height + ")")
@@ -268,13 +305,22 @@
             .attr("class", "bar")
             .attr("x", function(d) { return xScale1(d.ConditionGroup); })
             .attr("y", function(d) { return yScale1(Number(d.COVID19Deaths)); })
-            .attr("fill", function(d){ return color(d.ConditionGroup) })
+            .attr("fill", function(d){ return colors(d.ConditionGroup) })
             .attr("width", xScale1.bandwidth())
             .attr("height", function(d) { return height - yScale1(Number(d.COVID19Deaths)); });
         });
     }
-    makeConditions(mode);
 
+</script>
+
+<script>
+    function makeAll(LoWMode,LoWtag,unemTag,condMode,condTag,colors) {
+        makeVax(vaxFile,colors);
+        makeUnemploy(unemployFile,unemTag);
+        makeLoW(LoWFile,Lmode,tag,colors);
+        makeConditions(conditionsFile,Cmode,condTag,colors);
+    };
+    makeAll(Lmode,"#loss_of_work","#unemploy_graph",Cmode,"#conditions",color);
 </script>
 
 </body>
