@@ -7,7 +7,7 @@
 
 <body>
 
-<form>
+<form style="text-align: center;">
     <p>Colorblind Mode</p>
     <input type="radio" id="CBMode" name="CB" value="on">
     <label for="CBMode">On</label> <br>
@@ -62,7 +62,7 @@ var margin = {top: 10, right: 20, bottom: 30, left: 60},
 var mainColors = d3.scaleOrdinal()
         .range(["rgb(255,215,0)", "rgb(0,0,255)", "rgb(0,128,0)", "rgb(255,0,0)", "rgb(255,0,255)", "rgb(165,42,42)", "rgb(128,128,0)", "rgb(255,127,80)", "rgb(128,0,128)", "rgb(128,128,128)", "rgb(0,255,0)", "rgb(255,255,0)"]),
     deutColors = d3.scaleOrdinal()
-        .range(["rgb(213,94,0)","rgb(204,121,167)","rgb(0,114,178)","rgb(240,228,66)","rgb(0,158,115)","rgb(148,203,236)","rgb(126,041,084)","rgb(213,094,0)"]);
+        .range(["rgb(213,94,0)","rgb(204,121,167)","rgb(0,114,178)","rgb(240,228,66)","rgb(0,158,115)","rgb(148,203,236)","rgb(126,041,084)","rgb(187,187,187)"]);
 
 var vaxFile = "../datafiles/processed_vax.csv",
     unemployFile = "../datafiles/processed_unemploy.csv",
