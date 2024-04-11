@@ -59,22 +59,26 @@ var margin = {top: 10, right: 20, bottom: 30, left: 60},
     width = 750 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 
-var color = d3.scaleOrdinal()
-    .range(["gold", "blue", "green", "darkgreen", "pink", "brown", "slateblue"]);
+var mainColors = d3.scaleOrdinal()
+        .range(["gold", "blue", "green", "red", "pink", "brown", "black", "orange", "violet", "gray", "lime", "yellow"]),
+    deutColors = d3.scaleOrdinal()
+        .range(["red","blue"]);
 
 var vaxFile = "../datafiles/processed_vax.csv",
     unemployFile = "../datafiles/processed_unemploy.csv",
     LoWFile = "../datafiles/processed_loss.csv",
     conditionsFile = "../datafiles/parsedconditioncontributingdeathdata.csv";
 
+var color = mainColors;
+
 d3.selectAll("#CBMode").on("change", change)
     function change() {
         //console.log(this.value)
         if (this.value === "on") {
-            color = d3.scaleOrdinal().range(["black"]);
+            color = deutColors;
         };
         if (this.value === "off") {
-            color = d3.scaleOrdinal().range(["gold", "blue", "green", "darkgreen", "pink", "brown", "slateblue"]);
+            color = mainColors;
         };
         d3.selectAll("svg").remove();
         makeAll(Lmode,"#loss_of_work","#unemploy_graph",Cmode,"#conditions",color);
