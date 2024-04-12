@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>US Map with D3</title>
+    <script src="https://d3js.org/d3.v7.js"></script>
+    <script src="https://d3js.org/topojson.v3.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        } 
+
+        .map {
+            border: 1px solid black; 
+            position: relative;
+            width: 1000px;
+            height: 660px;
+        }
+
+        .chart {
+            border: 1px solid black; 
+            position: absolute;
+            right: 0;
+            right: -41%;
+            top: 70%;
+            transform: translateY(-50%);
+            width: 40%;
+            height: 45%;
+        }
+        
+        .legend {
+            font-size: 15px;
+        }
+        .placeholder-box {
+            border: 1px solid black; 
+            width: 40%; 
+            height: 46%; 
+            position: absolute;
+            right: -41%; 
+            top: 23%;
+            transform: translateY(-50%);
+            color: black; 
+            font-size: 20px; 
+        }
+        .placeholder-box2 {
+            border: 1px solid black;
+            width: 40%; 
+            height: 26%; 
+            position: absolute;
+            right: -41%; 
+            top: 106%;
+            transform: translateY(-50%);
+            color: black; 
+            font-size: 20px; 
+        }
+        .placeholder-box3 {
+            border: 1px solid black; 
+            width: 100%; 
+            height: 18%; 
+            position: absolute;
+            right: 0%; 
+            top: -10%;
+            transform: translateY(-50%);
+            color: black; 
+            font-size: 40px; 
+            display: flex;           
+            justify-content: center; 
+            align-items: center;     
+        }
+        .placeholder-box4 {
+            border: 1px solid black; 
+            width: 100%; 
+            height: 18%;
+            position: absolute;
+            right: 0%;
+            top: 110%;
+            transform: translateY(-50%);
+            color: black; 
+            font-size: 20px; 
+            }
+        .placeholder-box5 {
+            border: 1px solid black; 
+            width: 40%; 
+            height: 138%; 
+            position: absolute;
+            right: 101%; 
+            top: 50%;
+            transform: translateY(-50%);
+            color: black; 
+            font-size: 20px; 
+        }
+        .placeholder-box6 {
+            border: 1px solid black; 
+            width: 40%; 
+            height: 20%; 
+            position: absolute;
+            right: -41%; 
+            top: -10%;
+            transform: translateY(-50%);
+            color: black; 
+            font-size: 20px; 
+        }
+        .placeholder-box7 {
+            border: 1px solid black; 
+            width: 38%; 
+            height: 66%; 
+            position: absolute;
+            right: 102%; 
+            top: 17%;
+            transform: translateY(-50%);
+            color: black; 
+            font-size: 20px; 
+        }
+        .placeholder-box8 {
+            border: 1px solid black; 
+            width: 38%; 
+            height: 64%; 
+            position: absolute;
+            right: 102%; 
+            top: 84%;
+            transform: translateY(-50%);
+            color: black; 
+            font-size: 20px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="map">
+        <svg width="1000" height="660"></svg>
+        <div class="chart"></div>
+
+        <div class="placeholder-box">
+            <div id="vax_graph"></div>
+        </div> 
+        <div class="placeholder-box2">
+            <div id="legend"></div>
+        </div> 
+        <div class="placeholder-box3">Thoughtful COVID19 VIS NAME</div> 
+        <div class="placeholder-box4">
+            <div class="controls">
+                <label for="ageGroup">Age Group:</label>
+                <select id="ageGroup">
+                    <option value="All Ages">All Ages</option>
+                    <option value="0-24">0-24 years</option>
+                    <option value="25-34">25-34 years</option>
+                    <option value="35-44">35-44 years</option>
+                    <option value="45-54">45-54 years</option>
+                    <option value="45-54">45-54 years</option>
+                    <option value="55-64">55-64 years</option>
+                    <option value="65-74">65-74 years</option>
+                    <option value="75-84">75-84 years</option>
+                    <option value="85+">85+ years</option>
+                </select>
+            </div>
+        </div>
+       
+        <div class="placeholder-box5"></div> 
+        <div class="placeholder-box6">
+            Authors:Christian Stec & Alex<br>
+            Data Sets: https://data.gov/<br>
+            Last Updated: 4/11/2024
+        </div> 
+        <div class="placeholder-box7"> Unemployment graph
+            <div id="unemploy_graph"></div>
+        </div>
+        <div class="placeholder-box8"> Loss of work graph
+            <select id="LoWselect">
+                <option value=0>Age</option>
+                <option value=1>Chronic Conditions</option>
+                <option value=2>Education</option>
+                <option value=3>Gender</option>
+                <option value=4>Race</option>
+            </select>
+            <div id="loss_of_work"></div>
+        </div>
+    </div>
+    <script>
+        const vaxFile = "../datafiles/processed_vax.csv";
+        const color = d3.scaleOrdinal()
+    .range(["gold", "blue", "green", "darkgreen", "pink", "brown", "slateblue"]);
+        const unemployFile = "../datafiles/processed_unemploy.csv"
+        const LoWFile = "../datafiles/processed_loss.csv"
+        const unemTag = "#unemploy_graph"
+        const conditionsFile = "../datafiles/parsedconditioncontributingdeathdata.csv";
+        const path = d3.geoPath();
+        const svg = d3.select("svg");
+        const g = svg.append("g").call(d3.zoom().on("zoom", event => {
+            g.attr('transform', event.transform);
+        }));
+        d3.selectAll("#CBMode").on("change", change)
+    function change() {
+        //console.log(this.value)
+        if (this.value === "on") {
+            color = d3.scaleOrdinal().range(["black"]);
+        };
+        if (this.value === "off") {
+            color = d3.scaleOrdinal().range(["gold", "blue", "green", "darkgreen", "pink", "brown", "slateblue"]);
+        };
+        d3.selectAll("svg").remove();
+        makeAll(Lmode,"#loss_of_work","#unemploy_graph",Cmode,"#conditions",color,state);
+    }
+
+
+        function makeVax(file, colors) {
+            var margin = {top: 10, right: 30, bottom: 30, left: 30},
+                width = 420 - margin.left - margin.right,
+                height = 310 - margin.top - margin.bottom;
+
+            var svg1 = d3.select("#vax_graph")
+                .append("svg")
+                    .attr("width", width + margin.left + margin.right)
+                    .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+            d3.csv(file).then(function(data) {
+                var sumstat = d3.group(data, d => d.ageGroup);
+
+                var x = d3.scaleTime()
+                    .domain(d3.extent(data, d => new Date(d.date)))
+                    .range([ 0, width ]);
+                svg1.append("g")
+                    .attr("transform", "translate(0," + height + ")")
+                    .call(d3.axisBottom(x).ticks(5));
+
+                var y = d3.scaleLinear()
+                    .domain([0, d3.max(data, d => d.vaxxed)])
+                    .range([ height, 0 ]);
+                svg1.append("g")
+                    .call(d3.axisLeft(y));
+
+                svg1.selectAll(".line")
+                    .data(Array.from(sumstat))
+                    .enter()
+                    .append("path")
+                        .attr("fill", "none")
+                        .attr("stroke", d => colors(d[0]))
+                        .attr("stroke-width", 1.5)
+                        .attr("d", d => {
+                            return d3.line()
+                                .x(d => x(new Date(d.date)))
+                                .y(d => y(d.vaxxed))
+                                (d[1])
+                        });
+
+                const legendSize = 10;
+                const legendSpacing = 4;
+                svg1.selectAll("legend-dots")
+                    .data(Array.from(sumstat))
+                    .enter()
+                    .append("rect")
+                    .attr("x", margin.right)
+                    .attr("y", (d, i) => i * (legendSize + legendSpacing))
+                    .attr("width", legendSize)
+                    .attr("height", legendSize)
+                    .style("fill", d => colors(d[0]));
+
+                svg1.selectAll("legend-labels")
+                    .data(Array.from(sumstat))
+                    .enter()
+                    .append("text")
+                    .attr("x", margin.right + legendSize * 1.2)
+                    .attr("y", (d, i) => i * (legendSize + legendSpacing) + (legendSize / 2))
+                    .style("fill", d => colors(d[0]))
+                    .text(d => d[0])
+                    .attr("text-anchor", "left")
+                    .style("alignment-baseline", "middle")
+                    .attr("class", "legend");
+            });
+        }
+
+        makeVax(vaxFile, color);
+
+        function makeUnemploy(file, tag) {
+    var margin = {top: 10, right: 30, bottom: 30, left: 30},
+                width = 400 - margin.left - margin.right,
+                height = 400 - margin.top - margin.bottom;
+    var svg2 = d3.select(tag)
+        .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+            .attr("transform",
+                "translate(" + margin.left + "," + margin.top + ")");
+
+    d3.csv(file).then(function(data) {
+        data.forEach(function(d) {
+            d.year = new Date(d.year); 
+            d.ur = +d.ur; 
+        });
+
+    
+        var x = d3.scaleTime()
+            .domain(d3.extent(data, function(d) { return d.year; }))
+            .range([0, width]);
+        svg2.append("g")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x).ticks(5));
+
+   
+        var y = d3.scaleLinear()
+            .domain([0, d3.max(data, function(d) { return d.ur; })])
+            .range([height, 0]);
+        svg2.append("g")
+            .call(d3.axisLeft(y));
+
+        
+        svg2.append("path")
+            .datum(data)
+            .attr("fill", "none")
+            .attr("stroke", "black")
+            .attr("stroke-width", 1.5)
+            .attr("d", d3.line()
+                .x(function(d) { return x(d.year) })
+                .y(function(d) { return y(d.ur) })
+            );
+    });
+};
+        makeUnemploy(unemployFile, unemTag)
+
+        var tag = "#loss_of_work",
+    LoW = d3.select(tag),
+    file = "../datafiles/processed_loss.csv",
+    Lmode = "age";
+    d3.select("#LoWselect").on("change", change);
+    function change() {
+        if (this.value == 0) {Lmode = "age";}
+        if (this.value == 1) {Lmode = "chronic";}
+        if (this.value == 2) {Lmode = "education";}
+        if (this.value == 3) {Lmode = "gender";}
+        if (this.value == 4) {Lmode = "race";}
+        LoW.selectAll("*").remove();
+        makeLoW(file, Lmode, tag, color);
+    }
+
+        function makeLoW(file, mode, tag, colors) {
+    var margin = { top: 10, right: 30, bottom: 30, left: 30 },
+          width = 400 - margin.left - margin.right,
+          height = 400 - margin.top - margin.bottom;
+
+
+    var svg3 = d3.select(tag)
+        .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+    var xScale = d3.scaleBand().range([0, width]).padding(0.4),
+        yScale = d3.scaleLinear().range([height, 0]);
+
+    d3.csv(file).then(function(data) {
+
+        data = data.filter(d => d.group === mode);
+        xScale.domain(data.map(function(d) { return d.subgroup; }));
+        yScale.domain([0, d3.max(data, function(d) { return +d.percent; })]);
+
+        svg3.append("g")
+            .attr("transform", `translate(0,${height})`)
+            .call(d3.axisBottom(xScale));
+
+        svg3.append("g")
+            .call(d3.axisLeft(yScale).tickFormat(d => d));
+
+        svg3.selectAll(".bar")
+            .data(data)
+            .enter().append("rect")
+            .attr("class", "bar")
+            .attr("x", d => xScale(d.subgroup))
+            .attr("y", d => yScale(+d.percent))
+            .attr("fill", d => colors(d.subgroup))
+            .attr("width", xScale.bandwidth())
+            .attr("height", d => height - yScale(+d.percent));
+    });
+}
+      //  makeLoW(LoWFile,Lmode,tag,color);
+
+
+        function bar(state) {
+            d3.select(".chart").html("");
+            let legend = d3.select("#legend");
+            legend.html(""); 
+            d3.json("parsed_data3.json").then(function(data2) {
+                const data = data2.filter(d => d.State === state && d['Age Group'] === "All Ages");
+
+                const margin = { top: 20, right: 120, bottom: 30, left: 50 },
+                    width = 500 - margin.left - margin.right, 
+                    height = 310 - margin.top - margin.bottom;
+
+                const chart = d3.select(".chart").append("svg")
+                    .attr("width", width + margin.left + margin.right)
+                    .attr("height", height + margin.top + margin.bottom);
+
+                const chartstuff = chart.append("g")
+                    .attr("transform", `translate(${margin.left},${margin.top})`);
+        
+                chart.append("text")
+                    .attr("x", margin.left + (width / 2))             
+                    .attr("y", margin.top / 2)
+                    .attr("text-anchor", "middle")  
+                    .style("font-size", "14px") 
+                    .text(`COVID-19 Related Deaths in ${state}`);
+
+                const subgroups = Array.from(new Set(data.map(d => d['Condition Group'])));
+
+                const x = d3.scaleBand()
+                 .domain(subgroups)
+                 .range([0, width])
+                 .padding(0.1);
+
+                const maxYValue = d3.max(data, d => d['COVID-19 Deaths']);
+
+                const y = d3.scaleLinear()
+                 .domain([0, maxYValue])
+                 .range([height, 0]);
+
+                chartstuff.append("g")
+                    .call(d3.axisLeft(y));
+
+                const color = d3.scaleOrdinal()
+                    .domain(subgroups)
+                    .range(d3.schemeSet3);
+
+                chartstuff.selectAll(".bar")
+                    .data(data)
+                    .enter()
+                    .append("rect")
+                    .attr("class", "bar")
+                    .attr("x", d => x(d['Condition Group']))
+                    .attr("y", d => y(d['COVID-19 Deaths']))
+                    .attr("width", x.bandwidth())
+                    .attr("height", d => height - y(d['COVID-19 Deaths']))
+                    .attr("fill", d => color(d['Condition Group']));
+
+                    const legend = legend.append("svg")
+            .attr("width", legend.node().getBoundingClientRect().width)
+            .attr("height", subgroups.length * 20); 
+
+                const legendSize = 10;
+                const legendSpacing = 4;
+
+                legend.selectAll(".legend-dots")
+                    .data(subgroups)
+                    .enter()
+                    .append("rect")
+                    .attr("x", 10) 
+                    .attr("y", (d, i) => i * (legendSize + legendSpacing))
+                    .attr("width", legendSize)
+                    .attr("height", legendSize)
+                    .style("fill", color);
+
+                legend.selectAll(".legend-labels")
+                    .data(subgroups)
+                    .enter()
+                    .append("text")
+                    .attr("x", 10 + legendSize + 5)
+                    .attr("y", (d, i) => i * (legendSize + legendSpacing) + (legendSize / 2))
+                    .text(d => d)
+                    .attr("text-anchor", "left")
+                    .style("alignment-baseline", "middle")
+                    .attr("class", "legend");
+            });
+
+        }
+        var margin = {top: 10, right: 20, bottom: 30, left: 60},
+    width = 750 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
+        var xScale1 = d3.scaleBand().range([0, width]).padding(0.4),
+    yScale1 = d3.scaleLinear().range([height, 0]),
+    condTag = "#conditions",
+    condition = d3.select(condTag),
+    Cmode = "0-24";
+
+d3.select("#conditionSelect").on("change", function(event) {
+    var selectedValue = event.target.value;
+    if (selectedValue == 0) { Cmode = "0-24"; }
+    if (selectedValue == 1) { Cmode = "25-34"; }
+    if (selectedValue == 2) { Cmode = "35-44"; }
+    if (selectedValue == 3) { Cmode = "45-54"; }
+    if (selectedValue == 4) { Cmode = "55-64"; }
+    if (selectedValue == 5) { Cmode = "65-74"; }
+    if (selectedValue == 6) { Cmode = "75-84"; }
+    if (selectedValue == 7) { Cmode = "85+"; }
+    if (selectedValue == 8) { Cmode = "All Ages"; }
+    condition.selectAll("*").remove();
+    makeConditions(conditionsFile, Cmode, condTag, color);
+});
+
+function makeConditions(file, mode, tag, colors,state) {
+    var margin = { top: 10, right: 30, bottom: 30, left: 30 },
+        width = 400 - margin.left - margin.right,
+        height = 400 - margin.top - margin.bottom;
+    var svg4 = d3.select(tag)
+        .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom + 75)
+        .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    d3.csv(file).then(function(data) {
+        data = data.filter(d => d.AgeGroup === mode && d.State === state);
+        xScale1.domain(data.map(function(d) { return d.ConditionGroup; }));
+        yScale1.domain([0, d3.max(data, function(d) { return Number(d.COVID19Deaths); })]);
+
+        svg4.append("g")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(xScale1))
+            .selectAll("text")
+                .style("text-anchor", "end")
+                .attr("transform", "rotate(-15)");
+
+        svg4.append("g")
+            .call(d3.axisLeft(yScale1).tickFormat(function(d) { return d; }))
+            .append("text")
+            .attr("y", 6)
+            .attr("dy", "0.71em")
+            .attr("text-anchor", "end")
+            .text("deaths");
+
+        svg4.selectAll(".bar")
+            .data(data)
+            .enter().append("rect")
+            .attr("class", "bar")
+            .attr("x", function(d) { return xScale1(d.ConditionGroup); })
+            .attr("y", function(d) { return yScale1(Number(d.COVID19Deaths)); })
+            .attr("fill", function(d) { return colors(d.ConditionGroup) })
+            .attr("width", xScale1.bandwidth())
+            .attr("height", function(d) { return height - yScale1(Number(d.COVID19Deaths)); });
+    });
+}
+
+        function makeAll(LoWMode,LoWtag,unemTag,condMode,condTag,color,state) {
+      //  makeVax(vaxFile,color);
+      //  makeUnemploy(unemployFile,unemTag);
+        makeLoW(LoWFile,Lmode,tag,color);
+        makeConditions(conditionsFile,Cmode,condTag,color,state);
+    };
+    makeAll(Lmode,"#loss_of_work","#unemploy_graph",Cmode,"#conditions",color);
+        function updatedetail(state, data) {
+        const detailbox = d3.select(".placeholder-box4");
+        detailbox.html(""); 
+        detailbox.append("div")
+            .text(`covid 19 related deaths in ${state} full numerical data:`);
+
+        data.forEach(d => {
+            detailbox.append("div")
+                .text(`${d['Condition Group']}: ${d['COVID-19 Deaths']} deaths`);
+        });
+    }
+        d3.json("states-albers-10m.json").then(function(us) {
+    d3.json("parsed_data3.json").then(function(covidData) {
+        const statedeath = covidData.reduce((acc, row) => {
+            if (row['Age Group'] === 'All Ages') {
+                acc[row.State] = (acc[row.State] || 0) + row['COVID-19 Deaths'];
+            }
+            return acc;
+        }, {});
+
+       
+        const maxdeath = d3.max(Object.values(statedeath));
+  
+        const colors = d3.scaleSequentialLog([1, maxdeath], d3.interpolateReds);
+
+        const states = topojson.feature(us, us.objects.states);
+
+        g.selectAll("path")
+            .data(states.features)
+            .enter()
+            .append("path")
+            .attr("fill", d => colors(statedeath[d.properties.name] || 1)) 
+            .attr("d", path)
+            .on("click", (event, d) => {
+                const statedata = covidData.filter(row => row.State === d.properties.name && row['Age Group'] === 'All Ages');
+                bar(d.properties.name);
+                updatedetail(d.properties.name, statedata);
+                //makeAll(Lmode,"#loss_of_work","#unemploy_graph",Cmode,"#conditions",color,d.properties.name);
+            });
+
+        g.append("path")
+            .datum(topojson.mesh(us, us.objects.states, (a, b) => a !== b))
+            .attr("fill", "none")
+            .attr("stroke", "white")
+            .attr("stroke-linejoin", "round")
+            .attr("d", path);
+
+        g.selectAll("text")
+            .data(states.features)
+            .enter()
+            .append("text")
+            .attr("x", d => path.centroid(d)[0])
+            .attr("y", d => path.centroid(d)[1])
+            .attr("text-anchor", "middle")
+            .attr("fill", "black")
+            .attr("font-size", "10px")
+            .text(d => d.properties.name); 
+    });
+});
+
+    </script>
+</body>
+</html>
+
+
+
