@@ -7,11 +7,12 @@
     <script src="https://d3js.org/topojson.v3.js"></script>
     <style>
         body {
-            display: flex;
-            justify-content: center;
+            display: block;
+            justify-content: right;
             align-items: center;
-            min-height: 100vh;
-            margin: 0;
+            /* margin: 150px; */
+            margin-top: 150px;
+            margin-left: 450px;
         } 
 
         .map {
@@ -25,7 +26,7 @@
             border: 1px solid black; 
             position: absolute;
             right: 0;
-            right: -41%;
+            right: -29%;
             top: 70%;
             transform: translateY(-50%);
             width: 40%;
@@ -40,8 +41,8 @@
             width: 40%; 
             height: 46%; 
             position: absolute;
-            right: -41%; 
-            top: 23%;
+            right: -29%; 
+            top: 24%;
             transform: translateY(-50%);
             color: black; 
             font-size: 20px; 
@@ -51,7 +52,7 @@
             width: 40%; 
             height: 26%; 
             position: absolute;
-            right: -41%; 
+            right: -29%; 
             top: 106%;
             transform: translateY(-50%);
             color: black; 
@@ -62,7 +63,7 @@
             width: 100%; 
             height: 18%; 
             position: absolute;
-            right: 0%; 
+            right: 12%;
             top: -10%;
             transform: translateY(-50%);
             color: black; 
@@ -76,71 +77,62 @@
             width: 100%; 
             height: 18%;
             position: absolute;
-            right: 0%;
+            right: 12%;
             top: 110%;
             transform: translateY(-50%);
             color: black; 
             font-size: 20px; 
             }
         .placeholder-box5 {
-            border: 1px solid black; 
-            width: 40%; 
-            height: 138%; 
+            border: 1px solid black;
+            width: 30%;
+            height: 138%;
             position: absolute;
-            right: 101%; 
+            right: 113%;
             top: 50%;
             transform: translateY(-50%);
-            color: black; 
-            font-size: 20px; 
+            color: black;
+            font-size: 20px;
         }
         .placeholder-box6 {
             border: 1px solid black; 
             width: 40%; 
             height: 20%; 
             position: absolute;
-            right: -41%; 
+            right: -29%; 
             top: -10%;
             transform: translateY(-50%);
             color: black; 
             font-size: 20px; 
         }
         .placeholder-box7 {
-            border: 1px solid black; 
-            width: 38%; 
-            height: 66%; 
+            border: 1px solid black;
+            width: 28%;
+            height: 66%;
             position: absolute;
-            right: 102%; 
+            right: 114%;
             top: 17%;
             transform: translateY(-50%);
-            color: black; 
-            font-size: 20px; 
+            color: black;
+            font-size: 20px;
         }
         .placeholder-box8 {
-            border: 1px solid black; 
-            width: 38%; 
-            height: 64%; 
+            border: 1px solid black;
+            width: 28%;
+            height: 66%;
             position: absolute;
-            right: 102%; 
+            right: 114%;
             top: 84%;
             transform: translateY(-50%);
-            color: black; 
-            font-size: 20px; 
+            color: black;
+            font-size: 20px;
         }
     </style>
 </head>
 <body>
     <div class="map">
         <svg width="1000" height="660"></svg>
-        <div class="chart"></div>
-
-        <div class="placeholder-box">
-            <div id="vax_graph"></div>
-        </div> 
-        <div class="placeholder-box2">
-            <div id="legend"></div>
-        </div> 
-        <div class="placeholder-box3">Thoughtful COVID19 VIS NAME</div> 
-        <div class="placeholder-box4">
+        <div class="chart">
             <div class="controls">
                 <label for="ageGroup">Age Group:</label>
                 <select id="ageGroup">
@@ -157,17 +149,28 @@
                 </select>
             </div>
         </div>
+
+        <div class="placeholder-box">
+            <div id="vax_graph"></div>
+        </div> 
+        <div class="placeholder-box2">
+            <div id="legend"></div>
+        </div> 
+        <div class="placeholder-box3">Thoughtful COVID19 VIS NAME</div> 
+        <div class="placeholder-box4">
+            
+        </div>
        
         <div class="placeholder-box5"></div> 
         <div class="placeholder-box6">
-            Authors:Christian Stec & Alex<br>
+            Authors:Christian Stec & Alex Zou<br>
             Data Sets: https://data.gov/<br>
             Last Updated: 4/11/2024
         </div> 
-        <div class="placeholder-box7"> Unemployment graph
+        <div class="placeholder-box7"> Unemployment, 2014-2024
             <div id="unemploy_graph"></div>
         </div>
-        <div class="placeholder-box8"> Loss of work graph
+        <div class="placeholder-box8"> Loss of Work
             <select id="LoWselect">
                 <option value=0>Age</option>
                 <option value=1>Chronic Conditions</option>
@@ -181,7 +184,7 @@
     <script>
         const vaxFile = "../datafiles/processed_vax.csv";
         const color = d3.scaleOrdinal()
-    .range(["gold", "blue", "green", "darkgreen", "pink", "brown", "slateblue"]);
+            .range(["gold", "blue", "green", "darkgreen", "pink", "brown", "slateblue"]);
         const unemployFile = "../datafiles/processed_unemploy.csv"
         const LoWFile = "../datafiles/processed_loss.csv"
         const unemTag = "#unemploy_graph"
@@ -192,18 +195,17 @@
             g.attr('transform', event.transform);
         }));
         d3.selectAll("#CBMode").on("change", change)
-    function change() {
-        //console.log(this.value)
-        if (this.value === "on") {
-            color = d3.scaleOrdinal().range(["black"]);
-        };
-        if (this.value === "off") {
-            color = d3.scaleOrdinal().range(["gold", "blue", "green", "darkgreen", "pink", "brown", "slateblue"]);
-        };
-        d3.selectAll("svg").remove();
-        makeAll(Lmode,"#loss_of_work","#unemploy_graph",Cmode,"#conditions",color,state);
-    }
-
+        function change() {
+            //console.log(this.value)
+            if (this.value === "on") {
+                color = d3.scaleOrdinal().range(["black"]);
+            };
+            if (this.value === "off") {
+                color = d3.scaleOrdinal().range(["gold", "blue", "green", "darkgreen", "pink", "brown", "slateblue"]);
+            };
+            d3.selectAll("svg").remove();
+            makeAll(Lmode,"#loss_of_work","#unemploy_graph",Cmode,"#conditions",color,state);
+        }
 
         function makeVax(file, colors) {
             var margin = {top: 10, right: 30, bottom: 30, left: 30},
@@ -276,107 +278,107 @@
         makeVax(vaxFile, color);
 
         function makeUnemploy(file, tag) {
-    var margin = {top: 10, right: 30, bottom: 30, left: 30},
-                width = 400 - margin.left - margin.right,
-                height = 400 - margin.top - margin.bottom;
-    var svg2 = d3.select(tag)
-        .append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-            .attr("transform",
-                "translate(" + margin.left + "," + margin.top + ")");
+            var margin = {top: 10, right: 30, bottom: 30, left: 30},
+                        width = 300 - margin.left - margin.right,
+                        height = 400 - margin.top - margin.bottom;
+            var svg2 = d3.select(tag)
+                .append("svg")
+                    .attr("width", width + margin.left + margin.right)
+                    .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                    .attr("transform",
+                        "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.csv(file).then(function(data) {
-        data.forEach(function(d) {
-            d.year = new Date(d.year); 
-            d.ur = +d.ur; 
-        });
+            d3.csv(file).then(function(data) {
+                data.forEach(function(d) {
+                    d.year = new Date(d.year); 
+                    d.ur = +d.ur; 
+                });
 
-    
-        var x = d3.scaleTime()
-            .domain(d3.extent(data, function(d) { return d.year; }))
-            .range([0, width]);
-        svg2.append("g")
-            .attr("transform", "translate(0," + height + ")")
-            .call(d3.axisBottom(x).ticks(5));
-
-   
-        var y = d3.scaleLinear()
-            .domain([0, d3.max(data, function(d) { return d.ur; })])
-            .range([height, 0]);
-        svg2.append("g")
-            .call(d3.axisLeft(y));
+            
+                var x = d3.scaleTime()
+                    .domain(d3.extent(data, function(d) { return d.year; }))
+                    .range([0, width]);
+                svg2.append("g")
+                    .attr("transform", "translate(0," + height + ")")
+                    .call(d3.axisBottom(x).ticks(5));
 
         
-        svg2.append("path")
-            .datum(data)
-            .attr("fill", "none")
-            .attr("stroke", "black")
-            .attr("stroke-width", 1.5)
-            .attr("d", d3.line()
-                .x(function(d) { return x(d.year) })
-                .y(function(d) { return y(d.ur) })
-            );
-    });
-};
+                var y = d3.scaleLinear()
+                    .domain([0, d3.max(data, function(d) { return d.ur; })])
+                    .range([height, 0]);
+                svg2.append("g")
+                    .call(d3.axisLeft(y));
+
+                
+                svg2.append("path")
+                    .datum(data)
+                    .attr("fill", "none")
+                    .attr("stroke", "black")
+                    .attr("stroke-width", 1.5)
+                    .attr("d", d3.line()
+                        .x(function(d) { return x(d.year) })
+                        .y(function(d) { return y(d.ur) })
+                    );
+            });
+        };
         makeUnemploy(unemployFile, unemTag)
 
         var tag = "#loss_of_work",
-    LoW = d3.select(tag),
-    file = "../datafiles/processed_loss.csv",
-    Lmode = "age";
-    d3.select("#LoWselect").on("change", change);
-    function change() {
-        if (this.value == 0) {Lmode = "age";}
-        if (this.value == 1) {Lmode = "chronic";}
-        if (this.value == 2) {Lmode = "education";}
-        if (this.value == 3) {Lmode = "gender";}
-        if (this.value == 4) {Lmode = "race";}
-        LoW.selectAll("*").remove();
-        makeLoW(file, Lmode, tag, color);
-    }
+        LoW = d3.select(tag),
+        file = "../datafiles/processed_loss.csv",
+        Lmode = "age";
+        d3.select("#LoWselect").on("change", change);
+        function change() {
+            if (this.value == 0) {Lmode = "age";}
+            if (this.value == 1) {Lmode = "chronic";}
+            if (this.value == 2) {Lmode = "education";}
+            if (this.value == 3) {Lmode = "gender";}
+            if (this.value == 4) {Lmode = "race";}
+            LoW.selectAll("*").remove();
+            makeLoW(file, Lmode, tag, color);
+        }
 
         function makeLoW(file, mode, tag, colors) {
-    var margin = { top: 10, right: 30, bottom: 30, left: 30 },
-          width = 400 - margin.left - margin.right,
-          height = 400 - margin.top - margin.bottom;
+            var margin = { top: 10, right: 30, bottom: 30, left: 30 },
+                width = 300 - margin.left - margin.right,
+                height = 400 - margin.top - margin.bottom;
 
 
-    var svg3 = d3.select(tag)
-        .append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-            .attr("transform", `translate(${margin.left},${margin.top})`);
+            var svg3 = d3.select(tag)
+                .append("svg")
+                    .attr("width", width + margin.left + margin.right)
+                    .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                    .attr("transform", `translate(${margin.left},${margin.top})`);
 
-    var xScale = d3.scaleBand().range([0, width]).padding(0.4),
-        yScale = d3.scaleLinear().range([height, 0]);
+            var xScale = d3.scaleBand().range([0, width]).padding(0.4),
+                yScale = d3.scaleLinear().range([height, 0]);
 
-    d3.csv(file).then(function(data) {
+            d3.csv(file).then(function(data) {
 
-        data = data.filter(d => d.group === mode);
-        xScale.domain(data.map(function(d) { return d.subgroup; }));
-        yScale.domain([0, d3.max(data, function(d) { return +d.percent; })]);
+                data = data.filter(d => d.group === mode);
+                xScale.domain(data.map(function(d) { return d.subgroup; }));
+                yScale.domain([0, d3.max(data, function(d) { return +d.percent; })]);
 
-        svg3.append("g")
-            .attr("transform", `translate(0,${height})`)
-            .call(d3.axisBottom(xScale));
+                svg3.append("g")
+                    .attr("transform", `translate(0,${height})`)
+                    .call(d3.axisBottom(xScale));
 
-        svg3.append("g")
-            .call(d3.axisLeft(yScale).tickFormat(d => d));
+                svg3.append("g")
+                    .call(d3.axisLeft(yScale).tickFormat(d => d));
 
-        svg3.selectAll(".bar")
-            .data(data)
-            .enter().append("rect")
-            .attr("class", "bar")
-            .attr("x", d => xScale(d.subgroup))
-            .attr("y", d => yScale(+d.percent))
-            .attr("fill", d => colors(d.subgroup))
-            .attr("width", xScale.bandwidth())
-            .attr("height", d => height - yScale(+d.percent));
-    });
-}
+                svg3.selectAll(".bar")
+                    .data(data)
+                    .enter().append("rect")
+                    .attr("class", "bar")
+                    .attr("x", d => xScale(d.subgroup))
+                    .attr("y", d => yScale(+d.percent))
+                    .attr("fill", d => colors(d.subgroup))
+                    .attr("width", xScale.bandwidth())
+                    .attr("height", d => height - yScale(+d.percent));
+            });
+        }
       //  makeLoW(LoWFile,Lmode,tag,color);
 
 
