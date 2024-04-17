@@ -27,10 +27,10 @@
             position: absolute;
             right: 0;
             right: -29%;
-            top: 70%;
+            top: 86%;
             transform: translateY(-50%);
-            width: 40%;
-            height: 45%;
+            width: 400px;
+            height: 500px;
         }
         
         .legend {
@@ -53,7 +53,7 @@
             height: 500px; 
             position: absolute;
             right: -29%; 
-            top: 131%;
+            top: 163%;
             transform: translateY(-50%);
             color: black; 
             font-size: 20px; 
@@ -135,7 +135,10 @@
 <body>
     <div class="map">
         <svg width="1000" height="660"></svg>
-        <div class="chart"></div>
+        <div class="chart">
+            <div id="stateTitle"></div>
+            <div id="stateChart"></div>
+        </div>
 
         <div class="placeholder-box">
             <div id="vax_graph"></div>
@@ -324,7 +327,7 @@
                     );
             });
         };
-        makeUnemploy(unemployFile, unemTag)
+        makeUnemploy(unemployFile, unemTag);
 
         var tag = "#loss_of_work",
         LoW = d3.select(tag),
@@ -383,93 +386,92 @@
         }
       //  makeLoW(LoWFile,Lmode,tag,color);
 
+        // function bar(state) {
+        //     d3.select(".chart").html("");
+        //     // let legend = d3.select("#legend");
+        //     // legend.html(""); 
+        //     d3.json("parsed_data3.json").then(function(data2) {
+        //         const data = data2.filter(d => d.State === state && d['Age Group'] === "All Ages");
 
-        function bar(state) {
-            d3.select(".chart").html("");
-            let legend = d3.select("#legend");
-            legend.html(""); 
-            d3.json("parsed_data3.json").then(function(data2) {
-                const data = data2.filter(d => d.State === state && d['Age Group'] === "All Ages");
+        //         const margin = { top: 20, right: 120, bottom: 30, left: 50 },
+        //             width = 500 - margin.left - margin.right, 
+        //             height = 310 - margin.top - margin.bottom;
 
-                const margin = { top: 20, right: 120, bottom: 30, left: 50 },
-                    width = 500 - margin.left - margin.right, 
-                    height = 310 - margin.top - margin.bottom;
+        //         const chart = d3.select(".chart").append("svg")
+        //             .attr("width", width + margin.left + margin.right)
+        //             .attr("height", height + margin.top + margin.bottom);
 
-                const chart = d3.select(".chart").append("svg")
-                    .attr("width", width + margin.left + margin.right)
-                    .attr("height", height + margin.top + margin.bottom);
-
-                const chartstuff = chart.append("g")
-                    .attr("transform", `translate(${margin.left},${margin.top})`);
+        //         const chartstuff = chart.append("g")
+        //             .attr("transform", `translate(${margin.left},${margin.top})`);
         
-                chart.append("text")
-                    .attr("x", margin.left + (width / 2))             
-                    .attr("y", margin.top / 2)
-                    .attr("text-anchor", "middle")  
-                    .style("font-size", "14px") 
-                    .text(`COVID-19 Related Deaths in ${state}`);
+        //         chart.append("text")
+        //             .attr("x", margin.left + (width / 2))             
+        //             .attr("y", margin.top / 2)
+        //             .attr("text-anchor", "middle")  
+        //             .style("font-size", "14px") 
+        //             .text(`COVID-19 Related Deaths in ${state}`);
 
-                const subgroups = Array.from(new Set(data.map(d => d['Condition Group'])));
+        //         const subgroups = Array.from(new Set(data.map(d => d['Condition Group'])));
 
-                const x = d3.scaleBand()
-                 .domain(subgroups)
-                 .range([0, width])
-                 .padding(0.1);
+        //         const x = d3.scaleBand()
+        //          .domain(subgroups)
+        //          .range([0, width])
+        //          .padding(0.1);
 
-                const maxYValue = d3.max(data, d => d['COVID-19 Deaths']);
+        //         const maxYValue = d3.max(data, d => d['COVID-19 Deaths']);
 
-                const y = d3.scaleLinear()
-                 .domain([0, maxYValue])
-                 .range([height, 0]);
+        //         const y = d3.scaleLinear()
+        //          .domain([0, maxYValue])
+        //          .range([height, 0]);
 
-                chartstuff.append("g")
-                    .call(d3.axisLeft(y));
+        //         chartstuff.append("g")
+        //             .call(d3.axisLeft(y));
 
-                const color = d3.scaleOrdinal()
-                    .domain(subgroups)
-                    .range(d3.schemeSet3);
+        //         const color = d3.scaleOrdinal()
+        //             .domain(subgroups)
+        //             .range(d3.schemeSet3);
 
-                chartstuff.selectAll(".bar")
-                    .data(data)
-                    .enter()
-                    .append("rect")
-                    .attr("class", "bar")
-                    .attr("x", d => x(d['Condition Group']))
-                    .attr("y", d => y(d['COVID-19 Deaths']))
-                    .attr("width", x.bandwidth())
-                    .attr("height", d => height - y(d['COVID-19 Deaths']))
-                    .attr("fill", d => color(d['Condition Group']));
+        //         chartstuff.selectAll(".bar")
+        //             .data(data)
+        //             .enter()
+        //             .append("rect")
+        //             .attr("class", "bar")
+        //             .attr("x", d => x(d['Condition Group']))
+        //             .attr("y", d => y(d['COVID-19 Deaths']))
+        //             .attr("width", x.bandwidth())
+        //             .attr("height", d => height - y(d['COVID-19 Deaths']))
+        //             .attr("fill", d => color(d['Condition Group']));
 
-                    const legend = legend.append("svg")
-            .attr("width", legend.node().getBoundingClientRect().width)
-            .attr("height", subgroups.length * 20); 
+        //             const legend = legend.append("svg")
+        //     .attr("width", legend.node().getBoundingClientRect().width)
+        //     .attr("height", subgroups.length * 20); 
 
-                const legendSize = 10;
-                const legendSpacing = 4;
+        //         const legendSize = 10;
+        //         const legendSpacing = 4;
 
-                legend.selectAll(".legend-dots")
-                    .data(subgroups)
-                    .enter()
-                    .append("rect")
-                    .attr("x", 10) 
-                    .attr("y", (d, i) => i * (legendSize + legendSpacing))
-                    .attr("width", legendSize)
-                    .attr("height", legendSize)
-                    .style("fill", color);
+        //         legend.selectAll(".legend-dots")
+        //             .data(subgroups)
+        //             .enter()
+        //             .append("rect")
+        //             .attr("x", 10) 
+        //             .attr("y", (d, i) => i * (legendSize + legendSpacing))
+        //             .attr("width", legendSize)
+        //             .attr("height", legendSize)
+        //             .style("fill", color);
 
-                legend.selectAll(".legend-labels")
-                    .data(subgroups)
-                    .enter()
-                    .append("text")
-                    .attr("x", 10 + legendSize + 5)
-                    .attr("y", (d, i) => i * (legendSize + legendSpacing) + (legendSize / 2))
-                    .text(d => d)
-                    .attr("text-anchor", "left")
-                    .style("alignment-baseline", "middle")
-                    .attr("class", "legend");
-            });
+        //         legend.selectAll(".legend-labels")
+        //             .data(subgroups)
+        //             .enter()
+        //             .append("text")
+        //             .attr("x", 10 + legendSize + 5)
+        //             .attr("y", (d, i) => i * (legendSize + legendSpacing) + (legendSize / 2))
+        //             .text(d => d)
+        //             .attr("text-anchor", "left")
+        //             .style("alignment-baseline", "middle")
+        //             .attr("class", "legend");
+        //     });
 
-        }
+        // }
     var margin = {top: 10, right: 20, bottom: 30, left: 60},
     width = 750 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
@@ -492,10 +494,14 @@ d3.select("#conditionSelect").on("change", function(event) {
     if (selectedValue == 8) { Cmode = "85+"; }
     if (selectedValue == 0) { Cmode = "All Ages"; }
     condition.selectAll("*").remove();
+    d3.selectAll(".chart").selectAll("svg").remove();
+    bar(stateS, Cmode, color);
     //console.log(Cmode);
     makeConditions(conditionsFile, Cmode, condTag, color);
 });
 
+
+//size for conditions graphs
 var margin1 = { top: 10, right: 10, bottom: 30, left: 45 },
     width1 = 400 - margin1.left - margin1.right,
     height1 = 400 - margin1.top - margin1.bottom;
@@ -543,6 +549,47 @@ function makeConditions(file, mode, tag, colors) {
     });
 };
 
+function bar(state, mode, colors) {
+    var svg4 = d3.select("#stateChart")
+        .append("svg")
+            .attr("width", width1 + margin1.left + margin1.right)
+            .attr("height", height1 + margin1.top + margin1.bottom + 75)
+        .append("g")
+            .attr("transform", "translate(" + margin1.left + "," + margin1.top + ")");
+
+    d3.csv(conditionsFile).then(function(data) {
+        data = data.filter(d => d.AgeGroup === mode && d.State === state);
+        //console.log(mode);
+        xScale2.domain(data.map(function(d) { return d.ConditionGroup; }));
+        yScale2.domain([0, d3.max(data, function(d) { return Number(d.COVID19Deaths); })]);
+
+        svg4.append("g")
+            .attr("transform", "translate(0," + height1 + ")")
+            .call(d3.axisBottom(xScale2))
+            .selectAll("text")
+                .style("text-anchor", "end")
+                .attr("transform", "rotate(-15)");
+
+        svg4.append("g")
+            .call(d3.axisLeft(yScale2).tickFormat(function(d) { return d; }))
+            .append("text")
+            .attr("y", 6)
+            .attr("dy", "0.71em")
+            .attr("text-anchor", "end")
+            .text("deaths");
+
+        svg4.selectAll(".bar")
+            .data(data)
+            .enter().append("rect")
+            .attr("class", "bar")
+            .attr("x", function(d) { return xScale2(d.ConditionGroup); })
+            .attr("y", function(d) { return yScale2(Number(d.COVID19Deaths)); })
+            .attr("fill", function(d) { return colors(d.ConditionGroup) })
+            .attr("width", xScale2.bandwidth())
+            .attr("height", function(d) { return height1 - yScale2(Number(d.COVID19Deaths)); });
+    });
+}
+
         function makeAll(LoWMode,LoWtag,unemTag,condMode,condTag,color) {
       //  makeVax(vaxFile,color);
       //  makeUnemploy(unemployFile,unemTag);
@@ -550,7 +597,7 @@ function makeConditions(file, mode, tag, colors) {
         makeConditions(conditionsFile,Cmode,condTag,color);
     };
     makeAll(Lmode,"#loss_of_work","#unemploy_graph",Cmode,"#conditions",color);
-        function updatedetail(state, data) {
+    function updatedetail(state, data) {
         const detailbox = d3.select(".placeholder-box4");
         detailbox.html(""); 
         detailbox.append("div")
@@ -561,7 +608,8 @@ function makeConditions(file, mode, tag, colors) {
                 .text(`${d['Condition Group']}: ${d['COVID-19 Deaths']} deaths`);
         });
     }
-        d3.json("states-albers-10m.json").then(function(us) {
+    var stateS = "Alabama";
+    d3.json("states-albers-10m.json").then(function(us) {
     d3.json("parsed_data3.json").then(function(covidData) {
         const statedeath = covidData.reduce((acc, row) => {
             if (row['Age Group'] === 'All Ages') {
@@ -585,8 +633,11 @@ function makeConditions(file, mode, tag, colors) {
             .attr("d", path)
             .on("click", (event, d) => {
                 const statedata = covidData.filter(row => row.State === d.properties.name && row['Age Group'] === 'All Ages');
-                bar(d.properties.name);
-                updatedetail(d.properties.name, statedata);
+                d3.selectAll(".chart").selectAll("svg").remove();
+                stateS = d.properties.name;
+                bar(stateS, "All Ages", color);
+                d3.select("#stateTitle").html(`Deaths by Condition for ${stateS}`)
+                updatedetail(stateS, statedata);
                 //makeAll(Lmode,"#loss_of_work","#unemploy_graph",Cmode,"#conditions",color,d.properties.name);
             });
 
