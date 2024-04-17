@@ -49,11 +49,11 @@
         }
         .placeholder-box2 {
             border: 1px solid black;
-            width: 40%; 
-            height: 26%; 
+            width: 400px; 
+            height: 500px; 
             position: absolute;
             right: -29%; 
-            top: 106%;
+            top: 131%;
             transform: translateY(-50%);
             color: black; 
             font-size: 20px; 
@@ -127,34 +127,36 @@
             color: black;
             font-size: 20px;
         }
+        svg {
+            height: auto;
+        }
     </style>
 </head>
 <body>
     <div class="map">
         <svg width="1000" height="660"></svg>
-        <div class="chart">
-            <div class="controls">
-                <label for="ageGroup">Age Group:</label>
-                <select id="ageGroup">
-                    <option value="All Ages">All Ages</option>
-                    <option value="0-24">0-24 years</option>
-                    <option value="25-34">25-34 years</option>
-                    <option value="35-44">35-44 years</option>
-                    <option value="45-54">45-54 years</option>
-                    <option value="45-54">45-54 years</option>
-                    <option value="55-64">55-64 years</option>
-                    <option value="65-74">65-74 years</option>
-                    <option value="75-84">75-84 years</option>
-                    <option value="85+">85+ years</option>
-                </select>
-            </div>
-        </div>
+        <div class="chart"></div>
 
         <div class="placeholder-box">
             <div id="vax_graph"></div>
         </div> 
         <div class="placeholder-box2">
             <div id="legend"></div>
+            <div class="controls">
+                <label for="conditionSelect">Age Group:</label>
+                <select id="conditionSelect">
+                    <option value=0>All Ages</option>
+                    <option value=1>0-24 years</option>
+                    <option value=2>25-34 years</option>
+                    <option value=3>35-44 years</option>
+                    <option value=4>45-54 years</option>
+                    <option value=5>55-64 years</option>
+                    <option value=6>65-74 years</option>
+                    <option value=7>75-84 years</option>
+                    <option value=8>85+ years</option>
+                </select>
+            </div>
+            <div id="conditions"></div>
         </div> 
         <div class="placeholder-box3">Thoughtful COVID19 VIS NAME</div> 
         <div class="placeholder-box4">
@@ -468,55 +470,61 @@
             });
 
         }
-        var margin = {top: 10, right: 20, bottom: 30, left: 60},
+    var margin = {top: 10, right: 20, bottom: 30, left: 60},
     width = 750 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
-        var xScale1 = d3.scaleBand().range([0, width]).padding(0.4),
+    var xScale1 = d3.scaleBand().range([0, width]).padding(0.4),
     yScale1 = d3.scaleLinear().range([height, 0]),
     condTag = "#conditions",
     condition = d3.select(condTag),
-    Cmode = "0-24";
+    Cmode = "All Ages";
 
 d3.select("#conditionSelect").on("change", function(event) {
     var selectedValue = event.target.value;
-    if (selectedValue == 0) { Cmode = "0-24"; }
-    if (selectedValue == 1) { Cmode = "25-34"; }
-    if (selectedValue == 2) { Cmode = "35-44"; }
-    if (selectedValue == 3) { Cmode = "45-54"; }
-    if (selectedValue == 4) { Cmode = "55-64"; }
-    if (selectedValue == 5) { Cmode = "65-74"; }
-    if (selectedValue == 6) { Cmode = "75-84"; }
-    if (selectedValue == 7) { Cmode = "85+"; }
-    if (selectedValue == 8) { Cmode = "All Ages"; }
+    //console.log(selectedValue);
+    if (selectedValue == 1) { Cmode = "0-24"; }
+    if (selectedValue == 2) { Cmode = "25-34"; }
+    if (selectedValue == 3) { Cmode = "35-44"; }
+    if (selectedValue == 4) { Cmode = "45-54"; }
+    if (selectedValue == 5) { Cmode = "55-64"; }
+    if (selectedValue == 6) { Cmode = "65-74"; }
+    if (selectedValue == 7) { Cmode = "75-84"; }
+    if (selectedValue == 8) { Cmode = "85+"; }
+    if (selectedValue == 0) { Cmode = "All Ages"; }
     condition.selectAll("*").remove();
+    //console.log(Cmode);
     makeConditions(conditionsFile, Cmode, condTag, color);
 });
 
-function makeConditions(file, mode, tag, colors,state) {
-    var margin = { top: 10, right: 30, bottom: 30, left: 30 },
-        width = 400 - margin.left - margin.right,
-        height = 400 - margin.top - margin.bottom;
+var margin1 = { top: 10, right: 10, bottom: 30, left: 45 },
+    width1 = 400 - margin1.left - margin1.right,
+    height1 = 400 - margin1.top - margin1.bottom;
+var xScale2 = d3.scaleBand().range([0, width1]).padding(0.4),
+    yScale2 = d3.scaleLinear().range([height1, 0]);
+
+function makeConditions(file, mode, tag, colors) {
     var svg4 = d3.select(tag)
         .append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom + 75)
+            .attr("width", width1 + margin1.left + margin1.right)
+            .attr("height", height1 + margin1.top + margin1.bottom + 75)
         .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+            .attr("transform", "translate(" + margin1.left + "," + margin1.top + ")");
 
     d3.csv(file).then(function(data) {
-        data = data.filter(d => d.AgeGroup === mode && d.State === state);
-        xScale1.domain(data.map(function(d) { return d.ConditionGroup; }));
-        yScale1.domain([0, d3.max(data, function(d) { return Number(d.COVID19Deaths); })]);
+        data = data.filter(d => d.AgeGroup === mode && d.State === "United States");
+        //console.log(mode);
+        xScale2.domain(data.map(function(d) { return d.ConditionGroup; }));
+        yScale2.domain([0, d3.max(data, function(d) { return Number(d.COVID19Deaths); })]);
 
         svg4.append("g")
-            .attr("transform", "translate(0," + height + ")")
-            .call(d3.axisBottom(xScale1))
+            .attr("transform", "translate(0," + height1 + ")")
+            .call(d3.axisBottom(xScale2))
             .selectAll("text")
                 .style("text-anchor", "end")
                 .attr("transform", "rotate(-15)");
 
         svg4.append("g")
-            .call(d3.axisLeft(yScale1).tickFormat(function(d) { return d; }))
+            .call(d3.axisLeft(yScale2).tickFormat(function(d) { return d; }))
             .append("text")
             .attr("y", 6)
             .attr("dy", "0.71em")
@@ -527,19 +535,19 @@ function makeConditions(file, mode, tag, colors,state) {
             .data(data)
             .enter().append("rect")
             .attr("class", "bar")
-            .attr("x", function(d) { return xScale1(d.ConditionGroup); })
-            .attr("y", function(d) { return yScale1(Number(d.COVID19Deaths)); })
+            .attr("x", function(d) { return xScale2(d.ConditionGroup); })
+            .attr("y", function(d) { return yScale2(Number(d.COVID19Deaths)); })
             .attr("fill", function(d) { return colors(d.ConditionGroup) })
-            .attr("width", xScale1.bandwidth())
-            .attr("height", function(d) { return height - yScale1(Number(d.COVID19Deaths)); });
+            .attr("width", xScale2.bandwidth())
+            .attr("height", function(d) { return height1 - yScale2(Number(d.COVID19Deaths)); });
     });
-}
+};
 
-        function makeAll(LoWMode,LoWtag,unemTag,condMode,condTag,color,state) {
+        function makeAll(LoWMode,LoWtag,unemTag,condMode,condTag,color) {
       //  makeVax(vaxFile,color);
       //  makeUnemploy(unemployFile,unemTag);
         makeLoW(LoWFile,Lmode,tag,color);
-        makeConditions(conditionsFile,Cmode,condTag,color,state);
+        makeConditions(conditionsFile,Cmode,condTag,color);
     };
     makeAll(Lmode,"#loss_of_work","#unemploy_graph",Cmode,"#conditions",color);
         function updatedetail(state, data) {
