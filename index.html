@@ -206,8 +206,8 @@
             National Graphs
         </div> 
         <div class="placeholder-box6">
-            Authors:Christian Stec & Alex Zou<br>
-            Data Sets: https://data.gov/<br>
+            Authors: Christian Stec & Alex Zou<br>
+            Datasets from data.gov; 2020-2023<br>
             <form style="text-align: center;">
                 Colorblind Mode
                 <input type="radio" id="CBMode" name="CB" value="on">
@@ -216,14 +216,14 @@
                 <label for="CBMode">Off</label>
             </form>
         </div> 
-        <div class="placeholder-box7"> Unemployment, 2014-2024
+        <div class="placeholder-box7"> Unemployment Rate, 2014-2024
             <div id="unemploy_graph"></div>
          
         </div>
-        <div class="placeholder-box9"> Vax National
+        <div class="placeholder-box9"> Vaccination Rate by Age Group
             <div id="vax_graph"></div>
         </div>
-        <div class="placeholder-box8"> Loss of Work
+        <div class="placeholder-box8"> Loss of Work (2023)
             <select id="LoWselect">
                 <option value=0>Age</option>
                 <option value=1>Chronic Conditions</option>
@@ -434,22 +434,7 @@
     condition = d3.select(condTag),
     Cmode = "All Ages";
 
-d3.select("#conditionSelect").on("change", function(event) {
-    var selectedValue = event.target.value;
-    if (selectedValue == 1) { Cmode = "0-24"; }
-    if (selectedValue == 2) { Cmode = "25-34"; }
-    if (selectedValue == 3) { Cmode = "35-44"; }
-    if (selectedValue == 4) { Cmode = "45-54"; }
-    if (selectedValue == 5) { Cmode = "55-64"; }
-    if (selectedValue == 6) { Cmode = "65-74"; }
-    if (selectedValue == 7) { Cmode = "75-84"; }
-    if (selectedValue == 8) { Cmode = "85+"; }
-    if (selectedValue == 0) { Cmode = "All Ages"; }
-    condition.selectAll("*").remove();
-    d3.selectAll(".chart").selectAll("svg").remove();
-    bar(stateS, Cmode, color);
-    makeConditions(conditionsFile, Cmode, condTag, color);
-});
+
 
 
 //size for conditions graphs
@@ -552,31 +537,38 @@ function bar(state, mode, colors) {
         
     };
     makeAll(Lmode,"#loss_of_work","#unemploy_graph",Cmode,"#conditions",color);
-    function updatedetail(state, data) {
+    function updatedetail(state, data,Cmode) {
         const detailbox = d3.select(".placeholder-box4");
         detailbox.html(""); 
 
-        let deathsByCondition = new Map();
+        var deathsByCondition = new Map();
 
         data.forEach(d => {
-        let condition = d['Condition Group'];
-        let deaths = +d['COVID-19 Deaths']; // Convert string to number
-        if (deathsByCondition.has(condition)) {
-            deathsByCondition.set(condition, deathsByCondition.get(condition) + deaths);
+        var condition = d['Condition Group'];
+        var deaths = +d['COVID-19 Deaths'];
+        var age = d['Age Group'];
+        var mapkey = `${condition},${age}`;
+        if (deathsByCondition.has(mapkey)) {
+            deathsByCondition.set(mapkey, deathsByCondition.get(mapkey) + deaths);
         } else {
-            deathsByCondition.set(condition, deaths);
+            deathsByCondition.set(mapkey, deaths);
         }
     });
         detailbox.append("div")
             .text(`covid 19 related deaths in ${state} full numerical data:`);
-
-        deathsByCondition.forEach((deaths,condition) => {
-            detailbox.append("div")
-                .text(`${condition}: ${deaths.toLocaleString()} deaths`)
-                .style("font-size","14px");
+        console.log(Cmode)
+        deathsByCondition.forEach((deaths,mapkey) => {
+            var [condition,age] = mapkey.split(",")
+            if(age==Cmode)
+            {
+                detailbox.append("div")
+                    .text(`${condition} (${age}): ${deaths.toLocaleString()} deaths`)
+                    .style("font-size","14px");
+            }
         });
     }
     var stateS = "";
+    var statedata = ""
     d3.json("states-albers-10m.json").then(function(us) {
     d3.json("parsed_data3.json").then(function(covidData) {
         const statedeath = covidData.reduce((acc, row) => {
@@ -612,7 +604,6 @@ function bar(state, mode, colors) {
     deutColors = d3.scaleOrdinal()
         .range(["rgb(213,94,0)","rgb(204,121,167)","rgb(0,114,178)","rgb(240,228,66)","rgb(0,158,115)","rgb(148,203,236)","rgb(126,041,084)","rgb(187,187,187)"]);
 
-
     d3.selectAll("#CBMode").on("change", changeColor)
         function changeColor() {
             //console.log(this.value)
@@ -641,7 +632,6 @@ function bar(state, mode, colors) {
         const colors = d3.scaleSequentialLog([1, maxdeath], d3.interpolateReds);
 
         const states = topojson.feature(us, us.objects.states);
-
         g.selectAll("path")
             .data(states.features)
             .enter()
@@ -649,13 +639,12 @@ function bar(state, mode, colors) {
             .attr("fill", d => colors(statedeath[d.properties.name] || 1)) 
             .attr("d", path)
             .on("click", (event, d) => {
-                const statedata = covidData.filter(row => row.State === d.properties.name && row['Age Group'] === Cmode);
+                statedata = covidData.filter(row => row.State === d.properties.name);
                 d3.selectAll(".chart").selectAll("svg").remove();
                 stateS = d.properties.name;
                 bar(stateS, Cmode, color);
                 d3.select("#stateTitle").html(`Deaths by Condition for ${stateS}`)
-                updatedetail(stateS, statedata);
-                //makeAll(Lmode,"#loss_of_work","#unemploy_graph",Cmode,"#conditions",color,d.properties.name);
+                updatedetail(stateS, statedata,Cmode);
             });
 
         g.append("path")
@@ -676,6 +665,24 @@ function bar(state, mode, colors) {
             .attr("font-size", "10px")
             .text(d => d.properties.name); 
     });
+});
+d3.select("#conditionSelect").on("change", function(event) {
+    var selectedValue = event.target.value;
+    if (selectedValue == 1) { Cmode = "0-24"; }
+    if (selectedValue == 2) { Cmode = "25-34"; }
+    if (selectedValue == 3) { Cmode = "35-44"; }
+    if (selectedValue == 4) { Cmode = "45-54"; }
+    if (selectedValue == 5) { Cmode = "55-64"; }
+    if (selectedValue == 6) { Cmode = "65-74"; }
+    if (selectedValue == 7) { Cmode = "75-84"; }
+    if (selectedValue == 8) { Cmode = "85+"; }
+    if (selectedValue == 0) { Cmode = "All Ages"; }
+    condition.selectAll("*").remove();
+    d3.selectAll(".chart").selectAll("svg").remove();
+    bar(stateS, Cmode, color);
+    makeConditions(conditionsFile, Cmode, condTag, color);
+    console.log(statedata)
+    updatedetail(stateS, statedata, Cmode)
 });
 
     </script>
