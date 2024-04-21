@@ -32,10 +32,10 @@
             border: 2px solid black; 
             position: absolute;
             left: 98%;
-            top: 49%;
+            top: 61%;
             transform: translateY(-50%);
             width: 400px;
-            height: 37%;
+            height: 45%;
         }
         
         .legend {
@@ -44,10 +44,10 @@
         .placeholder-box {
             border: 2px solid black; 
             width: 400px; 
-            height: 37%; 
+            height: 45%; 
             position: absolute;
             left: 98%; 
-            top: 11%;
+            top: 15%;
             transform: translateY(-50%);
             color: black; 
             font-size: 20px; 
@@ -58,7 +58,7 @@
             height: 50%; 
             position: absolute;
             left: 98%; 
-            top: 94%;
+            top: 110%;
             transform: translateY(-50%);
             color: black; 
             font-size: 20px;
@@ -82,10 +82,10 @@
         .placeholder-box4 {
             border: 2px solid black; 
             width: 100%; 
-            height: 18%;
+            height: 34%;
             position: absolute;
             right: 3%;
-            top: 110%;
+            top: 118%;
             transform: translateY(-50%);
             color: black; 
             font-size: 20px; 
@@ -93,10 +93,10 @@
         .placeholder-box5 {
             border: 2px solid black;
             width: 30%;
-            height: 138%;
+            height: 153%;
             position: absolute;
             right: 104%;
-            top: 50%;
+            top: 58%;
             transform: translateY(-50%);
             color: black;
             font-size: 20px;
@@ -128,10 +128,10 @@
         .placeholder-box7 {
             border: 2px solid black;
             width: 28%;
-            height: 66%;
+            height: 48%;
             position: absolute;
             right: 105%;
-            top: 17%;
+            top: 59%;
             transform: translateY(-50%);
             color: black;
             font-size: 20px;
@@ -139,10 +139,21 @@
         .placeholder-box8 {
             border: 2px solid black;
             width: 28%;
-            height: 66%;
+            height: 48%;
             position: absolute;
             right: 105%;
-            top: 84%;
+            top: 109%;
+            transform: translateY(-50%);
+            color: black;
+            font-size: 20px;
+        }
+        .placeholder-box9 {
+            border: 2px solid black;
+            width: 28%;
+            height: 48%;
+            position: absolute;
+            right: 105%;
+            top: 9%;
             transform: translateY(-50%);
             color: black;
             font-size: 20px;
@@ -162,7 +173,7 @@
             <svg width=1000px height=660px></svg>
         </div>
         <div class="chart">
-            <div id="stateTitle"></div>
+            <div id="stateTitle">Click a State</div>
             <div id="stateChart"></div>
         </div>
 
@@ -191,20 +202,25 @@
         </div> 
         <div class="placeholder-box4"></div>
        
-        <div class="placeholder-box5"></div> 
+        <div class="placeholder-box5">
+            National Graphs
+        </div> 
         <div class="placeholder-box6">
             Authors:Christian Stec & Alex Zou<br>
             Data Sets: https://data.gov/<br>
             <form style="text-align: center;">
-                <p>Colorblind Mode</p>
+                Colorblind Mode
                 <input type="radio" id="CBMode" name="CB" value="on">
-                <label for="CBMode">On</label> <br>
+                <label for="CBMode">On</label> 
                 <input type="radio" id="CBMode" name="CB" value="off" checked="checked">
                 <label for="CBMode">Off</label>
             </form>
         </div> 
         <div class="placeholder-box7"> Unemployment, 2014-2024
             <div id="unemploy_graph"></div>
+         
+        </div>
+        <div class="placeholder-box9"> Vax National
             <div id="vax_graph"></div>
         </div>
         <div class="placeholder-box8"> Loss of Work
@@ -552,7 +568,8 @@ function bar(state, mode, colors) {
 
         deathsByCondition.forEach((deaths,condition) => {
             detailbox.append("div")
-                .text(`${condition}: ${deaths.toLocaleString()} deaths`);
+                .text(`${condition}: ${deaths.toLocaleString()} deaths`)
+                .style("font-size","14px");
         });
     }
     var stateS = "";
@@ -656,5 +673,3 @@ function bar(state, mode, colors) {
     </script>
 </body>
 </html>
-
-
