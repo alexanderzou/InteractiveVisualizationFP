@@ -225,7 +225,7 @@
         const unemployFile = "../datafiles/processed_unemploy.csv"
         const LoWFile = "../datafiles/processed_loss.csv"
         const unemTag = "#unemploy_graph"
-        const conditionsFile = "../datafiles/parsedconditioncontributingdeathdata.csv";
+        const conditionsFile = "../datafiles/processed_conditions.csv";
         const path = d3.geoPath();
         const svg = d3.select("svg");
         const g = svg.append("g").call(d3.zoom().on("zoom", event => {
@@ -535,12 +535,24 @@ function bar(state, mode, colors) {
     function updatedetail(state, data) {
         const detailbox = d3.select(".placeholder-box4");
         detailbox.html(""); 
+
+        let deathsByCondition = new Map();
+
+        data.forEach(d => {
+        let condition = d['Condition Group'];
+        let deaths = +d['COVID-19 Deaths']; // Convert string to number
+        if (deathsByCondition.has(condition)) {
+            deathsByCondition.set(condition, deathsByCondition.get(condition) + deaths);
+        } else {
+            deathsByCondition.set(condition, deaths);
+        }
+    });
         detailbox.append("div")
             .text(`covid 19 related deaths in ${state} full numerical data:`);
 
-        data.forEach(d => {
+        deathsByCondition.forEach((deaths,condition) => {
             detailbox.append("div")
-                .text(`${d['Condition Group']}: ${d['COVID-19 Deaths']} deaths`);
+                .text(`${condition}: ${deaths.toLocaleString()} deaths`);
         });
     }
     var stateS = "";
@@ -556,16 +568,10 @@ function bar(state, mode, colors) {
     {
         const legend = d3.select("#legendcond")
         var data = Array.from(colors.domain())
-        console.log(colors.domain())
-       d3.csv(conditionsFile).then(function(data)
-       {
-        data = data.filter(d => d.condition);
-      //  console.log(data)
-      //  var filt = data.filter(condition => !condition.match(/^\d/));
-       // console.log(filt)
-     //   var filt2 = filt.filter(condition=> !condition.match(/^</));
-      //  console.log(filt2);
-        data.forEach(condition => {
+        var conds = ["Respiratory diseases","Circulatory diseases","Sepsis","Malignant neoplasms","Diabetes","Obesity","Alzheimer disease","Vascular and unspecified dementia","Renal failure","Adverse Events","All other conditions and causes","COVID-19"]
+        //console.log(colors.domain())
+        
+        conds.forEach(condition => {
             const legendbox = legend.append("div").style("display", "flex").style("align-items", "center").style("margin-bottom", "5px").style("margin-left","10px");
 
         legendbox.append("div")
@@ -577,7 +583,7 @@ function bar(state, mode, colors) {
             .text(condition)
             .style("font-size", "16px");
 
-         })});
+         });
     }
     legendcond(color);
     var mainColors = d3.scaleOrdinal()
@@ -591,6 +597,7 @@ function bar(state, mode, colors) {
             //console.log(this.value)
             if (this.value === "on") {
                 color = deutColors;
+                //colors.domain()
             };
             if (this.value === "off") {
                 color = mainColors;
@@ -649,10 +656,5 @@ function bar(state, mode, colors) {
     </script>
 </body>
 </html>
-
-
-
-
-
 
 
