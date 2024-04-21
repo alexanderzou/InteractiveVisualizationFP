@@ -250,9 +250,9 @@
       
 
         function makeVax(file, colors) {
-            var margin = {top: 10, right: 30, bottom: 30, left: 30},
-                width = 400 - margin.left - margin.right,
-                height = 310 - margin.top - margin.bottom;
+            var margin = {top: 10, right: 30, bottom: 30, left: 27},
+                width = 300 - margin.left - margin.right,
+                height = 305 - margin.top - margin.bottom;
 
             var svg1 = d3.select("#vax_graph")
                 .append("svg")
@@ -320,9 +320,9 @@
         makeVax(vaxFile, color);
 
         function makeUnemploy(file, tag) {
-            var margin = {top: 10, right: 30, bottom: 30, left: 30},
-                        width = 300 - margin.left - margin.right,
-                        height = 400 - margin.top - margin.bottom;
+            var margin = {top: 10, right: 30, bottom: 30, left: 22},
+                        width = 320 - margin.left - margin.right,
+                        height = 300 - margin.top - margin.bottom;
             var svg2 = d3.select(tag)
                 .append("svg")
                     .attr("width", width + margin.left + margin.right)
@@ -384,7 +384,7 @@
         function makeLoW(file, mode, tag, colors) {
             var margin = { top: 10, right: 30, bottom: 30, left: 30 },
                 width = 300 - margin.left - margin.right,
-                height = 400 - margin.top - margin.bottom;
+                height = 300 - margin.top - margin.bottom;
 
 
             var svg3 = d3.select(tag)
@@ -405,7 +405,11 @@
 
                 svg3.append("g")
                     .attr("transform", `translate(0,${height})`)
-                    .call(d3.axisBottom(xScale));
+                    .call(d3.axisBottom(xScale))
+                    .selectAll("text")
+                       .style("text-anchor", "end")
+                       .attr("transform", "rotate(-8)")
+                       .style("font-size","8px");
 
                 svg3.append("g")
                     .call(d3.axisLeft(yScale).tickFormat(d => d));
@@ -451,7 +455,7 @@ d3.select("#conditionSelect").on("change", function(event) {
 //size for conditions graphs
 var margin1 = { top: 10, right: 10, bottom: 30, left: 45 },
     width1 = 400 - margin1.left - margin1.right,
-    height1 = 250 - margin1.top - margin1.bottom;
+    height1 = 301 - margin1.top - margin1.bottom;
 var xScale2 = d3.scaleBand().range([0, width1]).padding(0.4),
     yScale2 = d3.scaleLinear().range([height1, 0]);
 
@@ -622,9 +626,13 @@ function bar(state, mode, colors) {
             d3.selectAll("#conditions").selectAll("svg").remove();
             d3.selectAll("#stateChart").selectAll("svg").remove();
             d3.selectAll("#legendcond").selectAll("div").remove();
+            d3.selectAll("#loss_of_work").selectAll("svg").remove();
+            d3.selectAll("#vax_graph").selectAll("svg").remove();
             legendcond(color);
             makeAll(Lmode,"#loss_of_work","#unemploy_graph",Cmode,"#conditions",color);
+            makeVax(vaxFile,color);
             bar(stateS, Cmode, color);
+
            // d3.select("#legendcond").selectAll("*").remove();
         }
        
