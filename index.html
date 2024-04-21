@@ -29,7 +29,7 @@
         }
 
         .chart {
-            border: 1px solid black; 
+            border: 2px solid black; 
             position: absolute;
             left: 98%;
             top: 49%;
@@ -42,7 +42,7 @@
             font-size: 15px;
         }
         .placeholder-box {
-            border: 1px solid black; 
+            border: 2px solid black; 
             width: 400px; 
             height: 37%; 
             position: absolute;
@@ -77,10 +77,10 @@
             display: flex;           
             justify-content: center; 
             align-items: center;  
-
+            font: "Lato";
         }
         .placeholder-box4 {
-            border: 1px solid black; 
+            border: 2px solid black; 
             width: 100%; 
             height: 18%;
             position: absolute;
@@ -115,7 +115,7 @@
            
         }
         .placeholder-box6 {
-            border: 1px solid black; 
+            border: 2px solid black; 
             width: 400px; 
             height: 10%; 
             position: absolute;
@@ -126,7 +126,7 @@
             font-size: 20px; 
         }
         .placeholder-box7 {
-            border: 1px solid black;
+            border: 2px solid black;
             width: 28%;
             height: 66%;
             position: absolute;
@@ -137,7 +137,7 @@
             font-size: 20px;
         }
         .placeholder-box8 {
-            border: 1px solid black;
+            border: 2px solid black;
             width: 28%;
             height: 66%;
             position: absolute;
@@ -187,14 +187,21 @@
         <div class="placeholder-box2">Legend
             <div id="legendcond"></div>
         </div> 
-        <div class="placeholder-box3">Thoughtful COVID19 VIS NAME</div> 
+        <div class="placeholder-box3">COVID Age Gauge
+        </div> 
         <div class="placeholder-box4"></div>
        
         <div class="placeholder-box5"></div> 
         <div class="placeholder-box6">
             Authors:Christian Stec & Alex Zou<br>
             Data Sets: https://data.gov/<br>
-            Last Updated: 4/11/2024
+            <form style="text-align: center;">
+                <p>Colorblind Mode</p>
+                <input type="radio" id="CBMode" name="CB" value="on">
+                <label for="CBMode">On</label> <br>
+                <input type="radio" id="CBMode" name="CB" value="off" checked="checked">
+                <label for="CBMode">Off</label>
+            </form>
         </div> 
         <div class="placeholder-box7"> Unemployment, 2014-2024
             <div id="unemploy_graph"></div>
@@ -213,7 +220,7 @@
     </div>
     <script>
         const vaxFile = "../datafiles/processed_vax.csv";
-        const color = d3.scaleOrdinal()
+        var color = d3.scaleOrdinal()
         .range(["rgb(255,215,0)", "rgb(0,0,255)", "rgb(0,128,0)", "rgb(255,0,0)", "rgb(255,0,255)", "rgb(165,42,42)", "rgb(128,128,0)", "rgb(255,127,80)", "rgb(128,0,128)", "rgb(128,128,128)", "rgb(0,255,0)", "rgb(255,255,0)"]);
         const unemployFile = "../datafiles/processed_unemploy.csv"
         const LoWFile = "../datafiles/processed_loss.csv"
@@ -224,18 +231,7 @@
         const g = svg.append("g").call(d3.zoom().on("zoom", event => {
             g.attr('transform', event.transform);
         }));
-        d3.selectAll("#CBMode").on("change", changeColor)
-        function changeColor() {
-            //console.log(this.value)
-            if (this.value === "on") {
-                color = d3.scaleOrdinal().range(["black"]);
-            };
-            if (this.value === "off") {
-                color = d3.scaleOrdinal().range(["rgb(255,215,0)", "rgb(0,0,255)", "rgb(0,128,0)", "rgb(255,0,0)", "rgb(255,0,255)", "rgb(165,42,42)", "rgb(128,128,0)", "rgb(255,127,80)", "rgb(128,0,128)", "rgb(128,128,128)", "rgb(0,255,0)", "rgb(255,255,0)"]);
-            };
-            d3.selectAll("svg").remove();
-            makeAll(Lmode,"#loss_of_work","#unemploy_graph",Cmode,"#conditions",color,state);
-        }
+      
 
         function makeVax(file, colors) {
             var margin = {top: 10, right: 30, bottom: 30, left: 30},
@@ -532,6 +528,8 @@ function bar(state, mode, colors) {
       //  makeUnemploy(unemployFile,unemTag);
         makeLoW(LoWFile,Lmode,tag,color);
         makeConditions(conditionsFile,Cmode,condTag,color);
+        //legendcond(color);
+        
     };
     makeAll(Lmode,"#loss_of_work","#unemploy_graph",Cmode,"#conditions",color);
     function updatedetail(state, data) {
@@ -557,11 +555,18 @@ function bar(state, mode, colors) {
     function legendcond(colors)
     {
         const legend = d3.select("#legendcond")
-        const data = Array.from(colors.domain())
-        const filt = data.filter(condition => !condition.match(/^\d/));
-        const filt2 = filt.filter(condition=> !condition.match(/^</));
-        filt2.forEach(condition => {
-            const legendbox = legend.append("div").style("display", "flex").style("align-items", "center").style("margin-bottom", "5px");
+        var data = Array.from(colors.domain())
+        console.log(colors.domain())
+       d3.csv(conditionsFile).then(function(data)
+       {
+        data = data.filter(d => d.condition);
+      //  console.log(data)
+      //  var filt = data.filter(condition => !condition.match(/^\d/));
+       // console.log(filt)
+     //   var filt2 = filt.filter(condition=> !condition.match(/^</));
+      //  console.log(filt2);
+        data.forEach(condition => {
+            const legendbox = legend.append("div").style("display", "flex").style("align-items", "center").style("margin-bottom", "5px").style("margin-left","10px");
 
         legendbox.append("div")
             .style("width", "10px")
@@ -572,9 +577,32 @@ function bar(state, mode, colors) {
             .text(condition)
             .style("font-size", "16px");
 
-        });
+         })});
     }
     legendcond(color);
+    var mainColors = d3.scaleOrdinal()
+        .range(["rgb(255,215,0)", "rgb(0,0,255)", "rgb(0,128,0)", "rgb(255,0,0)", "rgb(255,0,255)", "rgb(165,42,42)", "rgb(128,128,0)", "rgb(255,127,80)", "rgb(128,0,128)", "rgb(128,128,128)", "rgb(0,255,0)", "rgb(255,255,0)"]),
+    deutColors = d3.scaleOrdinal()
+        .range(["rgb(213,94,0)","rgb(204,121,167)","rgb(0,114,178)","rgb(240,228,66)","rgb(0,158,115)","rgb(148,203,236)","rgb(126,041,084)","rgb(187,187,187)"]);
+
+
+    d3.selectAll("#CBMode").on("change", changeColor)
+        function changeColor() {
+            //console.log(this.value)
+            if (this.value === "on") {
+                color = deutColors;
+            };
+            if (this.value === "off") {
+                color = mainColors;
+            };
+            d3.selectAll("#conditions").selectAll("svg").remove();
+            d3.selectAll("#stateChart").selectAll("svg").remove();
+            d3.selectAll("#legendcond").selectAll("div").remove();
+            legendcond(color);
+            makeAll(Lmode,"#loss_of_work","#unemploy_graph",Cmode,"#conditions",color);
+            bar(stateS, Cmode, color);
+           // d3.select("#legendcond").selectAll("*").remove();
+        }
        
         const maxdeath = d3.max(Object.values(statedeath));
   
@@ -621,6 +649,9 @@ function bar(state, mode, colors) {
     </script>
 </body>
 </html>
+
+
+
 
 
 
