@@ -670,10 +670,10 @@ function bar(state, mode, colors) {
             d3.selectAll("#legendcond").selectAll("div").remove();
             d3.selectAll("#loss_of_work").selectAll("svg").remove();
             d3.selectAll("#vax_graph").selectAll("svg").remove();
-            legendcond(color);
             makeAll(Lmode,"#loss_of_work","#unemploy_graph",Cmode,"#conditions",color);
             makeVax(vaxFile,color);
             bar(stateS, Cmode, color);
+            legendcond(color);
         }
 
     d3.json("states-albers-10m.json").then(function(us) {
