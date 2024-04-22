@@ -250,7 +250,7 @@
       
 
         function makeVax(file, colors) {
-            var margin = {top: 10, right: 30, bottom: 30, left: 27},
+            var margin = {top: 10, right: 30, bottom: 30, left: 43},
                 width = 300 - margin.left - margin.right,
                 height = 305 - margin.top - margin.bottom;
 
@@ -276,6 +276,13 @@
                     .range([ height, 0 ]);
                 svg1.append("g")
                     .call(d3.axisLeft(y));
+                svg1.append("text")
+                    .attr("y", -35)
+                    .attr("dy", "0.71em")
+                    .attr("text-anchor", "end")
+                    .attr("x", -25)
+                    .text("%")
+                    .attr("transform", "rotate(-90)");
 
                 svg1.selectAll(".line")
                     .data(Array.from(sumstat))
@@ -320,7 +327,7 @@
         makeVax(vaxFile, color);
 
         function makeUnemploy(file, tag) {
-            var margin = {top: 10, right: 30, bottom: 30, left: 22},
+            var margin = {top: 10, right: 30, bottom: 30, left: 34},
                         width = 320 - margin.left - margin.right,
                         height = 300 - margin.top - margin.bottom;
             var svg2 = d3.select(tag)
@@ -352,7 +359,13 @@
                 svg2.append("g")
                     .call(d3.axisLeft(y));
 
-                
+                svg2.append("text")
+                    .attr("y", -32)
+                    .attr("dy", "0.71em")
+                    .attr("text-anchor", "end")
+                    .attr("x", -25)
+                    .text("%")
+                    .attr("transform", "rotate(-90)");
                 svg2.append("path")
                     .datum(data)
                     .attr("fill", "none")
@@ -382,7 +395,7 @@
         }
 
         function makeLoW(file, mode, tag, colors) {
-            var margin = { top: 10, right: 30, bottom: 30, left: 30 },
+            var margin = { top: 10, right: 30, bottom: 30, left: 45 },
                 width = 300 - margin.left - margin.right,
                 height = 300 - margin.top - margin.bottom;
 
@@ -413,6 +426,13 @@
 
                 svg3.append("g")
                     .call(d3.axisLeft(yScale).tickFormat(d => d));
+                svg3.append("text")
+                    .attr("y", -32)
+                    .attr("dy", "0.71em")
+                    .attr("text-anchor", "end")
+                    .attr("x", -25)
+                    .text("%")
+                    .attr("transform", "rotate(-90)");
 
                 svg3.selectAll(".bar")
                     .data(data)
@@ -438,7 +458,7 @@
 
 
 //size for conditions graphs
-var margin1 = { top: 10, right: 10, bottom: 30, left: 45 },
+var margin1 = { top: 10, right: 40, bottom: 30, left: 60 },
     width1 = 400 - margin1.left - margin1.right,
     height1 = 301 - margin1.top - margin1.bottom;
 var xScale2 = d3.scaleBand().range([0, width1]).padding(0.4),
@@ -468,11 +488,13 @@ function makeConditions(file, mode, tag, colors) {
 
         svg4.append("g")
             .call(d3.axisLeft(yScale2).tickFormat(function(d) { return d; }))
-            .append("text")
-            .attr("y", 6)
+        svg4.append("text")
+            .attr("y", -58)
             .attr("dy", "0.71em")
             .attr("text-anchor", "end")
-            .text("deaths");
+            .attr("x", -25)
+            .text("deaths")
+            .attr("transform", "rotate(-90)");
 
         svg4.selectAll(".bar")
             .data(data)
@@ -515,6 +537,13 @@ function bar(state, mode, colors) {
             .attr("dy", "0.71em")
             .attr("text-anchor", "end")
             .text("deaths");
+        svg4.append("text")
+            .attr("y", -58)
+            .attr("dy", "0.71em")
+            .attr("text-anchor", "end")
+            .attr("x", -25)
+            .text("deaths")
+            .attr("transform", "rotate(-90)");
 
         svg4.selectAll(".bar")
             .data(data)
@@ -623,22 +652,43 @@ function bar(state, mode, colors) {
             makeAll(Lmode,"#loss_of_work","#unemploy_graph",Cmode,"#conditions",color);
             makeVax(vaxFile,color);
             bar(stateS, Cmode, color);
-
-           // d3.select("#legendcond").selectAll("*").remove();
         }
        
         const maxdeath = d3.max(Object.values(statedeath));
-  
-        const colors = d3.scaleSequentialLog([1, maxdeath], d3.interpolateReds);
-
+        var mapcolor = null
+        const colors = d3.scaleSequentialLog(d3.interpolateReds).domain([1, maxdeath]);
+        const colorbrewercolorblind = d3.interpolateRgbBasis(["#eff3ff", "#bdd7e7", "#6baed6", "#3182bd", "#08519c"]);
+        const colors2 = d3.scaleSequentialLog(colorbrewercolorblind).domain([1, maxdeath]);
+        if (this.value === "on") {
+                mapcolor = colors2;
+            };
+            if (this.value === "off") {
+                mapcolor = colors
+            };
         const states = topojson.feature(us, us.objects.states);
+        var lastClickedState = null;
         g.selectAll("path")
             .data(states.features)
             .enter()
             .append("path")
-            .attr("fill", d => colors(statedeath[d.properties.name] || 1)) 
+            .attr("fill", d => colors2(statedeath[d.properties.name] || 1)) 
             .attr("d", path)
+            .attr("stroke","white")
+            .attr("stroke-width", .5) 
             .on("click", (event, d) => {
+                const currentElement = d3.select(event.currentTarget);
+                if (lastClickedState) {
+                    const lastData = lastClickedState.datum();
+                    lastClickedState
+                        .transition()
+                        .duration(500)
+                        .attr("fill", d => colors(statedeath[lastData.properties.name] || 1));
+                }
+                lastClickedState = currentElement;
+                lastClickedState
+                    .transition()
+                    .duration(500)
+                    .attr("fill", "#9e9ac8");
                 statedata = covidData.filter(row => row.State === d.properties.name);
                 d3.selectAll(".chart").selectAll("svg").remove();
                 stateS = d.properties.name;
@@ -646,24 +696,135 @@ function bar(state, mode, colors) {
                 d3.select("#stateTitle").html(`Deaths by Condition for ${stateS}`)
                 updatedetail(stateS, statedata,Cmode);
             });
-
-        g.append("path")
-            .datum(topojson.mesh(us, us.objects.states, (a, b) => a !== b))
-            .attr("fill", "none")
-            .attr("stroke", "white")
-            .attr("stroke-linejoin", "round")
-            .attr("d", path);
-
+        abbreviation_to_name = {
+            "AK": "Alaska",
+            "AL": "Alabama",
+            "AR": "Arkansas",
+            "AZ": "Arizona",
+            "CA": "California",
+            "CO": "Colorado",
+            "CT": "Connecticut",
+            "DE": "Delaware",
+            "FL": "Florida",
+            "GA": "Georgia",
+            "HI": "Hawaii",
+            "IA": "Iowa",
+            "ID": "Idaho",
+            "IL": "Illinois",
+            "IN": "Indiana",
+            "KS": "Kansas",
+            "KY": "Kentucky",
+            "LA": "Louisiana",
+            "MA": "Massachusetts",
+            "MD": "Maryland",
+            "ME": "Maine",
+            "MI": "Michigan",
+            "MN": "Minnesota",
+            "MO": "Missouri",
+            "MS": "Mississippi",
+            "MT": "Montana",
+            "NC": "North Carolina",
+            "ND": "North Dakota",
+            "NE": "Nebraska",
+            "NH": "New Hampshire",
+            "NJ": "New Jersey",
+            "NM": "New Mexico",
+            "NV": "Nevada",
+            "NY": "New York",
+            "OH": "Ohio",
+            "OK": "Oklahoma",
+            "OR": "Oregon",
+            "PA": "Pennsylvania",
+            "RI": "Rhode Island",
+            "SC": "South Carolina",
+            "SD": "South Dakota",
+            "TN": "Tennessee",
+            "TX": "Texas",
+            "UT": "Utah",
+            "VA": "Virginia",
+            "VT": "Vermont",
+            "WA": "Washington",
+            "WI": "Wisconsin",
+            "WV": "West Virginia",
+            "WY": "Wyoming",
+            "DC": "District of Columbia",
+            "AS": "American Samoa",
+            "GU": "Guam GU",
+            "MP": "Northern Mariana Islands",
+            "PR": "Puerto Rico PR",
+            "VI": "U.S. Virgin Islands",
+        }
         g.selectAll("text")
             .data(states.features)
             .enter()
             .append("text")
-            .attr("x", d => path.centroid(d)[0])
-            .attr("y", d => path.centroid(d)[1])
             .attr("text-anchor", "middle")
-            .attr("fill", "black")
-            .attr("font-size", "10px")
-            .text(d => d.properties.name); 
+            .attr("x",d =>{
+                var stateName = d.properties.name;
+                var abbreviation = Object.keys(abbreviation_to_name).find(key => abbreviation_to_name[key] == stateName);
+                if(abbreviation == "LA")
+                {
+                    return path.centroid(d)[0] - 10;
+                }
+                if(abbreviation == "FL")
+                {
+                    return path.centroid(d)[0] + 20;
+                }
+                if(abbreviation == "MD")
+                {
+                    return path.centroid(d)[0] + 25;
+                }
+            //    if(abbreviation == "DC")
+              //  {
+                    //return path.centroid(d)[0] + 24;
+            //    }
+                if(abbreviation == "HI")
+                {
+                    return path.centroid(d)[0] + 17;
+                }
+                if(abbreviation == "NJ")
+                {
+                    return path.centroid(d)[0] + 3;
+                }
+                else
+                {
+                    return path.centroid(d)[0]
+                }
+            })
+            .attr("y",d =>{
+                var stateName = d.properties.name;
+                var abbreviation = Object.keys(abbreviation_to_name).find(key => abbreviation_to_name[key] == stateName);
+                if(abbreviation == "LA")
+                {
+                    return path.centroid(d)[1]
+                }
+                if(abbreviation == "MD")
+                {
+                    return path.centroid(d)[1] + 16;
+                }
+                if(abbreviation == "DC")
+                {
+                    return path.centroid(d)[1] - 10;
+                }
+                if(abbreviation == "HI")
+                {
+                    return path.centroid(d)[1] + 15;
+                }
+                else
+                {
+                    return path.centroid(d)[1]
+                }
+            })
+            .text(d => {
+                var stateName = d.properties.name;
+                var abbreviation = Object.keys(abbreviation_to_name).find(key => abbreviation_to_name[key] == stateName);
+                
+                return abbreviation;
+
+            })
+            .style("fill", "black") 
+            .style("font-family", "sans-serif")
+            .style("font-size", "6px");
     });
 });
 d3.select("#conditionSelect").on("change", function(event) {
