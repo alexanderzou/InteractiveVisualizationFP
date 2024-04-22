@@ -9,7 +9,9 @@ data = {}
 
 for line in lines[1:]:
     line = line.split(",")
-    state,condition,age = line[0],line[1],line[3]
+    state,condition,age = line[0],line[1],line[-2]
+    if condition.startswith("\""):
+        condition = "Adverse Events"
     key = f"{state},{condition},{age}"
     if key not in data.keys():
         data[key] = 0

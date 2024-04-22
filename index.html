@@ -475,9 +475,13 @@ function makeConditions(file, mode, tag, colors) {
         .append("g")
             .attr("transform", "translate(" + margin1.left + "," + margin1.top + ")");
     var legend = svg.append("g")
+    //console.log(colors)
+    colors.domain([]);
+    console.log(colors.domain())
 
     d3.csv(file).then(function(data) {
         data = data.filter(d => d.AgeGroup === mode && d.State === "United States");
+        // console.log(data);
         //console.log(mode);
         xScale2.domain(data.map(function(d) { return d.ConditionGroup; }));
         yScale2.domain([0, d3.max(data, function(d) { return Number(d.COVID19Deaths); })]);
@@ -505,7 +509,7 @@ function makeConditions(file, mode, tag, colors) {
             .attr("class", "bar")
             .attr("x", function(d) { return xScale2(d.ConditionGroup); })
             .attr("y", function(d) { return yScale2(Number(d.COVID19Deaths)); })
-            .attr("fill", function(d) { return colors(d.ConditionGroup) })
+            .attr("fill", function(d) { console.log(colors.domain()); return colors(d.ConditionGroup) })
             .attr("width", xScale2.bandwidth())
             .attr("height", function(d) { return height1 - yScale2(Number(d.COVID19Deaths)); });
         
@@ -610,7 +614,7 @@ function bar(state, mode, colors) {
     function legendcond(colors)
     {
         const legend = d3.select("#legendcond")
-        var conds = ["Respiratory diseases","Circulatory diseases","Sepsis","Malignant neoplasms","Diabetes","Obesity","Alzheimer disease","Vascular and unspecified dementia","Renal failure","Adverse Events","All other conditions and causes","COVID-19"]
+        var conds = ["Respiratory diseases","Circulatory diseases","Sepsis","Malignant neoplasms","Diabetes","Obesity","Alzheimer disease","Vascular and unspecified dementia","Renal failure","Adverse Events","All other conditions and causes (residual)","COVID-19"]
         
         conds.forEach(condition => 
         {
