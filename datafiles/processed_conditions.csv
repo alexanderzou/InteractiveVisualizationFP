@@ -130,6 +130,7 @@ Alabama,Circulatory diseases,75-84,3604.0
 Alabama,Circulatory diseases,85+,2872.0
 Alabama,Circulatory diseases,Not stated,0.0
 Alabama,Circulatory diseases,All Ages,13128.0
+Alabama,Sepsis,0-24,0
 Alabama,Sepsis,25-34,35.0
 Alabama,Sepsis,35-44,106.0
 Alabama,Sepsis,45-54,267.0
@@ -139,6 +140,8 @@ Alabama,Sepsis,75-84,624.0
 Alabama,Sepsis,85+,268.0
 Alabama,Sepsis,Not stated,0.0
 Alabama,Sepsis,All Ages,2605.0
+Alabama,Malignant neoplasms,0-24,0
+Alabama,Malignant neoplasms,25-34,0
 Alabama,Malignant neoplasms,35-44,17.0
 Alabama,Malignant neoplasms,45-54,41.0
 Alabama,Malignant neoplasms,55-64,164.0
@@ -147,6 +150,7 @@ Alabama,Malignant neoplasms,75-84,289.0
 Alabama,Malignant neoplasms,85+,157.0
 Alabama,Malignant neoplasms,Not stated,0.0
 Alabama,Malignant neoplasms,All Ages,983.0
+Alabama,Diabetes,0-24,0
 Alabama,Diabetes,25-34,23.0
 Alabama,Diabetes,35-44,80.0
 Alabama,Diabetes,45-54,194.0
@@ -156,6 +160,7 @@ Alabama,Diabetes,75-84,592.0
 Alabama,Diabetes,85+,242.0
 Alabama,Diabetes,Not stated,0.0
 Alabama,Diabetes,All Ages,2198.0
+Alabama,Obesity,0-24,0
 Alabama,Obesity,25-34,31.0
 Alabama,Obesity,35-44,80.0
 Alabama,Obesity,45-54,112.0
@@ -168,6 +173,8 @@ Alabama,Obesity,All Ages,613.0
 Alabama,Alzheimer disease,0-24,0.0
 Alabama,Alzheimer disease,25-34,0.0
 Alabama,Alzheimer disease,35-44,0.0
+Alabama,Alzheimer disease,45-54,0
+Alabama,Alzheimer disease,55-64,0
 Alabama,Alzheimer disease,65-74,48.0
 Alabama,Alzheimer disease,75-84,166.0
 Alabama,Alzheimer disease,85+,252.0
@@ -183,6 +190,7 @@ Alabama,Vascular and unspecified dementia,75-84,375.0
 Alabama,Vascular and unspecified dementia,85+,546.0
 Alabama,Vascular and unspecified dementia,Not stated,0.0
 Alabama,Vascular and unspecified dementia,All Ages,1075.0
+Alabama,Renal failure,0-24,0
 Alabama,Renal failure,25-34,23.0
 Alabama,Renal failure,35-44,87.0
 Alabama,Renal failure,45-54,200.0
@@ -213,6 +221,7 @@ Alabama,COVID-19,75-84,5632.0
 Alabama,COVID-19,85+,4213.0
 Alabama,COVID-19,Not stated,0.0
 Alabama,COVID-19,All Ages,21513.0
+Alaska,Respiratory diseases,0-24,0.0
 Alaska,Respiratory diseases,25-34,34.0
 Alaska,Respiratory diseases,35-44,72.0
 Alaska,Respiratory diseases,45-54,151.0
@@ -222,8 +231,9 @@ Alaska,Respiratory diseases,75-84,400.0
 Alaska,Respiratory diseases,85+,183.0
 Alaska,Respiratory diseases,Not stated,0.0
 Alaska,Respiratory diseases,All Ages,1657.0
-Alaska,Respiratory diseases,0-24,0.0
 Alaska,Circulatory diseases,0-24,0.0
+Alaska,Circulatory diseases,25-34,0.0
+Alaska,Circulatory diseases,35-44,15.0
 Alaska,Circulatory diseases,45-54,42.0
 Alaska,Circulatory diseases,55-64,107.0
 Alaska,Circulatory diseases,65-74,210.0
@@ -231,22 +241,29 @@ Alaska,Circulatory diseases,75-84,234.0
 Alaska,Circulatory diseases,85+,158.0
 Alaska,Circulatory diseases,Not stated,0.0
 Alaska,Circulatory diseases,All Ages,831.0
-Alaska,Circulatory diseases,25-34,0.0
-Alaska,Circulatory diseases,35-44,15.0
+Alaska,Sepsis,0-24,0
 Alaska,Sepsis,25-34,0.0
+Alaska,Sepsis,35-44,0
 Alaska,Sepsis,45-54,14.0
 Alaska,Sepsis,55-64,18.0
 Alaska,Sepsis,65-74,26.0
 Alaska,Sepsis,75-84,21.0
+Alaska,Sepsis,85+,0
 Alaska,Sepsis,Not stated,0.0
 Alaska,Sepsis,All Ages,92.0
 Alaska,Malignant neoplasms,0-24,0.0
+Alaska,Malignant neoplasms,25-34,0
+Alaska,Malignant neoplasms,35-44,0
+Alaska,Malignant neoplasms,45-54,0
 Alaska,Malignant neoplasms,55-64,19.0
 Alaska,Malignant neoplasms,65-74,32.0
 Alaska,Malignant neoplasms,75-84,29.0
 Alaska,Malignant neoplasms,85+,14.0
 Alaska,Malignant neoplasms,Not stated,0.0
 Alaska,Malignant neoplasms,All Ages,101.0
+Alaska,Diabetes,0-24,0
+Alaska,Diabetes,25-34,0
+Alaska,Diabetes,35-44,0
 Alaska,Diabetes,45-54,13.0
 Alaska,Diabetes,55-64,31.0
 Alaska,Diabetes,65-74,31.0
@@ -254,17 +271,22 @@ Alaska,Diabetes,75-84,32.0
 Alaska,Diabetes,85+,14.0
 Alaska,Diabetes,Not stated,0.0
 Alaska,Diabetes,All Ages,126.0
+Alaska,Obesity,0-24,0
 Alaska,Obesity,25-34,11.0
 Alaska,Obesity,35-44,15.0
 Alaska,Obesity,45-54,15.0
 Alaska,Obesity,55-64,21.0
 Alaska,Obesity,65-74,16.0
+Alaska,Obesity,75-84,0
+Alaska,Obesity,85+,0
 Alaska,Obesity,Not stated,0.0
 Alaska,Obesity,All Ages,90.0
 Alaska,Alzheimer disease,0-24,0.0
 Alaska,Alzheimer disease,25-34,0.0
 Alaska,Alzheimer disease,35-44,0.0
 Alaska,Alzheimer disease,45-54,0.0
+Alaska,Alzheimer disease,55-64,0
+Alaska,Alzheimer disease,65-74,0
 Alaska,Alzheimer disease,75-84,14.0
 Alaska,Alzheimer disease,85+,21.0
 Alaska,Alzheimer disease,Not stated,0.0
@@ -274,11 +296,14 @@ Alaska,Vascular and unspecified dementia,25-34,0.0
 Alaska,Vascular and unspecified dementia,35-44,0.0
 Alaska,Vascular and unspecified dementia,45-54,0.0
 Alaska,Vascular and unspecified dementia,55-64,0.0
+Alaska,Vascular and unspecified dementia,65-74,0
 Alaska,Vascular and unspecified dementia,75-84,29.0
 Alaska,Vascular and unspecified dementia,85+,43.0
 Alaska,Vascular and unspecified dementia,Not stated,0.0
 Alaska,Vascular and unspecified dementia,All Ages,80.0
 Alaska,Renal failure,0-24,0.0
+Alaska,Renal failure,25-34,0
+Alaska,Renal failure,35-44,0
 Alaska,Renal failure,45-54,12.0
 Alaska,Renal failure,55-64,19.0
 Alaska,Renal failure,65-74,48.0
@@ -317,6 +342,7 @@ Arizona,Respiratory diseases,75-84,10659.0
 Arizona,Respiratory diseases,85+,6953.0
 Arizona,Respiratory diseases,Not stated,0.0
 Arizona,Respiratory diseases,All Ages,39484.0
+Arizona,Circulatory diseases,0-24,37.0
 Arizona,Circulatory diseases,25-34,162.0
 Arizona,Circulatory diseases,35-44,380.0
 Arizona,Circulatory diseases,45-54,1055.0
@@ -326,7 +352,6 @@ Arizona,Circulatory diseases,75-84,5375.0
 Arizona,Circulatory diseases,85+,4558.0
 Arizona,Circulatory diseases,Not stated,0.0
 Arizona,Circulatory diseases,All Ages,18021.0
-Arizona,Circulatory diseases,0-24,37.0
 Arizona,Sepsis,0-24,18.0
 Arizona,Sepsis,25-34,47.0
 Arizona,Sepsis,35-44,84.0
@@ -337,6 +362,7 @@ Arizona,Sepsis,75-84,439.0
 Arizona,Sepsis,85+,179.0
 Arizona,Sepsis,Not stated,0.0
 Arizona,Sepsis,All Ages,1965.0
+Arizona,Malignant neoplasms,0-24,0
 Arizona,Malignant neoplasms,25-34,11.0
 Arizona,Malignant neoplasms,35-44,20.0
 Arizona,Malignant neoplasms,45-54,53.0
@@ -369,6 +395,8 @@ Arizona,Obesity,All Ages,1727.0
 Arizona,Alzheimer disease,0-24,0.0
 Arizona,Alzheimer disease,25-34,0.0
 Arizona,Alzheimer disease,35-44,0.0
+Arizona,Alzheimer disease,45-54,0
+Arizona,Alzheimer disease,55-64,0
 Arizona,Alzheimer disease,65-74,62.0
 Arizona,Alzheimer disease,75-84,218.0
 Arizona,Alzheimer disease,85+,457.0
@@ -435,6 +463,7 @@ Arkansas,Circulatory diseases,75-84,2611.0
 Arkansas,Circulatory diseases,85+,2371.0
 Arkansas,Circulatory diseases,Not stated,0.0
 Arkansas,Circulatory diseases,All Ages,8764.0
+Arkansas,Sepsis,0-24,0
 Arkansas,Sepsis,25-34,18.0
 Arkansas,Sepsis,35-44,51.0
 Arkansas,Sepsis,45-54,109.0
@@ -444,6 +473,8 @@ Arkansas,Sepsis,75-84,306.0
 Arkansas,Sepsis,85+,172.0
 Arkansas,Sepsis,Not stated,0.0
 Arkansas,Sepsis,All Ages,1262.0
+Arkansas,Malignant neoplasms,0-24,0
+Arkansas,Malignant neoplasms,25-34,0
 Arkansas,Malignant neoplasms,35-44,10.0
 Arkansas,Malignant neoplasms,45-54,25.0
 Arkansas,Malignant neoplasms,55-64,92.0
@@ -452,6 +483,7 @@ Arkansas,Malignant neoplasms,75-84,207.0
 Arkansas,Malignant neoplasms,85+,138.0
 Arkansas,Malignant neoplasms,Not stated,0.0
 Arkansas,Malignant neoplasms,All Ages,687.0
+Arkansas,Diabetes,0-24,0
 Arkansas,Diabetes,25-34,18.0
 Arkansas,Diabetes,35-44,50.0
 Arkansas,Diabetes,45-54,122.0
@@ -461,17 +493,21 @@ Arkansas,Diabetes,75-84,468.0
 Arkansas,Diabetes,85+,259.0
 Arkansas,Diabetes,Not stated,0.0
 Arkansas,Diabetes,All Ages,1655.0
+Arkansas,Obesity,0-24,0
 Arkansas,Obesity,25-34,25.0
 Arkansas,Obesity,35-44,63.0
 Arkansas,Obesity,45-54,87.0
 Arkansas,Obesity,55-64,113.0
 Arkansas,Obesity,65-74,110.0
 Arkansas,Obesity,75-84,62.0
+Arkansas,Obesity,85+,0
 Arkansas,Obesity,Not stated,0.0
 Arkansas,Obesity,All Ages,472.0
 Arkansas,Alzheimer disease,0-24,0.0
 Arkansas,Alzheimer disease,25-34,0.0
 Arkansas,Alzheimer disease,35-44,0.0
+Arkansas,Alzheimer disease,45-54,0
+Arkansas,Alzheimer disease,55-64,0
 Arkansas,Alzheimer disease,65-74,35.0
 Arkansas,Alzheimer disease,75-84,156.0
 Arkansas,Alzheimer disease,85+,266.0
@@ -480,12 +516,14 @@ Arkansas,Alzheimer disease,All Ages,463.0
 Arkansas,Vascular and unspecified dementia,0-24,0.0
 Arkansas,Vascular and unspecified dementia,25-34,0.0
 Arkansas,Vascular and unspecified dementia,35-44,0.0
+Arkansas,Vascular and unspecified dementia,45-54,0
 Arkansas,Vascular and unspecified dementia,55-64,16.0
 Arkansas,Vascular and unspecified dementia,65-74,91.0
 Arkansas,Vascular and unspecified dementia,75-84,322.0
 Arkansas,Vascular and unspecified dementia,85+,523.0
 Arkansas,Vascular and unspecified dementia,Not stated,0.0
 Arkansas,Vascular and unspecified dementia,All Ages,954.0
+Arkansas,Renal failure,0-24,0
 Arkansas,Renal failure,25-34,17.0
 Arkansas,Renal failure,35-44,47.0
 Arkansas,Renal failure,45-54,100.0
@@ -524,8 +562,9 @@ California,Respiratory diseases,55-64,23388.0
 California,Respiratory diseases,65-74,32772.0
 California,Respiratory diseases,75-84,33546.0
 California,Respiratory diseases,85+,31034.0
-California,Respiratory diseases,All Ages,137807.0
 California,Respiratory diseases,Not stated,0.0
+California,Respiratory diseases,All Ages,137807.0
+California,Circulatory diseases,0-24,146.0
 California,Circulatory diseases,25-34,726.0
 California,Circulatory diseases,35-44,2008.0
 California,Circulatory diseases,45-54,5312.0
@@ -535,7 +574,6 @@ California,Circulatory diseases,75-84,25341.0
 California,Circulatory diseases,85+,29403.0
 California,Circulatory diseases,Not stated,0.0
 California,Circulatory diseases,All Ages,96430.0
-California,Circulatory diseases,0-24,146.0
 California,Sepsis,0-24,60.0
 California,Sepsis,25-34,222.0
 California,Sepsis,35-44,576.0
@@ -579,6 +617,7 @@ California,Obesity,All Ages,5871.0
 California,Alzheimer disease,0-24,0.0
 California,Alzheimer disease,25-34,0.0
 California,Alzheimer disease,35-44,0.0
+California,Alzheimer disease,45-54,0
 California,Alzheimer disease,55-64,26.0
 California,Alzheimer disease,65-74,211.0
 California,Alzheimer disease,75-84,1110.0
@@ -614,6 +653,7 @@ California,All other conditions and causes (residual),55-64,6430.0
 California,All other conditions and causes (residual),65-74,9007.0
 California,All other conditions and causes (residual),75-84,9746.0
 California,All other conditions and causes (residual),85+,10060.0
+California,All other conditions and causes (residual),Not stated,0
 California,All other conditions and causes (residual),All Ages,40441.0
 California,COVID-19,0-24,447.0
 California,COVID-19,25-34,1517.0
@@ -623,6 +663,7 @@ California,COVID-19,55-64,17092.0
 California,COVID-19,65-74,23945.0
 California,COVID-19,75-84,26018.0
 California,COVID-19,85+,28463.0
+California,COVID-19,Not stated,0
 California,COVID-19,All Ages,109130.0
 Colorado,Respiratory diseases,0-24,51.0
 Colorado,Respiratory diseases,25-34,176.0
@@ -634,6 +675,7 @@ Colorado,Respiratory diseases,75-84,5148.0
 Colorado,Respiratory diseases,85+,4538.0
 Colorado,Respiratory diseases,Not stated,0.0
 Colorado,Respiratory diseases,All Ages,19065.0
+Colorado,Circulatory diseases,0-24,10.0
 Colorado,Circulatory diseases,25-34,62.0
 Colorado,Circulatory diseases,35-44,173.0
 Colorado,Circulatory diseases,45-54,585.0
@@ -641,9 +683,9 @@ Colorado,Circulatory diseases,55-64,1382.0
 Colorado,Circulatory diseases,65-74,2481.0
 Colorado,Circulatory diseases,75-84,3302.0
 Colorado,Circulatory diseases,85+,4132.0
-Colorado,Circulatory diseases,All Ages,12177.0
-Colorado,Circulatory diseases,0-24,10.0
 Colorado,Circulatory diseases,Not stated,0.0
+Colorado,Circulatory diseases,All Ages,12177.0
+Colorado,Sepsis,0-24,0
 Colorado,Sepsis,25-34,24.0
 Colorado,Sepsis,35-44,52.0
 Colorado,Sepsis,45-54,127.0
@@ -653,6 +695,8 @@ Colorado,Sepsis,75-84,346.0
 Colorado,Sepsis,85+,245.0
 Colorado,Sepsis,Not stated,0.0
 Colorado,Sepsis,All Ages,1469.0
+Colorado,Malignant neoplasms,0-24,0
+Colorado,Malignant neoplasms,25-34,0
 Colorado,Malignant neoplasms,35-44,13.0
 Colorado,Malignant neoplasms,45-54,56.0
 Colorado,Malignant neoplasms,55-64,128.0
@@ -661,6 +705,7 @@ Colorado,Malignant neoplasms,75-84,385.0
 Colorado,Malignant neoplasms,85+,323.0
 Colorado,Malignant neoplasms,Not stated,0.0
 Colorado,Malignant neoplasms,All Ages,1230.0
+Colorado,Diabetes,0-24,0
 Colorado,Diabetes,25-34,13.0
 Colorado,Diabetes,35-44,53.0
 Colorado,Diabetes,45-54,188.0
@@ -668,6 +713,7 @@ Colorado,Diabetes,55-64,378.0
 Colorado,Diabetes,65-74,670.0
 Colorado,Diabetes,75-84,675.0
 Colorado,Diabetes,85+,468.0
+Colorado,Diabetes,Not stated,0
 Colorado,Diabetes,All Ages,2452.0
 Colorado,Obesity,0-24,15.0
 Colorado,Obesity,25-34,43.0
@@ -683,6 +729,7 @@ Colorado,Alzheimer disease,0-24,0.0
 Colorado,Alzheimer disease,25-34,0.0
 Colorado,Alzheimer disease,35-44,0.0
 Colorado,Alzheimer disease,45-54,0.0
+Colorado,Alzheimer disease,55-64,0
 Colorado,Alzheimer disease,65-74,42.0
 Colorado,Alzheimer disease,75-84,189.0
 Colorado,Alzheimer disease,85+,461.0
@@ -698,6 +745,7 @@ Colorado,Vascular and unspecified dementia,75-84,562.0
 Colorado,Vascular and unspecified dementia,85+,1128.0
 Colorado,Vascular and unspecified dementia,Not stated,0.0
 Colorado,Vascular and unspecified dementia,All Ages,1874.0
+Colorado,Renal failure,0-24,0
 Colorado,Renal failure,25-34,23.0
 Colorado,Renal failure,35-44,52.0
 Colorado,Renal failure,45-54,167.0
@@ -716,6 +764,7 @@ Colorado,All other conditions and causes (residual),55-64,1112.0
 Colorado,All other conditions and causes (residual),65-74,1948.0
 Colorado,All other conditions and causes (residual),75-84,2274.0
 Colorado,All other conditions and causes (residual),85+,2347.0
+Colorado,All other conditions and causes (residual),Not stated,0
 Colorado,All other conditions and causes (residual),All Ages,8574.0
 Colorado,COVID-19,0-24,75.0
 Colorado,COVID-19,25-34,167.0
@@ -725,7 +774,9 @@ Colorado,COVID-19,55-64,2034.0
 Colorado,COVID-19,65-74,3363.0
 Colorado,COVID-19,75-84,4006.0
 Colorado,COVID-19,85+,4401.0
+Colorado,COVID-19,Not stated,0
 Colorado,COVID-19,All Ages,15382.0
+Connecticut,Respiratory diseases,0-24,0.0
 Connecticut,Respiratory diseases,25-34,80.0
 Connecticut,Respiratory diseases,35-44,154.0
 Connecticut,Respiratory diseases,45-54,433.0
@@ -735,7 +786,8 @@ Connecticut,Respiratory diseases,75-84,3177.0
 Connecticut,Respiratory diseases,85+,4082.0
 Connecticut,Respiratory diseases,Not stated,0.0
 Connecticut,Respiratory diseases,All Ages,11657.0
-Connecticut,Respiratory diseases,0-24,0.0
+Connecticut,Circulatory diseases,0-24,0.0
+Connecticut,Circulatory diseases,25-34,0
 Connecticut,Circulatory diseases,35-44,60.0
 Connecticut,Circulatory diseases,45-54,201.0
 Connecticut,Circulatory diseases,55-64,691.0
@@ -744,7 +796,8 @@ Connecticut,Circulatory diseases,75-84,2011.0
 Connecticut,Circulatory diseases,85+,3327.0
 Connecticut,Circulatory diseases,Not stated,0.0
 Connecticut,Circulatory diseases,All Ages,7657.0
-Connecticut,Circulatory diseases,0-24,0.0
+Connecticut,Sepsis,0-24,0
+Connecticut,Sepsis,25-34,0
 Connecticut,Sepsis,35-44,14.0
 Connecticut,Sepsis,45-54,70.0
 Connecticut,Sepsis,55-64,183.0
@@ -753,6 +806,9 @@ Connecticut,Sepsis,75-84,283.0
 Connecticut,Sepsis,85+,261.0
 Connecticut,Sepsis,Not stated,0.0
 Connecticut,Sepsis,All Ages,1103.0
+Connecticut,Malignant neoplasms,0-24,0
+Connecticut,Malignant neoplasms,25-34,0
+Connecticut,Malignant neoplasms,35-44,0
 Connecticut,Malignant neoplasms,45-54,30.0
 Connecticut,Malignant neoplasms,55-64,88.0
 Connecticut,Malignant neoplasms,65-74,202.0
@@ -760,6 +816,8 @@ Connecticut,Malignant neoplasms,75-84,255.0
 Connecticut,Malignant neoplasms,85+,217.0
 Connecticut,Malignant neoplasms,Not stated,0.0
 Connecticut,Malignant neoplasms,All Ages,806.0
+Connecticut,Diabetes,0-24,0
+Connecticut,Diabetes,25-34,0
 Connecticut,Diabetes,35-44,31.0
 Connecticut,Diabetes,45-54,64.0
 Connecticut,Diabetes,55-64,152.0
@@ -768,18 +826,21 @@ Connecticut,Diabetes,75-84,343.0
 Connecticut,Diabetes,85+,334.0
 Connecticut,Diabetes,Not stated,0.0
 Connecticut,Diabetes,All Ages,1199.0
+Connecticut,Obesity,0-24,0
 Connecticut,Obesity,25-34,19.0
 Connecticut,Obesity,35-44,39.0
 Connecticut,Obesity,45-54,58.0
 Connecticut,Obesity,55-64,90.0
 Connecticut,Obesity,65-74,68.0
 Connecticut,Obesity,75-84,51.0
+Connecticut,Obesity,85+,0
 Connecticut,Obesity,Not stated,0.0
 Connecticut,Obesity,All Ages,338.0
 Connecticut,Alzheimer disease,0-24,0.0
 Connecticut,Alzheimer disease,25-34,0.0
 Connecticut,Alzheimer disease,35-44,0.0
 Connecticut,Alzheimer disease,45-54,0.0
+Connecticut,Alzheimer disease,55-64,0
 Connecticut,Alzheimer disease,65-74,16.0
 Connecticut,Alzheimer disease,75-84,73.0
 Connecticut,Alzheimer disease,85+,222.0
@@ -788,12 +849,15 @@ Connecticut,Alzheimer disease,All Ages,317.0
 Connecticut,Vascular and unspecified dementia,0-24,0.0
 Connecticut,Vascular and unspecified dementia,25-34,0.0
 Connecticut,Vascular and unspecified dementia,35-44,0.0
+Connecticut,Vascular and unspecified dementia,45-54,0
 Connecticut,Vascular and unspecified dementia,55-64,25.0
 Connecticut,Vascular and unspecified dementia,65-74,104.0
 Connecticut,Vascular and unspecified dementia,75-84,391.0
 Connecticut,Vascular and unspecified dementia,85+,1038.0
 Connecticut,Vascular and unspecified dementia,Not stated,0.0
 Connecticut,Vascular and unspecified dementia,All Ages,1559.0
+Connecticut,Renal failure,0-24,0
+Connecticut,Renal failure,25-34,0
 Connecticut,Renal failure,35-44,16.0
 Connecticut,Renal failure,45-54,63.0
 Connecticut,Renal failure,55-64,162.0
@@ -811,6 +875,7 @@ Connecticut,All other conditions and causes (residual),55-64,576.0
 Connecticut,All other conditions and causes (residual),65-74,955.0
 Connecticut,All other conditions and causes (residual),75-84,1200.0
 Connecticut,All other conditions and causes (residual),85+,1547.0
+Connecticut,All other conditions and causes (residual),Not stated,0
 Connecticut,All other conditions and causes (residual),All Ages,4633.0
 Connecticut,COVID-19,0-24,29.0
 Connecticut,COVID-19,25-34,77.0
@@ -820,7 +885,9 @@ Connecticut,COVID-19,55-64,1303.0
 Connecticut,COVID-19,65-74,2227.0
 Connecticut,COVID-19,75-84,3242.0
 Connecticut,COVID-19,85+,5065.0
+Connecticut,COVID-19,Not stated,0
 Connecticut,COVID-19,All Ages,12573.0
+Delaware,Respiratory diseases,0-24,0
 Delaware,Respiratory diseases,25-34,13.0
 Delaware,Respiratory diseases,35-44,43.0
 Delaware,Respiratory diseases,45-54,184.0
@@ -830,6 +897,9 @@ Delaware,Respiratory diseases,75-84,977.0
 Delaware,Respiratory diseases,85+,677.0
 Delaware,Respiratory diseases,Not stated,0.0
 Delaware,Respiratory diseases,All Ages,3235.0
+Delaware,Circulatory diseases,0-24,0.0
+Delaware,Circulatory diseases,25-34,0.0
+Delaware,Circulatory diseases,35-44,0.0
 Delaware,Circulatory diseases,45-54,48.0
 Delaware,Circulatory diseases,55-64,220.0
 Delaware,Circulatory diseases,65-74,457.0
@@ -837,9 +907,9 @@ Delaware,Circulatory diseases,75-84,826.0
 Delaware,Circulatory diseases,85+,871.0
 Delaware,Circulatory diseases,Not stated,0.0
 Delaware,Circulatory diseases,All Ages,2488.0
-Delaware,Circulatory diseases,0-24,0.0
-Delaware,Circulatory diseases,25-34,0.0
-Delaware,Circulatory diseases,35-44,0.0
+Delaware,Sepsis,0-24,0
+Delaware,Sepsis,25-34,0
+Delaware,Sepsis,35-44,0
 Delaware,Sepsis,45-54,21.0
 Delaware,Sepsis,55-64,73.0
 Delaware,Sepsis,65-74,93.0
@@ -847,6 +917,9 @@ Delaware,Sepsis,75-84,101.0
 Delaware,Sepsis,85+,48.0
 Delaware,Sepsis,Not stated,0.0
 Delaware,Sepsis,All Ages,346.0
+Delaware,Malignant neoplasms,0-24,0
+Delaware,Malignant neoplasms,25-34,0
+Delaware,Malignant neoplasms,35-44,0
 Delaware,Malignant neoplasms,45-54,14.0
 Delaware,Malignant neoplasms,55-64,45.0
 Delaware,Malignant neoplasms,65-74,67.0
@@ -854,7 +927,9 @@ Delaware,Malignant neoplasms,75-84,80.0
 Delaware,Malignant neoplasms,85+,59.0
 Delaware,Malignant neoplasms,Not stated,0.0
 Delaware,Malignant neoplasms,All Ages,268.0
+Delaware,Diabetes,0-24,0
 Delaware,Diabetes,25-34,0.0
+Delaware,Diabetes,35-44,0
 Delaware,Diabetes,45-54,21.0
 Delaware,Diabetes,55-64,60.0
 Delaware,Diabetes,65-74,131.0
@@ -862,6 +937,8 @@ Delaware,Diabetes,75-84,161.0
 Delaware,Diabetes,85+,98.0
 Delaware,Diabetes,Not stated,0.0
 Delaware,Diabetes,All Ages,482.0
+Delaware,Obesity,0-24,0
+Delaware,Obesity,25-34,0
 Delaware,Obesity,35-44,13.0
 Delaware,Obesity,45-54,29.0
 Delaware,Obesity,55-64,47.0
@@ -873,6 +950,8 @@ Delaware,Obesity,All Ages,227.0
 Delaware,Alzheimer disease,0-24,0.0
 Delaware,Alzheimer disease,25-34,0.0
 Delaware,Alzheimer disease,35-44,0.0
+Delaware,Alzheimer disease,45-54,0
+Delaware,Alzheimer disease,55-64,0
 Delaware,Alzheimer disease,65-74,12.0
 Delaware,Alzheimer disease,75-84,54.0
 Delaware,Alzheimer disease,85+,124.0
@@ -882,12 +961,14 @@ Delaware,Vascular and unspecified dementia,0-24,0.0
 Delaware,Vascular and unspecified dementia,25-34,0.0
 Delaware,Vascular and unspecified dementia,35-44,0.0
 Delaware,Vascular and unspecified dementia,45-54,0.0
+Delaware,Vascular and unspecified dementia,55-64,0
 Delaware,Vascular and unspecified dementia,65-74,36.0
 Delaware,Vascular and unspecified dementia,75-84,162.0
 Delaware,Vascular and unspecified dementia,85+,279.0
 Delaware,Vascular and unspecified dementia,Not stated,0.0
 Delaware,Vascular and unspecified dementia,All Ages,484.0
 Delaware,Renal failure,0-24,0.0
+Delaware,Renal failure,25-34,0
 Delaware,Renal failure,35-44,11.0
 Delaware,Renal failure,45-54,31.0
 Delaware,Renal failure,55-64,69.0
@@ -917,6 +998,7 @@ Delaware,COVID-19,75-84,1010.0
 Delaware,COVID-19,85+,1007.0
 Delaware,COVID-19,Not stated,0.0
 Delaware,COVID-19,All Ages,3447.0
+District of Columbia,Respiratory diseases,0-24,0.0
 District of Columbia,Respiratory diseases,25-34,37.0
 District of Columbia,Respiratory diseases,35-44,90.0
 District of Columbia,Respiratory diseases,45-54,287.0
@@ -926,8 +1008,8 @@ District of Columbia,Respiratory diseases,75-84,677.0
 District of Columbia,Respiratory diseases,85+,589.0
 District of Columbia,Respiratory diseases,Not stated,0.0
 District of Columbia,Respiratory diseases,All Ages,3232.0
-District of Columbia,Respiratory diseases,0-24,0.0
 District of Columbia,Circulatory diseases,0-24,0.0
+District of Columbia,Circulatory diseases,25-34,0.0
 District of Columbia,Circulatory diseases,35-44,22.0
 District of Columbia,Circulatory diseases,45-54,107.0
 District of Columbia,Circulatory diseases,55-64,369.0
@@ -936,8 +1018,9 @@ District of Columbia,Circulatory diseases,75-84,466.0
 District of Columbia,Circulatory diseases,85+,407.0
 District of Columbia,Circulatory diseases,Not stated,0.0
 District of Columbia,Circulatory diseases,All Ages,1996.0
-District of Columbia,Circulatory diseases,25-34,0.0
 District of Columbia,Sepsis,0-24,0.0
+District of Columbia,Sepsis,25-34,0
+District of Columbia,Sepsis,35-44,0
 District of Columbia,Sepsis,45-54,11.0
 District of Columbia,Sepsis,55-64,19.0
 District of Columbia,Sepsis,65-74,33.0
@@ -945,6 +1028,9 @@ District of Columbia,Sepsis,75-84,27.0
 District of Columbia,Sepsis,85+,16.0
 District of Columbia,Sepsis,Not stated,0.0
 District of Columbia,Sepsis,All Ages,113.0
+District of Columbia,Malignant neoplasms,0-24,0
+District of Columbia,Malignant neoplasms,25-34,0
+District of Columbia,Malignant neoplasms,35-44,0
 District of Columbia,Malignant neoplasms,45-54,13.0
 District of Columbia,Malignant neoplasms,55-64,43.0
 District of Columbia,Malignant neoplasms,65-74,68.0
@@ -952,6 +1038,8 @@ District of Columbia,Malignant neoplasms,75-84,69.0
 District of Columbia,Malignant neoplasms,85+,42.0
 District of Columbia,Malignant neoplasms,Not stated,0.0
 District of Columbia,Malignant neoplasms,All Ages,241.0
+District of Columbia,Diabetes,0-24,0
+District of Columbia,Diabetes,25-34,0
 District of Columbia,Diabetes,35-44,20.0
 District of Columbia,Diabetes,45-54,66.0
 District of Columbia,Diabetes,55-64,182.0
@@ -960,11 +1048,14 @@ District of Columbia,Diabetes,75-84,144.0
 District of Columbia,Diabetes,85+,111.0
 District of Columbia,Diabetes,Not stated,0.0
 District of Columbia,Diabetes,All Ages,775.0
+District of Columbia,Obesity,0-24,0
+District of Columbia,Obesity,25-34,0
 District of Columbia,Obesity,35-44,23.0
 District of Columbia,Obesity,45-54,36.0
 District of Columbia,Obesity,55-64,63.0
 District of Columbia,Obesity,65-74,40.0
 District of Columbia,Obesity,75-84,13.0
+District of Columbia,Obesity,85+,0
 District of Columbia,Obesity,Not stated,0.0
 District of Columbia,Obesity,All Ages,188.0
 District of Columbia,Alzheimer disease,0-24,0.0
@@ -972,6 +1063,8 @@ District of Columbia,Alzheimer disease,25-34,0.0
 District of Columbia,Alzheimer disease,35-44,0.0
 District of Columbia,Alzheimer disease,45-54,0.0
 District of Columbia,Alzheimer disease,55-64,0.0
+District of Columbia,Alzheimer disease,65-74,0
+District of Columbia,Alzheimer disease,75-84,0
 District of Columbia,Alzheimer disease,85+,18.0
 District of Columbia,Alzheimer disease,Not stated,0.0
 District of Columbia,Alzheimer disease,All Ages,27.0
@@ -979,12 +1072,15 @@ District of Columbia,Vascular and unspecified dementia,0-24,0.0
 District of Columbia,Vascular and unspecified dementia,25-34,0.0
 District of Columbia,Vascular and unspecified dementia,35-44,0.0
 District of Columbia,Vascular and unspecified dementia,45-54,0.0
+District of Columbia,Vascular and unspecified dementia,55-64,0
 District of Columbia,Vascular and unspecified dementia,65-74,22.0
 District of Columbia,Vascular and unspecified dementia,75-84,59.0
 District of Columbia,Vascular and unspecified dementia,85+,87.0
 District of Columbia,Vascular and unspecified dementia,Not stated,0.0
 District of Columbia,Vascular and unspecified dementia,All Ages,174.0
 District of Columbia,Renal failure,0-24,0.0
+District of Columbia,Renal failure,25-34,0
+District of Columbia,Renal failure,35-44,0
 District of Columbia,Renal failure,45-54,18.0
 District of Columbia,Renal failure,55-64,40.0
 District of Columbia,Renal failure,65-74,59.0
@@ -1021,8 +1117,8 @@ Florida,Respiratory diseases,55-64,14608.0
 Florida,Respiratory diseases,65-74,22784.0
 Florida,Respiratory diseases,75-84,26592.0
 Florida,Respiratory diseases,85+,21974.0
-Florida,Respiratory diseases,All Ages,97053.0
 Florida,Respiratory diseases,Not stated,0.0
+Florida,Respiratory diseases,All Ages,97053.0
 Florida,Circulatory diseases,0-24,102.0
 Florida,Circulatory diseases,25-34,344.0
 Florida,Circulatory diseases,35-44,911.0
@@ -1043,6 +1139,7 @@ Florida,Sepsis,75-84,2358.0
 Florida,Sepsis,85+,1687.0
 Florida,Sepsis,Not stated,0.0
 Florida,Sepsis,All Ages,9137.0
+Florida,Malignant neoplasms,0-24,0
 Florida,Malignant neoplasms,25-34,17.0
 Florida,Malignant neoplasms,35-44,55.0
 Florida,Malignant neoplasms,45-54,185.0
@@ -1070,10 +1167,12 @@ Florida,Obesity,55-64,956.0
 Florida,Obesity,65-74,919.0
 Florida,Obesity,75-84,543.0
 Florida,Obesity,85+,130.0
+Florida,Obesity,Not stated,0
 Florida,Obesity,All Ages,3877.0
 Florida,Alzheimer disease,0-24,0.0
 Florida,Alzheimer disease,25-34,0.0
 Florida,Alzheimer disease,35-44,0.0
+Florida,Alzheimer disease,45-54,0
 Florida,Alzheimer disease,55-64,18.0
 Florida,Alzheimer disease,65-74,134.0
 Florida,Alzheimer disease,75-84,538.0
@@ -1082,10 +1181,13 @@ Florida,Alzheimer disease,Not stated,0.0
 Florida,Alzheimer disease,All Ages,1677.0
 Florida,Vascular and unspecified dementia,0-24,0.0
 Florida,Vascular and unspecified dementia,25-34,0.0
+Florida,Vascular and unspecified dementia,35-44,0
+Florida,Vascular and unspecified dementia,45-54,0
 Florida,Vascular and unspecified dementia,55-64,78.0
 Florida,Vascular and unspecified dementia,65-74,595.0
 Florida,Vascular and unspecified dementia,75-84,2151.0
 Florida,Vascular and unspecified dementia,85+,4307.0
+Florida,Vascular and unspecified dementia,Not stated,0
 Florida,Vascular and unspecified dementia,All Ages,7137.0
 Florida,Renal failure,0-24,22.0
 Florida,Renal failure,25-34,86.0
@@ -1106,6 +1208,7 @@ Florida,All other conditions and causes (residual),55-64,4344.0
 Florida,All other conditions and causes (residual),65-74,6965.0
 Florida,All other conditions and causes (residual),75-84,8584.0
 Florida,All other conditions and causes (residual),85+,8373.0
+Florida,All other conditions and causes (residual),Not stated,0
 Florida,All other conditions and causes (residual),All Ages,31561.0
 Florida,COVID-19,0-24,304.0
 Florida,COVID-19,25-34,913.0
@@ -1115,6 +1218,7 @@ Florida,COVID-19,55-64,11134.0
 Florida,COVID-19,65-74,17829.0
 Florida,COVID-19,75-84,22313.0
 Florida,COVID-19,85+,22021.0
+Florida,COVID-19,Not stated,0
 Florida,COVID-19,All Ages,81867.0
 Georgia,Respiratory diseases,0-24,157.0
 Georgia,Respiratory diseases,25-34,519.0
@@ -1126,6 +1230,7 @@ Georgia,Respiratory diseases,75-84,11076.0
 Georgia,Respiratory diseases,85+,6990.0
 Georgia,Respiratory diseases,Not stated,0.0
 Georgia,Respiratory diseases,All Ages,42054.0
+Georgia,Circulatory diseases,0-24,37.0
 Georgia,Circulatory diseases,25-34,216.0
 Georgia,Circulatory diseases,35-44,577.0
 Georgia,Circulatory diseases,45-54,1470.0
@@ -1135,7 +1240,6 @@ Georgia,Circulatory diseases,75-84,6030.0
 Georgia,Circulatory diseases,85+,4913.0
 Georgia,Circulatory diseases,Not stated,0.0
 Georgia,Circulatory diseases,All Ages,22025.0
-Georgia,Circulatory diseases,0-24,37.0
 Georgia,Sepsis,0-24,23.0
 Georgia,Sepsis,25-34,74.0
 Georgia,Sepsis,35-44,173.0
@@ -1146,6 +1250,7 @@ Georgia,Sepsis,75-84,1216.0
 Georgia,Sepsis,85+,539.0
 Georgia,Sepsis,Not stated,0.0
 Georgia,Sepsis,All Ages,5015.0
+Georgia,Malignant neoplasms,0-24,0
 Georgia,Malignant neoplasms,25-34,11.0
 Georgia,Malignant neoplasms,35-44,30.0
 Georgia,Malignant neoplasms,45-54,91.0
@@ -1155,6 +1260,7 @@ Georgia,Malignant neoplasms,75-84,522.0
 Georgia,Malignant neoplasms,85+,274.0
 Georgia,Malignant neoplasms,Not stated,0.0
 Georgia,Malignant neoplasms,All Ages,1761.0
+Georgia,Diabetes,0-24,0
 Georgia,Diabetes,25-34,43.0
 Georgia,Diabetes,35-44,149.0
 Georgia,Diabetes,45-54,329.0
@@ -1175,7 +1281,9 @@ Georgia,Obesity,85+,45.0
 Georgia,Obesity,Not stated,0.0
 Georgia,Obesity,All Ages,1590.0
 Georgia,Alzheimer disease,0-24,0.0
+Georgia,Alzheimer disease,25-34,0
 Georgia,Alzheimer disease,35-44,0.0
+Georgia,Alzheimer disease,45-54,0
 Georgia,Alzheimer disease,55-64,11.0
 Georgia,Alzheimer disease,65-74,86.0
 Georgia,Alzheimer disease,75-84,382.0
@@ -1185,6 +1293,7 @@ Georgia,Alzheimer disease,All Ages,1006.0
 Georgia,Vascular and unspecified dementia,0-24,0.0
 Georgia,Vascular and unspecified dementia,25-34,0.0
 Georgia,Vascular and unspecified dementia,35-44,0.0
+Georgia,Vascular and unspecified dementia,45-54,0
 Georgia,Vascular and unspecified dementia,55-64,40.0
 Georgia,Vascular and unspecified dementia,65-74,214.0
 Georgia,Vascular and unspecified dementia,75-84,715.0
@@ -1222,6 +1331,7 @@ Georgia,COVID-19,75-84,9568.0
 Georgia,COVID-19,85+,7079.0
 Georgia,COVID-19,Not stated,0.0
 Georgia,COVID-19,All Ages,36482.0
+Hawaii,Respiratory diseases,0-24,0.0
 Hawaii,Respiratory diseases,25-34,23.0
 Hawaii,Respiratory diseases,35-44,82.0
 Hawaii,Respiratory diseases,45-54,155.0
@@ -1231,8 +1341,8 @@ Hawaii,Respiratory diseases,75-84,434.0
 Hawaii,Respiratory diseases,85+,478.0
 Hawaii,Respiratory diseases,Not stated,0.0
 Hawaii,Respiratory diseases,All Ages,2059.0
-Hawaii,Respiratory diseases,0-24,0.0
 Hawaii,Circulatory diseases,0-24,0.0
+Hawaii,Circulatory diseases,25-34,0.0
 Hawaii,Circulatory diseases,35-44,12.0
 Hawaii,Circulatory diseases,45-54,61.0
 Hawaii,Circulatory diseases,55-64,215.0
@@ -1241,7 +1351,9 @@ Hawaii,Circulatory diseases,75-84,245.0
 Hawaii,Circulatory diseases,85+,399.0
 Hawaii,Circulatory diseases,Not stated,0.0
 Hawaii,Circulatory diseases,All Ages,1319.0
-Hawaii,Circulatory diseases,25-34,0.0
+Hawaii,Sepsis,0-24,0
+Hawaii,Sepsis,25-34,0
+Hawaii,Sepsis,35-44,0
 Hawaii,Sepsis,45-54,17.0
 Hawaii,Sepsis,55-64,40.0
 Hawaii,Sepsis,65-74,49.0
@@ -1249,6 +1361,10 @@ Hawaii,Sepsis,75-84,38.0
 Hawaii,Sepsis,85+,28.0
 Hawaii,Sepsis,Not stated,0.0
 Hawaii,Sepsis,All Ages,190.0
+Hawaii,Malignant neoplasms,0-24,0
+Hawaii,Malignant neoplasms,25-34,0
+Hawaii,Malignant neoplasms,35-44,0
+Hawaii,Malignant neoplasms,45-54,0
 Hawaii,Malignant neoplasms,55-64,13.0
 Hawaii,Malignant neoplasms,65-74,45.0
 Hawaii,Malignant neoplasms,75-84,32.0
@@ -1256,6 +1372,7 @@ Hawaii,Malignant neoplasms,85+,26.0
 Hawaii,Malignant neoplasms,Not stated,0.0
 Hawaii,Malignant neoplasms,All Ages,126.0
 Hawaii,Diabetes,0-24,0.0
+Hawaii,Diabetes,25-34,0
 Hawaii,Diabetes,35-44,14.0
 Hawaii,Diabetes,45-54,26.0
 Hawaii,Diabetes,55-64,61.0
@@ -1264,10 +1381,13 @@ Hawaii,Diabetes,75-84,47.0
 Hawaii,Diabetes,85+,47.0
 Hawaii,Diabetes,Not stated,0.0
 Hawaii,Diabetes,All Ages,277.0
+Hawaii,Obesity,0-24,0
+Hawaii,Obesity,25-34,0
 Hawaii,Obesity,35-44,18.0
 Hawaii,Obesity,45-54,13.0
 Hawaii,Obesity,55-64,23.0
 Hawaii,Obesity,65-74,18.0
+Hawaii,Obesity,75-84,0
 Hawaii,Obesity,85+,0.0
 Hawaii,Obesity,Not stated,0.0
 Hawaii,Obesity,All Ages,84.0
@@ -1276,17 +1396,24 @@ Hawaii,Alzheimer disease,25-34,0.0
 Hawaii,Alzheimer disease,35-44,0.0
 Hawaii,Alzheimer disease,45-54,0.0
 Hawaii,Alzheimer disease,55-64,0.0
+Hawaii,Alzheimer disease,65-74,0
+Hawaii,Alzheimer disease,75-84,0
 Hawaii,Alzheimer disease,85+,32.0
 Hawaii,Alzheimer disease,Not stated,0.0
 Hawaii,Alzheimer disease,All Ages,39.0
 Hawaii,Vascular and unspecified dementia,0-24,0.0
 Hawaii,Vascular and unspecified dementia,25-34,0.0
 Hawaii,Vascular and unspecified dementia,35-44,0.0
+Hawaii,Vascular and unspecified dementia,45-54,0
 Hawaii,Vascular and unspecified dementia,55-64,0.0
+Hawaii,Vascular and unspecified dementia,65-74,0
 Hawaii,Vascular and unspecified dementia,75-84,30.0
 Hawaii,Vascular and unspecified dementia,85+,108.0
 Hawaii,Vascular and unspecified dementia,Not stated,0.0
 Hawaii,Vascular and unspecified dementia,All Ages,148.0
+Hawaii,Renal failure,0-24,0
+Hawaii,Renal failure,25-34,0
+Hawaii,Renal failure,35-44,0
 Hawaii,Renal failure,45-54,19.0
 Hawaii,Renal failure,55-64,55.0
 Hawaii,Renal failure,65-74,67.0
@@ -1315,6 +1442,7 @@ Hawaii,COVID-19,75-84,384.0
 Hawaii,COVID-19,85+,557.0
 Hawaii,COVID-19,Not stated,0.0
 Hawaii,COVID-19,All Ages,1943.0
+Idaho,Respiratory diseases,0-24,0.0
 Idaho,Respiratory diseases,25-34,14.0
 Idaho,Respiratory diseases,35-44,131.0
 Idaho,Respiratory diseases,45-54,438.0
@@ -1324,8 +1452,8 @@ Idaho,Respiratory diseases,75-84,2114.0
 Idaho,Respiratory diseases,85+,1598.0
 Idaho,Respiratory diseases,Not stated,0.0
 Idaho,Respiratory diseases,All Ages,7140.0
-Idaho,Respiratory diseases,0-24,0.0
 Idaho,Circulatory diseases,0-24,0.0
+Idaho,Circulatory diseases,25-34,0.0
 Idaho,Circulatory diseases,35-44,27.0
 Idaho,Circulatory diseases,45-54,159.0
 Idaho,Circulatory diseases,55-64,367.0
@@ -1334,8 +1462,8 @@ Idaho,Circulatory diseases,75-84,1192.0
 Idaho,Circulatory diseases,85+,1269.0
 Idaho,Circulatory diseases,Not stated,0.0
 Idaho,Circulatory diseases,All Ages,3925.0
-Idaho,Circulatory diseases,25-34,0.0
 Idaho,Sepsis,0-24,0.0
+Idaho,Sepsis,25-34,0
 Idaho,Sepsis,35-44,18.0
 Idaho,Sepsis,45-54,40.0
 Idaho,Sepsis,55-64,71.0
@@ -1344,6 +1472,9 @@ Idaho,Sepsis,75-84,84.0
 Idaho,Sepsis,85+,60.0
 Idaho,Sepsis,Not stated,0.0
 Idaho,Sepsis,All Ages,392.0
+Idaho,Malignant neoplasms,0-24,0
+Idaho,Malignant neoplasms,25-34,0
+Idaho,Malignant neoplasms,35-44,0
 Idaho,Malignant neoplasms,45-54,11.0
 Idaho,Malignant neoplasms,55-64,41.0
 Idaho,Malignant neoplasms,65-74,93.0
@@ -1351,6 +1482,8 @@ Idaho,Malignant neoplasms,75-84,144.0
 Idaho,Malignant neoplasms,85+,87.0
 Idaho,Malignant neoplasms,Not stated,0.0
 Idaho,Malignant neoplasms,All Ages,382.0
+Idaho,Diabetes,0-24,0
+Idaho,Diabetes,25-34,0
 Idaho,Diabetes,35-44,22.0
 Idaho,Diabetes,45-54,48.0
 Idaho,Diabetes,55-64,113.0
@@ -1372,6 +1505,7 @@ Idaho,Obesity,All Ages,363.0
 Idaho,Alzheimer disease,0-24,0.0
 Idaho,Alzheimer disease,25-34,0.0
 Idaho,Alzheimer disease,35-44,0.0
+Idaho,Alzheimer disease,45-54,0
 Idaho,Alzheimer disease,55-64,0.0
 Idaho,Alzheimer disease,65-74,22.0
 Idaho,Alzheimer disease,75-84,72.0
@@ -1381,12 +1515,15 @@ Idaho,Alzheimer disease,All Ages,220.0
 Idaho,Vascular and unspecified dementia,0-24,0.0
 Idaho,Vascular and unspecified dementia,25-34,0.0
 Idaho,Vascular and unspecified dementia,35-44,0.0
+Idaho,Vascular and unspecified dementia,45-54,0
+Idaho,Vascular and unspecified dementia,55-64,0
 Idaho,Vascular and unspecified dementia,65-74,32.0
 Idaho,Vascular and unspecified dementia,75-84,148.0
 Idaho,Vascular and unspecified dementia,85+,280.0
 Idaho,Vascular and unspecified dementia,Not stated,0.0
 Idaho,Vascular and unspecified dementia,All Ages,465.0
 Idaho,Renal failure,0-24,0.0
+Idaho,Renal failure,25-34,0
 Idaho,Renal failure,35-44,12.0
 Idaho,Renal failure,45-54,47.0
 Idaho,Renal failure,55-64,88.0
@@ -1396,6 +1533,7 @@ Idaho,Renal failure,85+,111.0
 Idaho,Renal failure,Not stated,0.0
 Idaho,Renal failure,All Ages,540.0
 Idaho,"Intentional and unintentional injury, and other adverse events",348.0
+Idaho,All other conditions and causes (residual),0-24,0
 Idaho,All other conditions and causes (residual),25-34,11.0
 Idaho,All other conditions and causes (residual),35-44,67.0
 Idaho,All other conditions and causes (residual),45-54,141.0
@@ -1423,8 +1561,9 @@ Illinois,Respiratory diseases,55-64,5348.0
 Illinois,Respiratory diseases,65-74,9234.0
 Illinois,Respiratory diseases,75-84,10430.0
 Illinois,Respiratory diseases,85+,9738.0
-Illinois,Respiratory diseases,All Ages,38155.0
 Illinois,Respiratory diseases,Not stated,0.0
+Illinois,Respiratory diseases,All Ages,38155.0
+Illinois,Circulatory diseases,0-24,12.0
 Illinois,Circulatory diseases,25-34,108.0
 Illinois,Circulatory diseases,35-44,409.0
 Illinois,Circulatory diseases,45-54,1155.0
@@ -1432,9 +1571,9 @@ Illinois,Circulatory diseases,55-64,3435.0
 Illinois,Circulatory diseases,65-74,6603.0
 Illinois,Circulatory diseases,75-84,8706.0
 Illinois,Circulatory diseases,85+,10773.0
-Illinois,Circulatory diseases,All Ages,31247.0
-Illinois,Circulatory diseases,0-24,12.0
 Illinois,Circulatory diseases,Not stated,0.0
+Illinois,Circulatory diseases,All Ages,31247.0
+Illinois,Sepsis,0-24,0
 Illinois,Sepsis,25-34,25.0
 Illinois,Sepsis,35-44,68.0
 Illinois,Sepsis,45-54,144.0
@@ -1444,6 +1583,7 @@ Illinois,Sepsis,75-84,675.0
 Illinois,Sepsis,85+,551.0
 Illinois,Sepsis,Not stated,0.0
 Illinois,Sepsis,All Ages,2476.0
+Illinois,Malignant neoplasms,0-24,0
 Illinois,Malignant neoplasms,25-34,16.0
 Illinois,Malignant neoplasms,35-44,42.0
 Illinois,Malignant neoplasms,45-54,88.0
@@ -1453,6 +1593,7 @@ Illinois,Malignant neoplasms,75-84,850.0
 Illinois,Malignant neoplasms,85+,555.0
 Illinois,Malignant neoplasms,Not stated,0.0
 Illinois,Malignant neoplasms,All Ages,2679.0
+Illinois,Diabetes,0-24,0
 Illinois,Diabetes,25-34,58.0
 Illinois,Diabetes,35-44,185.0
 Illinois,Diabetes,45-54,528.0
@@ -1474,6 +1615,9 @@ Illinois,Obesity,Not stated,0.0
 Illinois,Obesity,All Ages,2234.0
 Illinois,Alzheimer disease,0-24,0.0
 Illinois,Alzheimer disease,25-34,0.0
+Illinois,Alzheimer disease,35-44,0
+Illinois,Alzheimer disease,45-54,0
+Illinois,Alzheimer disease,55-64,0
 Illinois,Alzheimer disease,65-74,68.0
 Illinois,Alzheimer disease,75-84,287.0
 Illinois,Alzheimer disease,85+,688.0
@@ -1482,12 +1626,14 @@ Illinois,Alzheimer disease,All Ages,1054.0
 Illinois,Vascular and unspecified dementia,0-24,0.0
 Illinois,Vascular and unspecified dementia,25-34,0.0
 Illinois,Vascular and unspecified dementia,35-44,0.0
+Illinois,Vascular and unspecified dementia,45-54,0
 Illinois,Vascular and unspecified dementia,55-64,54.0
 Illinois,Vascular and unspecified dementia,65-74,271.0
 Illinois,Vascular and unspecified dementia,75-84,932.0
 Illinois,Vascular and unspecified dementia,85+,1990.0
 Illinois,Vascular and unspecified dementia,Not stated,0.0
 Illinois,Vascular and unspecified dementia,All Ages,3249.0
+Illinois,Renal failure,0-24,0
 Illinois,Renal failure,25-34,19.0
 Illinois,Renal failure,35-44,52.0
 Illinois,Renal failure,45-54,124.0
@@ -1516,6 +1662,7 @@ Illinois,COVID-19,55-64,4905.0
 Illinois,COVID-19,65-74,8324.0
 Illinois,COVID-19,75-84,10039.0
 Illinois,COVID-19,85+,12014.0
+Illinois,COVID-19,Not stated,0
 Illinois,COVID-19,All Ages,38721.0
 Indiana,Respiratory diseases,0-24,83.0
 Indiana,Respiratory diseases,25-34,211.0
@@ -1525,8 +1672,9 @@ Indiana,Respiratory diseases,55-64,4721.0
 Indiana,Respiratory diseases,65-74,7959.0
 Indiana,Respiratory diseases,75-84,8872.0
 Indiana,Respiratory diseases,85+,6964.0
-Indiana,Respiratory diseases,All Ages,31277.0
 Indiana,Respiratory diseases,Not stated,0.0
+Indiana,Respiratory diseases,All Ages,31277.0
+Indiana,Circulatory diseases,0-24,30.0
 Indiana,Circulatory diseases,25-34,52.0
 Indiana,Circulatory diseases,35-44,230.0
 Indiana,Circulatory diseases,45-54,699.0
@@ -1536,7 +1684,7 @@ Indiana,Circulatory diseases,75-84,5380.0
 Indiana,Circulatory diseases,85+,6084.0
 Indiana,Circulatory diseases,Not stated,0.0
 Indiana,Circulatory diseases,All Ages,18471.0
-Indiana,Circulatory diseases,0-24,30.0
+Indiana,Sepsis,0-24,0
 Indiana,Sepsis,25-34,20.0
 Indiana,Sepsis,35-44,64.0
 Indiana,Sepsis,45-54,182.0
@@ -1544,7 +1692,10 @@ Indiana,Sepsis,55-64,467.0
 Indiana,Sepsis,65-74,722.0
 Indiana,Sepsis,75-84,697.0
 Indiana,Sepsis,85+,372.0
+Indiana,Sepsis,Not stated,0
 Indiana,Sepsis,All Ages,2532.0
+Indiana,Malignant neoplasms,0-24,0
+Indiana,Malignant neoplasms,25-34,0
 Indiana,Malignant neoplasms,35-44,16.0
 Indiana,Malignant neoplasms,45-54,86.0
 Indiana,Malignant neoplasms,55-64,279.0
@@ -1553,6 +1704,7 @@ Indiana,Malignant neoplasms,75-84,483.0
 Indiana,Malignant neoplasms,85+,347.0
 Indiana,Malignant neoplasms,Not stated,0.0
 Indiana,Malignant neoplasms,All Ages,1743.0
+Indiana,Diabetes,0-24,0
 Indiana,Diabetes,25-34,18.0
 Indiana,Diabetes,35-44,69.0
 Indiana,Diabetes,45-54,226.0
@@ -1574,6 +1726,9 @@ Indiana,Obesity,Not stated,0.0
 Indiana,Obesity,All Ages,1125.0
 Indiana,Alzheimer disease,0-24,0.0
 Indiana,Alzheimer disease,25-34,0.0
+Indiana,Alzheimer disease,35-44,0
+Indiana,Alzheimer disease,45-54,0
+Indiana,Alzheimer disease,55-64,0
 Indiana,Alzheimer disease,65-74,65.0
 Indiana,Alzheimer disease,75-84,302.0
 Indiana,Alzheimer disease,85+,619.0
@@ -1582,11 +1737,14 @@ Indiana,Alzheimer disease,All Ages,997.0
 Indiana,Vascular and unspecified dementia,0-24,0.0
 Indiana,Vascular and unspecified dementia,25-34,0.0
 Indiana,Vascular and unspecified dementia,35-44,0.0
+Indiana,Vascular and unspecified dementia,45-54,0
 Indiana,Vascular and unspecified dementia,55-64,41.0
 Indiana,Vascular and unspecified dementia,65-74,259.0
 Indiana,Vascular and unspecified dementia,75-84,870.0
 Indiana,Vascular and unspecified dementia,85+,1637.0
+Indiana,Vascular and unspecified dementia,Not stated,0
 Indiana,Vascular and unspecified dementia,All Ages,2811.0
+Indiana,Renal failure,0-24,0
 Indiana,Renal failure,25-34,23.0
 Indiana,Renal failure,35-44,60.0
 Indiana,Renal failure,45-54,193.0
@@ -1594,6 +1752,7 @@ Indiana,Renal failure,55-64,500.0
 Indiana,Renal failure,65-74,875.0
 Indiana,Renal failure,75-84,990.0
 Indiana,Renal failure,85+,835.0
+Indiana,Renal failure,Not stated,0
 Indiana,Renal failure,All Ages,3480.0
 Indiana,"Intentional and unintentional injury, and other adverse events",1671.0
 Indiana,All other conditions and causes (residual),0-24,56.0
@@ -1604,6 +1763,7 @@ Indiana,All other conditions and causes (residual),55-64,1794.0
 Indiana,All other conditions and causes (residual),65-74,3095.0
 Indiana,All other conditions and causes (residual),75-84,3647.0
 Indiana,All other conditions and causes (residual),85+,3505.0
+Indiana,All other conditions and causes (residual),Not stated,0
 Indiana,All other conditions and causes (residual),All Ages,13092.0
 Indiana,COVID-19,0-24,108.0
 Indiana,COVID-19,25-34,206.0
@@ -1613,7 +1773,9 @@ Indiana,COVID-19,55-64,3506.0
 Indiana,COVID-19,65-74,6035.0
 Indiana,COVID-19,75-84,7355.0
 Indiana,COVID-19,85+,7790.0
+Indiana,COVID-19,Not stated,0
 Indiana,COVID-19,All Ages,26896.0
+Iowa,Respiratory diseases,0-24,0.0
 Iowa,Respiratory diseases,25-34,55.0
 Iowa,Respiratory diseases,35-44,184.0
 Iowa,Respiratory diseases,45-54,542.0
@@ -1623,8 +1785,8 @@ Iowa,Respiratory diseases,75-84,2958.0
 Iowa,Respiratory diseases,85+,3164.0
 Iowa,Respiratory diseases,Not stated,0.0
 Iowa,Respiratory diseases,All Ages,10903.0
-Iowa,Respiratory diseases,0-24,0.0
 Iowa,Circulatory diseases,0-24,0.0
+Iowa,Circulatory diseases,25-34,12.0
 Iowa,Circulatory diseases,35-44,71.0
 Iowa,Circulatory diseases,45-54,284.0
 Iowa,Circulatory diseases,55-64,721.0
@@ -1633,7 +1795,8 @@ Iowa,Circulatory diseases,75-84,2102.0
 Iowa,Circulatory diseases,85+,3173.0
 Iowa,Circulatory diseases,Not stated,0.0
 Iowa,Circulatory diseases,All Ages,7750.0
-Iowa,Circulatory diseases,25-34,12.0
+Iowa,Sepsis,0-24,0
+Iowa,Sepsis,25-34,0
 Iowa,Sepsis,35-44,17.0
 Iowa,Sepsis,45-54,52.0
 Iowa,Sepsis,55-64,148.0
@@ -1643,6 +1806,8 @@ Iowa,Sepsis,85+,146.0
 Iowa,Sepsis,Not stated,0.0
 Iowa,Sepsis,All Ages,746.0
 Iowa,Malignant neoplasms,0-24,0.0
+Iowa,Malignant neoplasms,25-34,0
+Iowa,Malignant neoplasms,35-44,0
 Iowa,Malignant neoplasms,45-54,19.0
 Iowa,Malignant neoplasms,55-64,93.0
 Iowa,Malignant neoplasms,65-74,185.0
@@ -1651,6 +1816,7 @@ Iowa,Malignant neoplasms,85+,202.0
 Iowa,Malignant neoplasms,Not stated,0.0
 Iowa,Malignant neoplasms,All Ages,747.0
 Iowa,Diabetes,0-24,0.0
+Iowa,Diabetes,25-34,0
 Iowa,Diabetes,35-44,21.0
 Iowa,Diabetes,45-54,75.0
 Iowa,Diabetes,55-64,213.0
@@ -1659,6 +1825,7 @@ Iowa,Diabetes,75-84,453.0
 Iowa,Diabetes,85+,417.0
 Iowa,Diabetes,Not stated,0.0
 Iowa,Diabetes,All Ages,1574.0
+Iowa,Obesity,0-24,0
 Iowa,Obesity,25-34,20.0
 Iowa,Obesity,35-44,49.0
 Iowa,Obesity,45-54,94.0
@@ -1672,18 +1839,24 @@ Iowa,Alzheimer disease,0-24,0.0
 Iowa,Alzheimer disease,25-34,0.0
 Iowa,Alzheimer disease,35-44,0.0
 Iowa,Alzheimer disease,45-54,0.0
+Iowa,Alzheimer disease,55-64,0
 Iowa,Alzheimer disease,65-74,22.0
 Iowa,Alzheimer disease,75-84,158.0
 Iowa,Alzheimer disease,85+,382.0
 Iowa,Alzheimer disease,Not stated,0.0
 Iowa,Alzheimer disease,All Ages,567.0
 Iowa,Vascular and unspecified dementia,0-24,0.0
+Iowa,Vascular and unspecified dementia,25-34,0
 Iowa,Vascular and unspecified dementia,35-44,0.0
+Iowa,Vascular and unspecified dementia,45-54,0
+Iowa,Vascular and unspecified dementia,55-64,0
 Iowa,Vascular and unspecified dementia,65-74,100.0
 Iowa,Vascular and unspecified dementia,75-84,346.0
 Iowa,Vascular and unspecified dementia,85+,751.0
 Iowa,Vascular and unspecified dementia,Not stated,0.0
 Iowa,Vascular and unspecified dementia,All Ages,1206.0
+Iowa,Renal failure,0-24,0
+Iowa,Renal failure,25-34,0
 Iowa,Renal failure,35-44,16.0
 Iowa,Renal failure,45-54,60.0
 Iowa,Renal failure,55-64,151.0
@@ -1724,6 +1897,7 @@ Kansas,Respiratory diseases,85+,2750.0
 Kansas,Respiratory diseases,Not stated,0.0
 Kansas,Respiratory diseases,All Ages,11244.0
 Kansas,Circulatory diseases,0-24,0.0
+Kansas,Circulatory diseases,25-34,13.0
 Kansas,Circulatory diseases,35-44,76.0
 Kansas,Circulatory diseases,45-54,278.0
 Kansas,Circulatory diseases,55-64,739.0
@@ -1732,7 +1906,8 @@ Kansas,Circulatory diseases,75-84,1635.0
 Kansas,Circulatory diseases,85+,2152.0
 Kansas,Circulatory diseases,Not stated,0.0
 Kansas,Circulatory diseases,All Ages,6163.0
-Kansas,Circulatory diseases,25-34,13.0
+Kansas,Sepsis,0-24,0
+Kansas,Sepsis,25-34,0
 Kansas,Sepsis,35-44,29.0
 Kansas,Sepsis,45-54,72.0
 Kansas,Sepsis,55-64,156.0
@@ -1742,6 +1917,8 @@ Kansas,Sepsis,85+,163.0
 Kansas,Sepsis,Not stated,0.0
 Kansas,Sepsis,All Ages,913.0
 Kansas,Malignant neoplasms,0-24,0.0
+Kansas,Malignant neoplasms,25-34,0
+Kansas,Malignant neoplasms,35-44,0
 Kansas,Malignant neoplasms,45-54,22.0
 Kansas,Malignant neoplasms,55-64,56.0
 Kansas,Malignant neoplasms,65-74,168.0
@@ -1749,6 +1926,8 @@ Kansas,Malignant neoplasms,75-84,180.0
 Kansas,Malignant neoplasms,85+,134.0
 Kansas,Malignant neoplasms,Not stated,0.0
 Kansas,Malignant neoplasms,All Ages,572.0
+Kansas,Diabetes,0-24,0
+Kansas,Diabetes,25-34,0
 Kansas,Diabetes,35-44,31.0
 Kansas,Diabetes,45-54,86.0
 Kansas,Diabetes,55-64,166.0
@@ -1757,6 +1936,7 @@ Kansas,Diabetes,75-84,319.0
 Kansas,Diabetes,85+,249.0
 Kansas,Diabetes,Not stated,0.0
 Kansas,Diabetes,All Ages,1162.0
+Kansas,Obesity,0-24,0
 Kansas,Obesity,25-34,13.0
 Kansas,Obesity,35-44,46.0
 Kansas,Obesity,45-54,90.0
@@ -1770,6 +1950,7 @@ Kansas,Alzheimer disease,0-24,0.0
 Kansas,Alzheimer disease,25-34,0.0
 Kansas,Alzheimer disease,35-44,0.0
 Kansas,Alzheimer disease,45-54,0.0
+Kansas,Alzheimer disease,55-64,0
 Kansas,Alzheimer disease,65-74,20.0
 Kansas,Alzheimer disease,75-84,79.0
 Kansas,Alzheimer disease,85+,204.0
@@ -1778,12 +1959,15 @@ Kansas,Alzheimer disease,All Ages,307.0
 Kansas,Vascular and unspecified dementia,0-24,0.0
 Kansas,Vascular and unspecified dementia,25-34,0.0
 Kansas,Vascular and unspecified dementia,35-44,0.0
+Kansas,Vascular and unspecified dementia,45-54,0
 Kansas,Vascular and unspecified dementia,55-64,16.0
 Kansas,Vascular and unspecified dementia,65-74,63.0
 Kansas,Vascular and unspecified dementia,75-84,275.0
 Kansas,Vascular and unspecified dementia,85+,614.0
 Kansas,Vascular and unspecified dementia,Not stated,0.0
 Kansas,Vascular and unspecified dementia,All Ages,969.0
+Kansas,Renal failure,0-24,0
+Kansas,Renal failure,25-34,0
 Kansas,Renal failure,35-44,20.0
 Kansas,Renal failure,45-54,53.0
 Kansas,Renal failure,55-64,163.0
@@ -1821,8 +2005,9 @@ Kentucky,Respiratory diseases,55-64,4127.0
 Kentucky,Respiratory diseases,65-74,6810.0
 Kentucky,Respiratory diseases,75-84,6805.0
 Kentucky,Respiratory diseases,85+,4322.0
-Kentucky,Respiratory diseases,All Ages,24653.0
 Kentucky,Respiratory diseases,Not stated,0.0
+Kentucky,Respiratory diseases,All Ages,24653.0
+Kentucky,Circulatory diseases,0-24,0.0
 Kentucky,Circulatory diseases,25-34,39.0
 Kentucky,Circulatory diseases,35-44,212.0
 Kentucky,Circulatory diseases,45-54,616.0
@@ -1830,9 +2015,9 @@ Kentucky,Circulatory diseases,55-64,1811.0
 Kentucky,Circulatory diseases,65-74,3556.0
 Kentucky,Circulatory diseases,75-84,4622.0
 Kentucky,Circulatory diseases,85+,4379.0
-Kentucky,Circulatory diseases,All Ages,15283.0
-Kentucky,Circulatory diseases,0-24,0.0
 Kentucky,Circulatory diseases,Not stated,0.0
+Kentucky,Circulatory diseases,All Ages,15283.0
+Kentucky,Sepsis,0-24,0
 Kentucky,Sepsis,25-34,30.0
 Kentucky,Sepsis,35-44,91.0
 Kentucky,Sepsis,45-54,266.0
@@ -1840,7 +2025,10 @@ Kentucky,Sepsis,55-64,642.0
 Kentucky,Sepsis,65-74,1002.0
 Kentucky,Sepsis,75-84,855.0
 Kentucky,Sepsis,85+,450.0
+Kentucky,Sepsis,Not stated,0
 Kentucky,Sepsis,All Ages,3343.0
+Kentucky,Malignant neoplasms,0-24,0
+Kentucky,Malignant neoplasms,25-34,0
 Kentucky,Malignant neoplasms,35-44,16.0
 Kentucky,Malignant neoplasms,45-54,68.0
 Kentucky,Malignant neoplasms,55-64,258.0
@@ -1849,12 +2037,15 @@ Kentucky,Malignant neoplasms,75-84,519.0
 Kentucky,Malignant neoplasms,85+,321.0
 Kentucky,Malignant neoplasms,Not stated,0.0
 Kentucky,Malignant neoplasms,All Ages,1725.0
+Kentucky,Diabetes,0-24,0
+Kentucky,Diabetes,25-34,0
 Kentucky,Diabetes,35-44,75.0
 Kentucky,Diabetes,45-54,236.0
 Kentucky,Diabetes,55-64,582.0
 Kentucky,Diabetes,65-74,986.0
 Kentucky,Diabetes,75-84,1087.0
 Kentucky,Diabetes,85+,641.0
+Kentucky,Diabetes,Not stated,0
 Kentucky,Diabetes,All Ages,3621.0
 Kentucky,Obesity,0-24,11.0
 Kentucky,Obesity,25-34,38.0
@@ -1869,6 +2060,8 @@ Kentucky,Obesity,All Ages,764.0
 Kentucky,Alzheimer disease,0-24,0.0
 Kentucky,Alzheimer disease,25-34,0.0
 Kentucky,Alzheimer disease,35-44,0.0
+Kentucky,Alzheimer disease,45-54,0
+Kentucky,Alzheimer disease,55-64,0
 Kentucky,Alzheimer disease,65-74,47.0
 Kentucky,Alzheimer disease,75-84,191.0
 Kentucky,Alzheimer disease,85+,347.0
@@ -1876,12 +2069,15 @@ Kentucky,Alzheimer disease,Not stated,0.0
 Kentucky,Alzheimer disease,All Ages,591.0
 Kentucky,Vascular and unspecified dementia,0-24,0.0
 Kentucky,Vascular and unspecified dementia,25-34,0.0
+Kentucky,Vascular and unspecified dementia,35-44,0
+Kentucky,Vascular and unspecified dementia,45-54,0
 Kentucky,Vascular and unspecified dementia,55-64,24.0
 Kentucky,Vascular and unspecified dementia,65-74,207.0
 Kentucky,Vascular and unspecified dementia,75-84,733.0
 Kentucky,Vascular and unspecified dementia,85+,1254.0
 Kentucky,Vascular and unspecified dementia,Not stated,0.0
 Kentucky,Vascular and unspecified dementia,All Ages,2224.0
+Kentucky,Renal failure,0-24,0
 Kentucky,Renal failure,25-34,21.0
 Kentucky,Renal failure,35-44,81.0
 Kentucky,Renal failure,45-54,222.0
@@ -1889,6 +2085,7 @@ Kentucky,Renal failure,55-64,496.0
 Kentucky,Renal failure,65-74,873.0
 Kentucky,Renal failure,75-84,897.0
 Kentucky,Renal failure,85+,649.0
+Kentucky,Renal failure,Not stated,0
 Kentucky,Renal failure,All Ages,3242.0
 Kentucky,"Intentional and unintentional injury, and other adverse events",1325.0
 Kentucky,All other conditions and causes (residual),0-24,39.0
@@ -1899,6 +2096,7 @@ Kentucky,All other conditions and causes (residual),55-64,1552.0
 Kentucky,All other conditions and causes (residual),65-74,2731.0
 Kentucky,All other conditions and causes (residual),75-84,3147.0
 Kentucky,All other conditions and causes (residual),85+,2518.0
+Kentucky,All other conditions and causes (residual),Not stated,0
 Kentucky,All other conditions and causes (residual),All Ages,10952.0
 Kentucky,COVID-19,0-24,67.0
 Kentucky,COVID-19,25-34,164.0
@@ -1908,6 +2106,7 @@ Kentucky,COVID-19,55-64,2865.0
 Kentucky,COVID-19,65-74,4900.0
 Kentucky,COVID-19,75-84,5645.0
 Kentucky,COVID-19,85+,4980.0
+Kentucky,COVID-19,Not stated,0
 Kentucky,COVID-19,All Ages,20281.0
 Louisiana,Respiratory diseases,0-24,78.0
 Louisiana,Respiratory diseases,25-34,267.0
@@ -1919,6 +2118,7 @@ Louisiana,Respiratory diseases,75-84,5631.0
 Louisiana,Respiratory diseases,85+,3811.0
 Louisiana,Respiratory diseases,Not stated,0.0
 Louisiana,Respiratory diseases,All Ages,21039.0
+Louisiana,Circulatory diseases,0-24,0.0
 Louisiana,Circulatory diseases,25-34,52.0
 Louisiana,Circulatory diseases,35-44,278.0
 Louisiana,Circulatory diseases,45-54,686.0
@@ -1928,7 +2128,7 @@ Louisiana,Circulatory diseases,75-84,3457.0
 Louisiana,Circulatory diseases,85+,2773.0
 Louisiana,Circulatory diseases,Not stated,0.0
 Louisiana,Circulatory diseases,All Ages,11875.0
-Louisiana,Circulatory diseases,0-24,0.0
+Louisiana,Sepsis,0-24,0
 Louisiana,Sepsis,25-34,20.0
 Louisiana,Sepsis,35-44,54.0
 Louisiana,Sepsis,45-54,125.0
@@ -1938,6 +2138,8 @@ Louisiana,Sepsis,75-84,409.0
 Louisiana,Sepsis,85+,247.0
 Louisiana,Sepsis,Not stated,0.0
 Louisiana,Sepsis,All Ages,1606.0
+Louisiana,Malignant neoplasms,0-24,0
+Louisiana,Malignant neoplasms,25-34,0
 Louisiana,Malignant neoplasms,35-44,16.0
 Louisiana,Malignant neoplasms,45-54,40.0
 Louisiana,Malignant neoplasms,55-64,148.0
@@ -1946,6 +2148,7 @@ Louisiana,Malignant neoplasms,75-84,268.0
 Louisiana,Malignant neoplasms,85+,164.0
 Louisiana,Malignant neoplasms,Not stated,0.0
 Louisiana,Malignant neoplasms,All Ages,916.0
+Louisiana,Diabetes,0-24,0
 Louisiana,Diabetes,25-34,19.0
 Louisiana,Diabetes,35-44,71.0
 Louisiana,Diabetes,45-54,254.0
@@ -1968,6 +2171,8 @@ Louisiana,Obesity,All Ages,842.0
 Louisiana,Alzheimer disease,0-24,0.0
 Louisiana,Alzheimer disease,25-34,0.0
 Louisiana,Alzheimer disease,35-44,0.0
+Louisiana,Alzheimer disease,45-54,0
+Louisiana,Alzheimer disease,55-64,0
 Louisiana,Alzheimer disease,65-74,35.0
 Louisiana,Alzheimer disease,75-84,156.0
 Louisiana,Alzheimer disease,85+,260.0
@@ -1976,12 +2181,14 @@ Louisiana,Alzheimer disease,All Ages,458.0
 Louisiana,Vascular and unspecified dementia,0-24,0.0
 Louisiana,Vascular and unspecified dementia,25-34,0.0
 Louisiana,Vascular and unspecified dementia,35-44,0.0
+Louisiana,Vascular and unspecified dementia,45-54,0
 Louisiana,Vascular and unspecified dementia,55-64,28.0
 Louisiana,Vascular and unspecified dementia,65-74,97.0
 Louisiana,Vascular and unspecified dementia,75-84,293.0
 Louisiana,Vascular and unspecified dementia,85+,443.0
 Louisiana,Vascular and unspecified dementia,Not stated,0.0
 Louisiana,Vascular and unspecified dementia,All Ages,863.0
+Louisiana,Renal failure,0-24,0
 Louisiana,Renal failure,25-34,21.0
 Louisiana,Renal failure,35-44,39.0
 Louisiana,Renal failure,45-54,104.0
@@ -2012,6 +2219,8 @@ Louisiana,COVID-19,75-84,4679.0
 Louisiana,COVID-19,85+,3689.0
 Louisiana,COVID-19,Not stated,0.0
 Louisiana,COVID-19,All Ages,17714.0
+Maine,Respiratory diseases,0-24,0.0
+Maine,Respiratory diseases,25-34,0.0
 Maine,Respiratory diseases,35-44,16.0
 Maine,Respiratory diseases,45-54,67.0
 Maine,Respiratory diseases,55-64,253.0
@@ -2020,10 +2229,9 @@ Maine,Respiratory diseases,75-84,578.0
 Maine,Respiratory diseases,85+,436.0
 Maine,Respiratory diseases,Not stated,0.0
 Maine,Respiratory diseases,All Ages,1888.0
-Maine,Respiratory diseases,0-24,0.0
-Maine,Respiratory diseases,25-34,0.0
 Maine,Circulatory diseases,0-24,0.0
 Maine,Circulatory diseases,25-34,0.0
+Maine,Circulatory diseases,35-44,0.0
 Maine,Circulatory diseases,45-54,24.0
 Maine,Circulatory diseases,55-64,147.0
 Maine,Circulatory diseases,65-74,318.0
@@ -2031,16 +2239,20 @@ Maine,Circulatory diseases,75-84,498.0
 Maine,Circulatory diseases,85+,633.0
 Maine,Circulatory diseases,Not stated,0.0
 Maine,Circulatory diseases,All Ages,1675.0
-Maine,Circulatory diseases,35-44,0.0
 Maine,Sepsis,0-24,0.0
 Maine,Sepsis,25-34,0.0
+Maine,Sepsis,35-44,0
+Maine,Sepsis,45-54,0
 Maine,Sepsis,55-64,14.0
 Maine,Sepsis,65-74,18.0
 Maine,Sepsis,75-84,12.0
+Maine,Sepsis,85+,0
 Maine,Sepsis,Not stated,0.0
 Maine,Sepsis,All Ages,59.0
 Maine,Malignant neoplasms,0-24,0.0
 Maine,Malignant neoplasms,25-34,0.0
+Maine,Malignant neoplasms,35-44,0
+Maine,Malignant neoplasms,45-54,0
 Maine,Malignant neoplasms,55-64,33.0
 Maine,Malignant neoplasms,65-74,70.0
 Maine,Malignant neoplasms,75-84,75.0
@@ -2048,6 +2260,8 @@ Maine,Malignant neoplasms,85+,40.0
 Maine,Malignant neoplasms,Not stated,0.0
 Maine,Malignant neoplasms,All Ages,229.0
 Maine,Diabetes,0-24,0.0
+Maine,Diabetes,25-34,0
+Maine,Diabetes,35-44,0
 Maine,Diabetes,45-54,15.0
 Maine,Diabetes,55-64,38.0
 Maine,Diabetes,65-74,68.0
@@ -2055,15 +2269,22 @@ Maine,Diabetes,75-84,90.0
 Maine,Diabetes,85+,75.0
 Maine,Diabetes,Not stated,0.0
 Maine,Diabetes,All Ages,293.0
+Maine,Obesity,0-24,0
+Maine,Obesity,25-34,0
+Maine,Obesity,35-44,0
+Maine,Obesity,45-54,0
 Maine,Obesity,55-64,18.0
 Maine,Obesity,65-74,13.0
 Maine,Obesity,75-84,17.0
+Maine,Obesity,85+,0
 Maine,Obesity,Not stated,0.0
 Maine,Obesity,All Ages,68.0
 Maine,Alzheimer disease,0-24,0.0
 Maine,Alzheimer disease,25-34,0.0
 Maine,Alzheimer disease,35-44,0.0
 Maine,Alzheimer disease,45-54,0.0
+Maine,Alzheimer disease,55-64,0
+Maine,Alzheimer disease,65-74,0
 Maine,Alzheimer disease,75-84,40.0
 Maine,Alzheimer disease,85+,81.0
 Maine,Alzheimer disease,Not stated,0.0
@@ -2072,12 +2293,15 @@ Maine,Vascular and unspecified dementia,0-24,0.0
 Maine,Vascular and unspecified dementia,25-34,0.0
 Maine,Vascular and unspecified dementia,35-44,0.0
 Maine,Vascular and unspecified dementia,45-54,0.0
+Maine,Vascular and unspecified dementia,55-64,0
 Maine,Vascular and unspecified dementia,65-74,35.0
 Maine,Vascular and unspecified dementia,75-84,166.0
 Maine,Vascular and unspecified dementia,85+,308.0
 Maine,Vascular and unspecified dementia,Not stated,0.0
 Maine,Vascular and unspecified dementia,All Ages,512.0
 Maine,Renal failure,0-24,0.0
+Maine,Renal failure,25-34,0
+Maine,Renal failure,35-44,0
 Maine,Renal failure,45-54,16.0
 Maine,Renal failure,55-64,35.0
 Maine,Renal failure,65-74,52.0
@@ -2086,6 +2310,8 @@ Maine,Renal failure,85+,57.0
 Maine,Renal failure,Not stated,0.0
 Maine,Renal failure,All Ages,240.0
 Maine,"Intentional and unintentional injury, and other adverse events",134.0
+Maine,All other conditions and causes (residual),0-24,0
+Maine,All other conditions and causes (residual),25-34,0
 Maine,All other conditions and causes (residual),35-44,22.0
 Maine,All other conditions and causes (residual),45-54,55.0
 Maine,All other conditions and causes (residual),55-64,155.0
@@ -2094,6 +2320,7 @@ Maine,All other conditions and causes (residual),75-84,375.0
 Maine,All other conditions and causes (residual),85+,314.0
 Maine,All other conditions and causes (residual),Not stated,0.0
 Maine,All other conditions and causes (residual),All Ages,1202.0
+Maine,COVID-19,0-24,0
 Maine,COVID-19,25-34,17.0
 Maine,COVID-19,35-44,56.0
 Maine,COVID-19,45-54,132.0
@@ -2111,8 +2338,9 @@ Maryland,Respiratory diseases,55-64,2421.0
 Maryland,Respiratory diseases,65-74,3836.0
 Maryland,Respiratory diseases,75-84,4402.0
 Maryland,Respiratory diseases,85+,3870.0
-Maryland,Respiratory diseases,All Ages,16060.0
 Maryland,Respiratory diseases,Not stated,0.0
+Maryland,Respiratory diseases,All Ages,16060.0
+Maryland,Circulatory diseases,0-24,12.0
 Maryland,Circulatory diseases,25-34,63.0
 Maryland,Circulatory diseases,35-44,200.0
 Maryland,Circulatory diseases,45-54,641.0
@@ -2122,7 +2350,7 @@ Maryland,Circulatory diseases,75-84,4405.0
 Maryland,Circulatory diseases,85+,5119.0
 Maryland,Circulatory diseases,Not stated,0.0
 Maryland,Circulatory diseases,All Ages,15393.0
-Maryland,Circulatory diseases,0-24,12.0
+Maryland,Sepsis,0-24,0
 Maryland,Sepsis,25-34,21.0
 Maryland,Sepsis,35-44,55.0
 Maryland,Sepsis,45-54,143.0
@@ -2132,6 +2360,8 @@ Maryland,Sepsis,75-84,480.0
 Maryland,Sepsis,85+,361.0
 Maryland,Sepsis,Not stated,0.0
 Maryland,Sepsis,All Ages,1957.0
+Maryland,Malignant neoplasms,0-24,0
+Maryland,Malignant neoplasms,25-34,0
 Maryland,Malignant neoplasms,35-44,17.0
 Maryland,Malignant neoplasms,45-54,54.0
 Maryland,Malignant neoplasms,55-64,211.0
@@ -2140,6 +2370,7 @@ Maryland,Malignant neoplasms,75-84,469.0
 Maryland,Malignant neoplasms,85+,387.0
 Maryland,Malignant neoplasms,Not stated,0.0
 Maryland,Malignant neoplasms,All Ages,1568.0
+Maryland,Diabetes,0-24,0
 Maryland,Diabetes,25-34,19.0
 Maryland,Diabetes,35-44,83.0
 Maryland,Diabetes,45-54,229.0
@@ -2149,6 +2380,7 @@ Maryland,Diabetes,75-84,842.0
 Maryland,Diabetes,85+,648.0
 Maryland,Diabetes,Not stated,0.0
 Maryland,Diabetes,All Ages,3287.0
+Maryland,Obesity,0-24,0
 Maryland,Obesity,25-34,53.0
 Maryland,Obesity,35-44,106.0
 Maryland,Obesity,45-54,188.0
@@ -2162,6 +2394,7 @@ Maryland,Alzheimer disease,0-24,0.0
 Maryland,Alzheimer disease,25-34,0.0
 Maryland,Alzheimer disease,35-44,0.0
 Maryland,Alzheimer disease,45-54,0.0
+Maryland,Alzheimer disease,55-64,0
 Maryland,Alzheimer disease,65-74,31.0
 Maryland,Alzheimer disease,75-84,112.0
 Maryland,Alzheimer disease,85+,211.0
@@ -2170,12 +2403,14 @@ Maryland,Alzheimer disease,All Ages,355.0
 Maryland,Vascular and unspecified dementia,0-24,0.0
 Maryland,Vascular and unspecified dementia,25-34,0.0
 Maryland,Vascular and unspecified dementia,35-44,0.0
+Maryland,Vascular and unspecified dementia,45-54,0
 Maryland,Vascular and unspecified dementia,55-64,27.0
 Maryland,Vascular and unspecified dementia,65-74,224.0
 Maryland,Vascular and unspecified dementia,75-84,739.0
 Maryland,Vascular and unspecified dementia,85+,1539.0
 Maryland,Vascular and unspecified dementia,Not stated,0.0
 Maryland,Vascular and unspecified dementia,All Ages,2532.0
+Maryland,Renal failure,0-24,0
 Maryland,Renal failure,25-34,26.0
 Maryland,Renal failure,35-44,63.0
 Maryland,Renal failure,45-54,201.0
@@ -2183,6 +2418,7 @@ Maryland,Renal failure,55-64,471.0
 Maryland,Renal failure,65-74,690.0
 Maryland,Renal failure,75-84,775.0
 Maryland,Renal failure,85+,579.0
+Maryland,Renal failure,Not stated,0
 Maryland,Renal failure,All Ages,2809.0
 Maryland,"Intentional and unintentional injury, and other adverse events",1310.0
 Maryland,All other conditions and causes (residual),0-24,35.0
@@ -2193,6 +2429,7 @@ Maryland,All other conditions and causes (residual),55-64,1232.0
 Maryland,All other conditions and causes (residual),65-74,1958.0
 Maryland,All other conditions and causes (residual),75-84,2426.0
 Maryland,All other conditions and causes (residual),85+,2490.0
+Maryland,All other conditions and causes (residual),Not stated,0
 Maryland,All other conditions and causes (residual),All Ages,8931.0
 Maryland,COVID-19,0-24,67.0
 Maryland,COVID-19,25-34,178.0
@@ -2202,6 +2439,7 @@ Maryland,COVID-19,55-64,2347.0
 Maryland,COVID-19,65-74,3836.0
 Maryland,COVID-19,75-84,4799.0
 Maryland,COVID-19,85+,5458.0
+Maryland,COVID-19,Not stated,0
 Maryland,COVID-19,All Ages,18140.0
 Massachusetts,Respiratory diseases,0-24,29.0
 Massachusetts,Respiratory diseases,25-34,120.0
@@ -2214,6 +2452,7 @@ Massachusetts,Respiratory diseases,85+,7461.0
 Massachusetts,Respiratory diseases,Not stated,0.0
 Massachusetts,Respiratory diseases,All Ages,21709.0
 Massachusetts,Circulatory diseases,0-24,0.0
+Massachusetts,Circulatory diseases,25-34,28.0
 Massachusetts,Circulatory diseases,35-44,115.0
 Massachusetts,Circulatory diseases,45-54,368.0
 Massachusetts,Circulatory diseases,55-64,1134.0
@@ -2222,7 +2461,7 @@ Massachusetts,Circulatory diseases,75-84,3526.0
 Massachusetts,Circulatory diseases,85+,5562.0
 Massachusetts,Circulatory diseases,Not stated,0.0
 Massachusetts,Circulatory diseases,All Ages,13137.0
-Massachusetts,Circulatory diseases,25-34,28.0
+Massachusetts,Sepsis,0-24,0
 Massachusetts,Sepsis,25-34,11.0
 Massachusetts,Sepsis,35-44,23.0
 Massachusetts,Sepsis,45-54,87.0
@@ -2232,6 +2471,8 @@ Massachusetts,Sepsis,75-84,546.0
 Massachusetts,Sepsis,85+,488.0
 Massachusetts,Sepsis,Not stated,0.0
 Massachusetts,Sepsis,All Ages,1916.0
+Massachusetts,Malignant neoplasms,0-24,0
+Massachusetts,Malignant neoplasms,25-34,0
 Massachusetts,Malignant neoplasms,35-44,11.0
 Massachusetts,Malignant neoplasms,45-54,46.0
 Massachusetts,Malignant neoplasms,55-64,170.0
@@ -2250,6 +2491,7 @@ Massachusetts,Diabetes,75-84,516.0
 Massachusetts,Diabetes,85+,539.0
 Massachusetts,Diabetes,Not stated,0.0
 Massachusetts,Diabetes,All Ages,1777.0
+Massachusetts,Obesity,0-24,0
 Massachusetts,Obesity,25-34,25.0
 Massachusetts,Obesity,35-44,37.0
 Massachusetts,Obesity,45-54,59.0
@@ -2263,6 +2505,7 @@ Massachusetts,Alzheimer disease,0-24,0.0
 Massachusetts,Alzheimer disease,25-34,0.0
 Massachusetts,Alzheimer disease,35-44,0.0
 Massachusetts,Alzheimer disease,45-54,0.0
+Massachusetts,Alzheimer disease,55-64,0
 Massachusetts,Alzheimer disease,65-74,37.0
 Massachusetts,Alzheimer disease,75-84,157.0
 Massachusetts,Alzheimer disease,85+,376.0
@@ -2271,12 +2514,14 @@ Massachusetts,Alzheimer disease,All Ages,578.0
 Massachusetts,Vascular and unspecified dementia,0-24,0.0
 Massachusetts,Vascular and unspecified dementia,25-34,0.0
 Massachusetts,Vascular and unspecified dementia,35-44,0.0
+Massachusetts,Vascular and unspecified dementia,45-54,0
 Massachusetts,Vascular and unspecified dementia,55-64,35.0
 Massachusetts,Vascular and unspecified dementia,65-74,217.0
 Massachusetts,Vascular and unspecified dementia,75-84,789.0
 Massachusetts,Vascular and unspecified dementia,85+,2166.0
 Massachusetts,Vascular and unspecified dementia,Not stated,0.0
 Massachusetts,Vascular and unspecified dementia,All Ages,3210.0
+Massachusetts,Renal failure,0-24,0
 Massachusetts,Renal failure,25-34,10.0
 Massachusetts,Renal failure,35-44,23.0
 Massachusetts,Renal failure,45-54,82.0
@@ -2317,6 +2562,7 @@ Michigan,Respiratory diseases,75-84,10167.0
 Michigan,Respiratory diseases,85+,8091.0
 Michigan,Respiratory diseases,Not stated,0.0
 Michigan,Respiratory diseases,All Ages,37063.0
+Michigan,Circulatory diseases,0-24,11.0
 Michigan,Circulatory diseases,25-34,97.0
 Michigan,Circulatory diseases,35-44,344.0
 Michigan,Circulatory diseases,45-54,1026.0
@@ -2326,7 +2572,7 @@ Michigan,Circulatory diseases,75-84,6016.0
 Michigan,Circulatory diseases,85+,7234.0
 Michigan,Circulatory diseases,Not stated,0.0
 Michigan,Circulatory diseases,All Ages,22079.0
-Michigan,Circulatory diseases,0-24,11.0
+Michigan,Sepsis,0-24,0
 Michigan,Sepsis,25-34,34.0
 Michigan,Sepsis,35-44,78.0
 Michigan,Sepsis,45-54,263.0
@@ -2336,6 +2582,7 @@ Michigan,Sepsis,75-84,859.0
 Michigan,Sepsis,85+,605.0
 Michigan,Sepsis,Not stated,0.0
 Michigan,Sepsis,All Ages,3511.0
+Michigan,Malignant neoplasms,0-24,0
 Michigan,Malignant neoplasms,25-34,10.0
 Michigan,Malignant neoplasms,35-44,22.0
 Michigan,Malignant neoplasms,45-54,79.0
@@ -2345,6 +2592,7 @@ Michigan,Malignant neoplasms,75-84,712.0
 Michigan,Malignant neoplasms,85+,514.0
 Michigan,Malignant neoplasms,Not stated,0.0
 Michigan,Malignant neoplasms,All Ages,2348.0
+Michigan,Diabetes,0-24,0
 Michigan,Diabetes,25-34,25.0
 Michigan,Diabetes,35-44,91.0
 Michigan,Diabetes,45-54,302.0
@@ -2367,6 +2615,7 @@ Michigan,Obesity,All Ages,1415.0
 Michigan,Alzheimer disease,0-24,0.0
 Michigan,Alzheimer disease,25-34,0.0
 Michigan,Alzheimer disease,35-44,0.0
+Michigan,Alzheimer disease,45-54,0
 Michigan,Alzheimer disease,55-64,14.0
 Michigan,Alzheimer disease,65-74,79.0
 Michigan,Alzheimer disease,75-84,312.0
@@ -2376,12 +2625,14 @@ Michigan,Alzheimer disease,All Ages,1182.0
 Michigan,Vascular and unspecified dementia,0-24,0.0
 Michigan,Vascular and unspecified dementia,25-34,0.0
 Michigan,Vascular and unspecified dementia,35-44,0.0
+Michigan,Vascular and unspecified dementia,45-54,0
 Michigan,Vascular and unspecified dementia,55-64,43.0
 Michigan,Vascular and unspecified dementia,65-74,193.0
 Michigan,Vascular and unspecified dementia,75-84,743.0
 Michigan,Vascular and unspecified dementia,85+,1447.0
 Michigan,Vascular and unspecified dementia,Not stated,0.0
 Michigan,Vascular and unspecified dementia,All Ages,2428.0
+Michigan,Renal failure,0-24,0
 Michigan,Renal failure,25-34,30.0
 Michigan,Renal failure,35-44,104.0
 Michigan,Renal failure,45-54,259.0
@@ -2422,6 +2673,8 @@ Minnesota,Respiratory diseases,75-84,4186.0
 Minnesota,Respiratory diseases,85+,4246.0
 Minnesota,Respiratory diseases,Not stated,0.0
 Minnesota,Respiratory diseases,All Ages,14978.0
+Minnesota,Circulatory diseases,0-24,0.0
+Minnesota,Circulatory diseases,25-34,35.0
 Minnesota,Circulatory diseases,35-44,153.0
 Minnesota,Circulatory diseases,45-54,366.0
 Minnesota,Circulatory diseases,55-64,1118.0
@@ -2430,8 +2683,7 @@ Minnesota,Circulatory diseases,75-84,4038.0
 Minnesota,Circulatory diseases,85+,6352.0
 Minnesota,Circulatory diseases,Not stated,0.0
 Minnesota,Circulatory diseases,All Ages,14418.0
-Minnesota,Circulatory diseases,25-34,35.0
-Minnesota,Circulatory diseases,0-24,0.0
+Minnesota,Sepsis,0-24,0
 Minnesota,Sepsis,25-34,11.0
 Minnesota,Sepsis,35-44,29.0
 Minnesota,Sepsis,45-54,78.0
@@ -2441,6 +2693,8 @@ Minnesota,Sepsis,75-84,298.0
 Minnesota,Sepsis,85+,225.0
 Minnesota,Sepsis,Not stated,0.0
 Minnesota,Sepsis,All Ages,1150.0
+Minnesota,Malignant neoplasms,0-24,0
+Minnesota,Malignant neoplasms,25-34,0
 Minnesota,Malignant neoplasms,35-44,12.0
 Minnesota,Malignant neoplasms,45-54,46.0
 Minnesota,Malignant neoplasms,55-64,186.0
@@ -2449,6 +2703,7 @@ Minnesota,Malignant neoplasms,75-84,468.0
 Minnesota,Malignant neoplasms,85+,440.0
 Minnesota,Malignant neoplasms,Not stated,0.0
 Minnesota,Malignant neoplasms,All Ages,1494.0
+Minnesota,Diabetes,0-24,0
 Minnesota,Diabetes,25-34,13.0
 Minnesota,Diabetes,35-44,38.0
 Minnesota,Diabetes,45-54,128.0
@@ -2471,6 +2726,8 @@ Minnesota,Obesity,All Ages,811.0
 Minnesota,Alzheimer disease,0-24,0.0
 Minnesota,Alzheimer disease,25-34,0.0
 Minnesota,Alzheimer disease,35-44,0.0
+Minnesota,Alzheimer disease,45-54,0
+Minnesota,Alzheimer disease,55-64,0
 Minnesota,Alzheimer disease,65-74,61.0
 Minnesota,Alzheimer disease,75-84,303.0
 Minnesota,Alzheimer disease,85+,751.0
@@ -2479,12 +2736,15 @@ Minnesota,Alzheimer disease,All Ages,1125.0
 Minnesota,Vascular and unspecified dementia,0-24,0.0
 Minnesota,Vascular and unspecified dementia,25-34,0.0
 Minnesota,Vascular and unspecified dementia,35-44,0.0
+Minnesota,Vascular and unspecified dementia,45-54,0
 Minnesota,Vascular and unspecified dementia,55-64,27.0
 Minnesota,Vascular and unspecified dementia,65-74,189.0
 Minnesota,Vascular and unspecified dementia,75-84,754.0
 Minnesota,Vascular and unspecified dementia,85+,1537.0
 Minnesota,Vascular and unspecified dementia,Not stated,0.0
 Minnesota,Vascular and unspecified dementia,All Ages,2510.0
+Minnesota,Renal failure,0-24,0
+Minnesota,Renal failure,25-34,0
 Minnesota,Renal failure,35-44,33.0
 Minnesota,Renal failure,45-54,106.0
 Minnesota,Renal failure,55-64,231.0
@@ -2524,6 +2784,7 @@ Mississippi,Respiratory diseases,75-84,4998.0
 Mississippi,Respiratory diseases,85+,3432.0
 Mississippi,Respiratory diseases,Not stated,0.0
 Mississippi,Respiratory diseases,All Ages,19130.0
+Mississippi,Circulatory diseases,0-24,11.0
 Mississippi,Circulatory diseases,25-34,103.0
 Mississippi,Circulatory diseases,35-44,302.0
 Mississippi,Circulatory diseases,45-54,729.0
@@ -2533,7 +2794,7 @@ Mississippi,Circulatory diseases,75-84,3902.0
 Mississippi,Circulatory diseases,85+,3131.0
 Mississippi,Circulatory diseases,Not stated,0.0
 Mississippi,Circulatory diseases,All Ages,13504.0
-Mississippi,Circulatory diseases,0-24,11.0
+Mississippi,Sepsis,0-24,0
 Mississippi,Sepsis,25-34,12.0
 Mississippi,Sepsis,35-44,58.0
 Mississippi,Sepsis,45-54,140.0
@@ -2544,6 +2805,7 @@ Mississippi,Sepsis,85+,213.0
 Mississippi,Sepsis,Not stated,0.0
 Mississippi,Sepsis,All Ages,1558.0
 Mississippi,Malignant neoplasms,0-24,0.0
+Mississippi,Malignant neoplasms,25-34,0
 Mississippi,Malignant neoplasms,35-44,14.0
 Mississippi,Malignant neoplasms,45-54,49.0
 Mississippi,Malignant neoplasms,55-64,170.0
@@ -2552,6 +2814,7 @@ Mississippi,Malignant neoplasms,75-84,328.0
 Mississippi,Malignant neoplasms,85+,226.0
 Mississippi,Malignant neoplasms,Not stated,0.0
 Mississippi,Malignant neoplasms,All Ages,1140.0
+Mississippi,Diabetes,0-24,0
 Mississippi,Diabetes,25-34,24.0
 Mississippi,Diabetes,35-44,82.0
 Mississippi,Diabetes,45-54,189.0
@@ -2568,11 +2831,14 @@ Mississippi,Obesity,45-54,133.0
 Mississippi,Obesity,55-64,158.0
 Mississippi,Obesity,65-74,153.0
 Mississippi,Obesity,75-84,81.0
+Mississippi,Obesity,85+,0
 Mississippi,Obesity,Not stated,0.0
 Mississippi,Obesity,All Ages,664.0
 Mississippi,Alzheimer disease,0-24,0.0
 Mississippi,Alzheimer disease,25-34,0.0
 Mississippi,Alzheimer disease,35-44,0.0
+Mississippi,Alzheimer disease,45-54,0
+Mississippi,Alzheimer disease,55-64,0
 Mississippi,Alzheimer disease,65-74,50.0
 Mississippi,Alzheimer disease,75-84,183.0
 Mississippi,Alzheimer disease,85+,288.0
@@ -2581,12 +2847,14 @@ Mississippi,Alzheimer disease,All Ages,528.0
 Mississippi,Vascular and unspecified dementia,0-24,0.0
 Mississippi,Vascular and unspecified dementia,25-34,0.0
 Mississippi,Vascular and unspecified dementia,35-44,0.0
+Mississippi,Vascular and unspecified dementia,45-54,0
 Mississippi,Vascular and unspecified dementia,55-64,16.0
 Mississippi,Vascular and unspecified dementia,65-74,92.0
 Mississippi,Vascular and unspecified dementia,75-84,364.0
 Mississippi,Vascular and unspecified dementia,85+,471.0
 Mississippi,Vascular and unspecified dementia,Not stated,0.0
 Mississippi,Vascular and unspecified dementia,All Ages,945.0
+Mississippi,Renal failure,0-24,0
 Mississippi,Renal failure,25-34,14.0
 Mississippi,Renal failure,35-44,43.0
 Mississippi,Renal failure,45-54,146.0
@@ -2627,6 +2895,7 @@ Missouri,Respiratory diseases,75-84,6774.0
 Missouri,Respiratory diseases,85+,5297.0
 Missouri,Respiratory diseases,Not stated,0.0
 Missouri,Respiratory diseases,All Ages,24579.0
+Missouri,Circulatory diseases,0-24,11.0
 Missouri,Circulatory diseases,25-34,59.0
 Missouri,Circulatory diseases,35-44,242.0
 Missouri,Circulatory diseases,45-54,572.0
@@ -2636,7 +2905,7 @@ Missouri,Circulatory diseases,75-84,3344.0
 Missouri,Circulatory diseases,85+,4035.0
 Missouri,Circulatory diseases,Not stated,0.0
 Missouri,Circulatory diseases,All Ages,12405.0
-Missouri,Circulatory diseases,0-24,11.0
+Missouri,Sepsis,0-24,0
 Missouri,Sepsis,25-34,10.0
 Missouri,Sepsis,35-44,51.0
 Missouri,Sepsis,45-54,171.0
@@ -2646,6 +2915,8 @@ Missouri,Sepsis,75-84,549.0
 Missouri,Sepsis,85+,295.0
 Missouri,Sepsis,Not stated,0.0
 Missouri,Sepsis,All Ages,2160.0
+Missouri,Malignant neoplasms,0-24,0
+Missouri,Malignant neoplasms,25-34,0
 Missouri,Malignant neoplasms,35-44,20.0
 Missouri,Malignant neoplasms,45-54,41.0
 Missouri,Malignant neoplasms,55-64,162.0
@@ -2654,6 +2925,7 @@ Missouri,Malignant neoplasms,75-84,403.0
 Missouri,Malignant neoplasms,85+,284.0
 Missouri,Malignant neoplasms,Not stated,0.0
 Missouri,Malignant neoplasms,All Ages,1269.0
+Missouri,Diabetes,0-24,0
 Missouri,Diabetes,25-34,12.0
 Missouri,Diabetes,35-44,65.0
 Missouri,Diabetes,45-54,151.0
@@ -2663,6 +2935,7 @@ Missouri,Diabetes,75-84,615.0
 Missouri,Diabetes,85+,436.0
 Missouri,Diabetes,Not stated,0.0
 Missouri,Diabetes,All Ages,2197.0
+Missouri,Obesity,0-24,0
 Missouri,Obesity,25-34,37.0
 Missouri,Obesity,35-44,90.0
 Missouri,Obesity,45-54,129.0
@@ -2676,6 +2949,7 @@ Missouri,Alzheimer disease,0-24,0.0
 Missouri,Alzheimer disease,25-34,0.0
 Missouri,Alzheimer disease,35-44,0.0
 Missouri,Alzheimer disease,45-54,0.0
+Missouri,Alzheimer disease,55-64,0
 Missouri,Alzheimer disease,65-74,48.0
 Missouri,Alzheimer disease,75-84,251.0
 Missouri,Alzheimer disease,85+,528.0
@@ -2683,12 +2957,15 @@ Missouri,Alzheimer disease,Not stated,0.0
 Missouri,Alzheimer disease,All Ages,830.0
 Missouri,Vascular and unspecified dementia,0-24,0.0
 Missouri,Vascular and unspecified dementia,25-34,0.0
+Missouri,Vascular and unspecified dementia,35-44,0
+Missouri,Vascular and unspecified dementia,45-54,0
 Missouri,Vascular and unspecified dementia,55-64,15.0
 Missouri,Vascular and unspecified dementia,65-74,118.0
 Missouri,Vascular and unspecified dementia,75-84,436.0
 Missouri,Vascular and unspecified dementia,85+,967.0
 Missouri,Vascular and unspecified dementia,Not stated,0.0
 Missouri,Vascular and unspecified dementia,All Ages,1540.0
+Missouri,Renal failure,0-24,0
 Missouri,Renal failure,25-34,14.0
 Missouri,Renal failure,35-44,67.0
 Missouri,Renal failure,45-54,195.0
@@ -2719,6 +2996,7 @@ Missouri,COVID-19,75-84,6255.0
 Missouri,COVID-19,85+,6551.0
 Missouri,COVID-19,Not stated,0.0
 Missouri,COVID-19,All Ages,23372.0
+Montana,Respiratory diseases,0-24,0.0
 Montana,Respiratory diseases,25-34,23.0
 Montana,Respiratory diseases,35-44,107.0
 Montana,Respiratory diseases,45-54,271.0
@@ -2728,7 +3006,8 @@ Montana,Respiratory diseases,75-84,1506.0
 Montana,Respiratory diseases,85+,1039.0
 Montana,Respiratory diseases,Not stated,0.0
 Montana,Respiratory diseases,All Ages,5147.0
-Montana,Respiratory diseases,0-24,0.0
+Montana,Circulatory diseases,0-24,0.0
+Montana,Circulatory diseases,25-34,0.0
 Montana,Circulatory diseases,35-44,22.0
 Montana,Circulatory diseases,45-54,102.0
 Montana,Circulatory diseases,55-64,353.0
@@ -2737,8 +3016,9 @@ Montana,Circulatory diseases,75-84,933.0
 Montana,Circulatory diseases,85+,810.0
 Montana,Circulatory diseases,Not stated,0.0
 Montana,Circulatory diseases,All Ages,2961.0
-Montana,Circulatory diseases,0-24,0.0
-Montana,Circulatory diseases,25-34,0.0
+Montana,Sepsis,0-24,0
+Montana,Sepsis,25-34,0
+Montana,Sepsis,35-44,0
 Montana,Sepsis,45-54,21.0
 Montana,Sepsis,55-64,61.0
 Montana,Sepsis,65-74,86.0
@@ -2748,6 +3028,7 @@ Montana,Sepsis,Not stated,0.0
 Montana,Sepsis,All Ages,303.0
 Montana,Malignant neoplasms,0-24,0.0
 Montana,Malignant neoplasms,25-34,0.0
+Montana,Malignant neoplasms,35-44,0
 Montana,Malignant neoplasms,45-54,11.0
 Montana,Malignant neoplasms,55-64,35.0
 Montana,Malignant neoplasms,65-74,78.0
@@ -2756,6 +3037,7 @@ Montana,Malignant neoplasms,85+,68.0
 Montana,Malignant neoplasms,Not stated,0.0
 Montana,Malignant neoplasms,All Ages,304.0
 Montana,Diabetes,0-24,0.0
+Montana,Diabetes,25-34,0
 Montana,Diabetes,35-44,14.0
 Montana,Diabetes,45-54,43.0
 Montana,Diabetes,55-64,109.0
@@ -2764,16 +3046,22 @@ Montana,Diabetes,75-84,207.0
 Montana,Diabetes,85+,116.0
 Montana,Diabetes,Not stated,0.0
 Montana,Diabetes,All Ages,695.0
+Montana,Obesity,0-24,0
+Montana,Obesity,25-34,0
 Montana,Obesity,35-44,29.0
 Montana,Obesity,45-54,47.0
 Montana,Obesity,55-64,76.0
 Montana,Obesity,65-74,96.0
 Montana,Obesity,75-84,53.0
+Montana,Obesity,85+,0
 Montana,Obesity,Not stated,0.0
 Montana,Obesity,All Ages,320.0
 Montana,Alzheimer disease,0-24,0.0
 Montana,Alzheimer disease,25-34,0.0
 Montana,Alzheimer disease,35-44,0.0
+Montana,Alzheimer disease,45-54,0
+Montana,Alzheimer disease,55-64,0
+Montana,Alzheimer disease,65-74,0
 Montana,Alzheimer disease,75-84,37.0
 Montana,Alzheimer disease,85+,55.0
 Montana,Alzheimer disease,Not stated,0.0
@@ -2782,12 +3070,15 @@ Montana,Vascular and unspecified dementia,0-24,0.0
 Montana,Vascular and unspecified dementia,25-34,0.0
 Montana,Vascular and unspecified dementia,35-44,0.0
 Montana,Vascular and unspecified dementia,45-54,0.0
+Montana,Vascular and unspecified dementia,55-64,0
 Montana,Vascular and unspecified dementia,65-74,37.0
 Montana,Vascular and unspecified dementia,75-84,120.0
 Montana,Vascular and unspecified dementia,85+,226.0
 Montana,Vascular and unspecified dementia,Not stated,0.0
 Montana,Vascular and unspecified dementia,All Ages,384.0
 Montana,Renal failure,0-24,0.0
+Montana,Renal failure,25-34,0
+Montana,Renal failure,35-44,0
 Montana,Renal failure,45-54,22.0
 Montana,Renal failure,55-64,78.0
 Montana,Renal failure,65-74,93.0
@@ -2796,6 +3087,7 @@ Montana,Renal failure,85+,94.0
 Montana,Renal failure,Not stated,0.0
 Montana,Renal failure,All Ages,420.0
 Montana,"Intentional and unintentional injury, and other adverse events",275.0
+Montana,All other conditions and causes (residual),0-24,0
 Montana,All other conditions and causes (residual),25-34,13.0
 Montana,All other conditions and causes (residual),35-44,50.0
 Montana,All other conditions and causes (residual),45-54,107.0
@@ -2805,6 +3097,7 @@ Montana,All other conditions and causes (residual),75-84,615.0
 Montana,All other conditions and causes (residual),85+,547.0
 Montana,All other conditions and causes (residual),Not stated,0.0
 Montana,All other conditions and causes (residual),All Ages,2157.0
+Montana,COVID-19,0-24,0
 Montana,COVID-19,25-34,27.0
 Montana,COVID-19,35-44,91.0
 Montana,COVID-19,45-54,199.0
@@ -2814,6 +3107,7 @@ Montana,COVID-19,75-84,1123.0
 Montana,COVID-19,85+,1060.0
 Montana,COVID-19,Not stated,0.0
 Montana,COVID-19,All Ages,3963.0
+Nebraska,Respiratory diseases,0-24,0.0
 Nebraska,Respiratory diseases,25-34,72.0
 Nebraska,Respiratory diseases,35-44,148.0
 Nebraska,Respiratory diseases,45-54,373.0
@@ -2823,8 +3117,8 @@ Nebraska,Respiratory diseases,75-84,1735.0
 Nebraska,Respiratory diseases,85+,1724.0
 Nebraska,Respiratory diseases,Not stated,0.0
 Nebraska,Respiratory diseases,All Ages,6500.0
-Nebraska,Respiratory diseases,0-24,0.0
 Nebraska,Circulatory diseases,0-24,0.0
+Nebraska,Circulatory diseases,25-34,0.0
 Nebraska,Circulatory diseases,35-44,48.0
 Nebraska,Circulatory diseases,45-54,181.0
 Nebraska,Circulatory diseases,55-64,462.0
@@ -2833,7 +3127,8 @@ Nebraska,Circulatory diseases,75-84,1341.0
 Nebraska,Circulatory diseases,85+,1886.0
 Nebraska,Circulatory diseases,Not stated,0.0
 Nebraska,Circulatory diseases,All Ages,4858.0
-Nebraska,Circulatory diseases,25-34,0.0
+Nebraska,Sepsis,0-24,0
+Nebraska,Sepsis,25-34,0
 Nebraska,Sepsis,35-44,14.0
 Nebraska,Sepsis,45-54,32.0
 Nebraska,Sepsis,55-64,95.0
@@ -2842,6 +3137,9 @@ Nebraska,Sepsis,75-84,115.0
 Nebraska,Sepsis,85+,104.0
 Nebraska,Sepsis,Not stated,0.0
 Nebraska,Sepsis,All Ages,527.0
+Nebraska,Malignant neoplasms,0-24,0
+Nebraska,Malignant neoplasms,25-34,0
+Nebraska,Malignant neoplasms,35-44,0
 Nebraska,Malignant neoplasms,45-54,21.0
 Nebraska,Malignant neoplasms,55-64,53.0
 Nebraska,Malignant neoplasms,65-74,132.0
@@ -2849,6 +3147,8 @@ Nebraska,Malignant neoplasms,75-84,153.0
 Nebraska,Malignant neoplasms,85+,121.0
 Nebraska,Malignant neoplasms,Not stated,0.0
 Nebraska,Malignant neoplasms,All Ages,489.0
+Nebraska,Diabetes,0-24,0
+Nebraska,Diabetes,25-34,0
 Nebraska,Diabetes,35-44,22.0
 Nebraska,Diabetes,45-54,58.0
 Nebraska,Diabetes,55-64,125.0
@@ -2857,6 +3157,7 @@ Nebraska,Diabetes,75-84,261.0
 Nebraska,Diabetes,85+,230.0
 Nebraska,Diabetes,Not stated,0.0
 Nebraska,Diabetes,All Ages,935.0
+Nebraska,Obesity,0-24,0
 Nebraska,Obesity,25-34,19.0
 Nebraska,Obesity,35-44,25.0
 Nebraska,Obesity,45-54,58.0
@@ -2870,6 +3171,7 @@ Nebraska,Alzheimer disease,0-24,0.0
 Nebraska,Alzheimer disease,25-34,0.0
 Nebraska,Alzheimer disease,35-44,0.0
 Nebraska,Alzheimer disease,45-54,0.0
+Nebraska,Alzheimer disease,55-64,0
 Nebraska,Alzheimer disease,65-74,22.0
 Nebraska,Alzheimer disease,75-84,71.0
 Nebraska,Alzheimer disease,85+,164.0
@@ -2879,11 +3181,14 @@ Nebraska,Vascular and unspecified dementia,0-24,0.0
 Nebraska,Vascular and unspecified dementia,25-34,0.0
 Nebraska,Vascular and unspecified dementia,35-44,0.0
 Nebraska,Vascular and unspecified dementia,45-54,0.0
+Nebraska,Vascular and unspecified dementia,55-64,0
 Nebraska,Vascular and unspecified dementia,65-74,49.0
 Nebraska,Vascular and unspecified dementia,75-84,180.0
 Nebraska,Vascular and unspecified dementia,85+,408.0
 Nebraska,Vascular and unspecified dementia,Not stated,0.0
 Nebraska,Vascular and unspecified dementia,All Ages,645.0
+Nebraska,Renal failure,0-24,0
+Nebraska,Renal failure,25-34,0
 Nebraska,Renal failure,35-44,16.0
 Nebraska,Renal failure,45-54,37.0
 Nebraska,Renal failure,55-64,92.0
@@ -2933,6 +3238,7 @@ Nevada,Circulatory diseases,75-84,2401.0
 Nevada,Circulatory diseases,85+,1643.0
 Nevada,Circulatory diseases,Not stated,0.0
 Nevada,Circulatory diseases,All Ages,8326.0
+Nevada,Sepsis,0-24,0
 Nevada,Sepsis,25-34,28.0
 Nevada,Sepsis,35-44,67.0
 Nevada,Sepsis,45-54,175.0
@@ -2942,6 +3248,8 @@ Nevada,Sepsis,75-84,439.0
 Nevada,Sepsis,85+,170.0
 Nevada,Sepsis,Not stated,0.0
 Nevada,Sepsis,All Ages,1682.0
+Nevada,Malignant neoplasms,0-24,0
+Nevada,Malignant neoplasms,25-34,0
 Nevada,Malignant neoplasms,35-44,10.0
 Nevada,Malignant neoplasms,45-54,22.0
 Nevada,Malignant neoplasms,55-64,73.0
@@ -2950,6 +3258,7 @@ Nevada,Malignant neoplasms,75-84,138.0
 Nevada,Malignant neoplasms,85+,71.0
 Nevada,Malignant neoplasms,Not stated,0.0
 Nevada,Malignant neoplasms,All Ages,482.0
+Nevada,Diabetes,0-24,0
 Nevada,Diabetes,25-34,12.0
 Nevada,Diabetes,35-44,47.0
 Nevada,Diabetes,45-54,128.0
@@ -2959,6 +3268,7 @@ Nevada,Diabetes,75-84,419.0
 Nevada,Diabetes,85+,174.0
 Nevada,Diabetes,Not stated,0.0
 Nevada,Diabetes,All Ages,1517.0
+Nevada,Obesity,0-24,0
 Nevada,Obesity,25-34,37.0
 Nevada,Obesity,35-44,64.0
 Nevada,Obesity,45-54,116.0
@@ -2972,17 +3282,23 @@ Nevada,Alzheimer disease,0-24,0.0
 Nevada,Alzheimer disease,25-34,0.0
 Nevada,Alzheimer disease,35-44,0.0
 Nevada,Alzheimer disease,45-54,0.0
+Nevada,Alzheimer disease,55-64,0
+Nevada,Alzheimer disease,65-74,0
 Nevada,Alzheimer disease,75-84,53.0
 Nevada,Alzheimer disease,85+,70.0
 Nevada,Alzheimer disease,Not stated,0.0
 Nevada,Alzheimer disease,All Ages,133.0
 Nevada,Vascular and unspecified dementia,0-24,0.0
 Nevada,Vascular and unspecified dementia,25-34,0.0
+Nevada,Vascular and unspecified dementia,35-44,0
+Nevada,Vascular and unspecified dementia,45-54,0
+Nevada,Vascular and unspecified dementia,55-64,0
 Nevada,Vascular and unspecified dementia,65-74,57.0
 Nevada,Vascular and unspecified dementia,75-84,180.0
 Nevada,Vascular and unspecified dementia,85+,192.0
 Nevada,Vascular and unspecified dementia,Not stated,0.0
 Nevada,Vascular and unspecified dementia,All Ages,437.0
+Nevada,Renal failure,0-24,0
 Nevada,Renal failure,25-34,14.0
 Nevada,Renal failure,35-44,35.0
 Nevada,Renal failure,45-54,102.0
@@ -3014,6 +3330,7 @@ Nevada,COVID-19,85+,2181.0
 Nevada,COVID-19,Not stated,0.0
 Nevada,COVID-19,All Ages,12259.0
 New Hampshire,Respiratory diseases,0-24,0.0
+New Hampshire,Respiratory diseases,25-34,0.0
 New Hampshire,Respiratory diseases,35-44,15.0
 New Hampshire,Respiratory diseases,45-54,115.0
 New Hampshire,Respiratory diseases,55-64,316.0
@@ -3022,9 +3339,9 @@ New Hampshire,Respiratory diseases,75-84,874.0
 New Hampshire,Respiratory diseases,85+,884.0
 New Hampshire,Respiratory diseases,Not stated,0.0
 New Hampshire,Respiratory diseases,All Ages,2962.0
-New Hampshire,Respiratory diseases,25-34,0.0
 New Hampshire,Circulatory diseases,0-24,0.0
 New Hampshire,Circulatory diseases,25-34,0.0
+New Hampshire,Circulatory diseases,35-44,0.0
 New Hampshire,Circulatory diseases,45-54,32.0
 New Hampshire,Circulatory diseases,55-64,157.0
 New Hampshire,Circulatory diseases,65-74,405.0
@@ -3032,8 +3349,10 @@ New Hampshire,Circulatory diseases,75-84,586.0
 New Hampshire,Circulatory diseases,85+,824.0
 New Hampshire,Circulatory diseases,Not stated,0.0
 New Hampshire,Circulatory diseases,All Ages,2049.0
-New Hampshire,Circulatory diseases,35-44,0.0
 New Hampshire,Sepsis,0-24,0.0
+New Hampshire,Sepsis,25-34,0
+New Hampshire,Sepsis,35-44,0
+New Hampshire,Sepsis,45-54,0
 New Hampshire,Sepsis,55-64,28.0
 New Hampshire,Sepsis,65-74,51.0
 New Hampshire,Sepsis,75-84,53.0
@@ -3041,6 +3360,9 @@ New Hampshire,Sepsis,85+,51.0
 New Hampshire,Sepsis,Not stated,0.0
 New Hampshire,Sepsis,All Ages,196.0
 New Hampshire,Malignant neoplasms,0-24,0.0
+New Hampshire,Malignant neoplasms,25-34,0
+New Hampshire,Malignant neoplasms,35-44,0
+New Hampshire,Malignant neoplasms,45-54,0
 New Hampshire,Malignant neoplasms,55-64,22.0
 New Hampshire,Malignant neoplasms,65-74,45.0
 New Hampshire,Malignant neoplasms,75-84,64.0
@@ -3048,6 +3370,9 @@ New Hampshire,Malignant neoplasms,85+,62.0
 New Hampshire,Malignant neoplasms,Not stated,0.0
 New Hampshire,Malignant neoplasms,All Ages,201.0
 New Hampshire,Diabetes,0-24,0.0
+New Hampshire,Diabetes,25-34,0
+New Hampshire,Diabetes,35-44,0
+New Hampshire,Diabetes,45-54,0
 New Hampshire,Diabetes,55-64,41.0
 New Hampshire,Diabetes,65-74,84.0
 New Hampshire,Diabetes,75-84,100.0
@@ -3055,10 +3380,13 @@ New Hampshire,Diabetes,85+,91.0
 New Hampshire,Diabetes,Not stated,0.0
 New Hampshire,Diabetes,All Ages,334.0
 New Hampshire,Obesity,0-24,0.0
+New Hampshire,Obesity,25-34,0
+New Hampshire,Obesity,35-44,0
 New Hampshire,Obesity,45-54,17.0
 New Hampshire,Obesity,55-64,22.0
 New Hampshire,Obesity,65-74,40.0
 New Hampshire,Obesity,75-84,17.0
+New Hampshire,Obesity,85+,0
 New Hampshire,Obesity,Not stated,0.0
 New Hampshire,Obesity,All Ages,114.0
 New Hampshire,Alzheimer disease,0-24,0.0
@@ -3066,6 +3394,7 @@ New Hampshire,Alzheimer disease,25-34,0.0
 New Hampshire,Alzheimer disease,35-44,0.0
 New Hampshire,Alzheimer disease,45-54,0.0
 New Hampshire,Alzheimer disease,55-64,0.0
+New Hampshire,Alzheimer disease,65-74,0
 New Hampshire,Alzheimer disease,75-84,38.0
 New Hampshire,Alzheimer disease,85+,58.0
 New Hampshire,Alzheimer disease,Not stated,0.0
@@ -3074,12 +3403,15 @@ New Hampshire,Vascular and unspecified dementia,0-24,0.0
 New Hampshire,Vascular and unspecified dementia,25-34,0.0
 New Hampshire,Vascular and unspecified dementia,35-44,0.0
 New Hampshire,Vascular and unspecified dementia,45-54,0.0
+New Hampshire,Vascular and unspecified dementia,55-64,0
 New Hampshire,Vascular and unspecified dementia,65-74,32.0
 New Hampshire,Vascular and unspecified dementia,75-84,140.0
 New Hampshire,Vascular and unspecified dementia,85+,301.0
 New Hampshire,Vascular and unspecified dementia,Not stated,0.0
 New Hampshire,Vascular and unspecified dementia,All Ages,478.0
 New Hampshire,Renal failure,0-24,0.0
+New Hampshire,Renal failure,25-34,0
+New Hampshire,Renal failure,35-44,0
 New Hampshire,Renal failure,45-54,12.0
 New Hampshire,Renal failure,55-64,44.0
 New Hampshire,Renal failure,65-74,82.0
@@ -3088,6 +3420,7 @@ New Hampshire,Renal failure,85+,108.0
 New Hampshire,Renal failure,Not stated,0.0
 New Hampshire,Renal failure,All Ages,353.0
 New Hampshire,"Intentional and unintentional injury, and other adverse events",177.0
+New Hampshire,All other conditions and causes (residual),0-24,0
 New Hampshire,All other conditions and causes (residual),25-34,11.0
 New Hampshire,All other conditions and causes (residual),35-44,27.0
 New Hampshire,All other conditions and causes (residual),45-54,59.0
@@ -3097,6 +3430,7 @@ New Hampshire,All other conditions and causes (residual),75-84,395.0
 New Hampshire,All other conditions and causes (residual),85+,488.0
 New Hampshire,All other conditions and causes (residual),Not stated,0.0
 New Hampshire,All other conditions and causes (residual),All Ages,1437.0
+New Hampshire,COVID-19,0-24,0
 New Hampshire,COVID-19,25-34,21.0
 New Hampshire,COVID-19,35-44,42.0
 New Hampshire,COVID-19,45-54,103.0
@@ -3114,8 +3448,9 @@ New Jersey,Respiratory diseases,55-64,5993.0
 New Jersey,Respiratory diseases,65-74,9398.0
 New Jersey,Respiratory diseases,75-84,11340.0
 New Jersey,Respiratory diseases,85+,11731.0
-New Jersey,Respiratory diseases,All Ages,42050.0
 New Jersey,Respiratory diseases,Not stated,0.0
+New Jersey,Respiratory diseases,All Ages,42050.0
+New Jersey,Circulatory diseases,0-24,23.0
 New Jersey,Circulatory diseases,25-34,95.0
 New Jersey,Circulatory diseases,35-44,353.0
 New Jersey,Circulatory diseases,45-54,1152.0
@@ -3123,9 +3458,9 @@ New Jersey,Circulatory diseases,55-64,3049.0
 New Jersey,Circulatory diseases,65-74,5344.0
 New Jersey,Circulatory diseases,75-84,7288.0
 New Jersey,Circulatory diseases,85+,9268.0
-New Jersey,Circulatory diseases,All Ages,26597.0
 New Jersey,Circulatory diseases,Not stated,0.0
-New Jersey,Circulatory diseases,0-24,23.0
+New Jersey,Circulatory diseases,All Ages,26597.0
+New Jersey,Sepsis,0-24,0
 New Jersey,Sepsis,25-34,26.0
 New Jersey,Sepsis,35-44,86.0
 New Jersey,Sepsis,45-54,278.0
@@ -3135,6 +3470,8 @@ New Jersey,Sepsis,75-84,1128.0
 New Jersey,Sepsis,85+,864.0
 New Jersey,Sepsis,Not stated,0.0
 New Jersey,Sepsis,All Ages,4203.0
+New Jersey,Malignant neoplasms,0-24,0
+New Jersey,Malignant neoplasms,25-34,0
 New Jersey,Malignant neoplasms,35-44,17.0
 New Jersey,Malignant neoplasms,45-54,68.0
 New Jersey,Malignant neoplasms,55-64,300.0
@@ -3143,6 +3480,7 @@ New Jersey,Malignant neoplasms,75-84,678.0
 New Jersey,Malignant neoplasms,85+,585.0
 New Jersey,Malignant neoplasms,Not stated,0.0
 New Jersey,Malignant neoplasms,All Ages,2280.0
+New Jersey,Diabetes,0-24,0
 New Jersey,Diabetes,25-34,21.0
 New Jersey,Diabetes,35-44,79.0
 New Jersey,Diabetes,45-54,259.0
@@ -3150,6 +3488,7 @@ New Jersey,Diabetes,55-64,655.0
 New Jersey,Diabetes,65-74,936.0
 New Jersey,Diabetes,75-84,987.0
 New Jersey,Diabetes,85+,755.0
+New Jersey,Diabetes,Not stated,0
 New Jersey,Diabetes,All Ages,3700.0
 New Jersey,Obesity,0-24,11.0
 New Jersey,Obesity,25-34,47.0
@@ -3165,6 +3504,7 @@ New Jersey,Alzheimer disease,0-24,0.0
 New Jersey,Alzheimer disease,25-34,0.0
 New Jersey,Alzheimer disease,35-44,0.0
 New Jersey,Alzheimer disease,45-54,0.0
+New Jersey,Alzheimer disease,55-64,0
 New Jersey,Alzheimer disease,65-74,28.0
 New Jersey,Alzheimer disease,75-84,183.0
 New Jersey,Alzheimer disease,85+,493.0
@@ -3173,12 +3513,14 @@ New Jersey,Alzheimer disease,All Ages,708.0
 New Jersey,Vascular and unspecified dementia,0-24,0.0
 New Jersey,Vascular and unspecified dementia,25-34,0.0
 New Jersey,Vascular and unspecified dementia,35-44,0.0
+New Jersey,Vascular and unspecified dementia,45-54,0
 New Jersey,Vascular and unspecified dementia,55-64,36.0
 New Jersey,Vascular and unspecified dementia,65-74,185.0
 New Jersey,Vascular and unspecified dementia,75-84,696.0
 New Jersey,Vascular and unspecified dementia,85+,1680.0
 New Jersey,Vascular and unspecified dementia,Not stated,0.0
 New Jersey,Vascular and unspecified dementia,All Ages,2598.0
+New Jersey,Renal failure,0-24,0
 New Jersey,Renal failure,25-34,31.0
 New Jersey,Renal failure,35-44,85.0
 New Jersey,Renal failure,45-54,219.0
@@ -3197,6 +3539,7 @@ New Jersey,All other conditions and causes (residual),55-64,2066.0
 New Jersey,All other conditions and causes (residual),65-74,3238.0
 New Jersey,All other conditions and causes (residual),75-84,3863.0
 New Jersey,All other conditions and causes (residual),85+,4249.0
+New Jersey,All other conditions and causes (residual),Not stated,0
 New Jersey,All other conditions and causes (residual),All Ages,14811.0
 New Jersey,COVID-19,0-24,75.0
 New Jersey,COVID-19,25-34,287.0
@@ -3206,6 +3549,7 @@ New Jersey,COVID-19,55-64,4646.0
 New Jersey,COVID-19,65-74,7314.0
 New Jersey,COVID-19,75-84,9360.0
 New Jersey,COVID-19,85+,11394.0
+New Jersey,COVID-19,Not stated,0
 New Jersey,COVID-19,All Ages,35659.0
 New Mexico,Respiratory diseases,0-24,28.0
 New Mexico,Respiratory diseases,25-34,195.0
@@ -3215,8 +3559,9 @@ New Mexico,Respiratory diseases,55-64,1617.0
 New Mexico,Respiratory diseases,65-74,2260.0
 New Mexico,Respiratory diseases,75-84,2099.0
 New Mexico,Respiratory diseases,85+,1559.0
-New Mexico,Respiratory diseases,All Ages,9171.0
 New Mexico,Respiratory diseases,Not stated,0.0
+New Mexico,Respiratory diseases,All Ages,9171.0
+New Mexico,Circulatory diseases,0-24,0.0
 New Mexico,Circulatory diseases,25-34,22.0
 New Mexico,Circulatory diseases,35-44,124.0
 New Mexico,Circulatory diseases,45-54,337.0
@@ -3224,9 +3569,9 @@ New Mexico,Circulatory diseases,55-64,718.0
 New Mexico,Circulatory diseases,65-74,1239.0
 New Mexico,Circulatory diseases,75-84,1250.0
 New Mexico,Circulatory diseases,85+,1238.0
-New Mexico,Circulatory diseases,All Ages,4975.0
 New Mexico,Circulatory diseases,Not stated,0.0
-New Mexico,Circulatory diseases,0-24,0.0
+New Mexico,Circulatory diseases,All Ages,4975.0
+New Mexico,Sepsis,0-24,0
 New Mexico,Sepsis,25-34,27.0
 New Mexico,Sepsis,35-44,38.0
 New Mexico,Sepsis,45-54,69.0
@@ -3236,6 +3581,9 @@ New Mexico,Sepsis,75-84,146.0
 New Mexico,Sepsis,85+,87.0
 New Mexico,Sepsis,Not stated,0.0
 New Mexico,Sepsis,All Ages,642.0
+New Mexico,Malignant neoplasms,0-24,0
+New Mexico,Malignant neoplasms,25-34,0
+New Mexico,Malignant neoplasms,35-44,0
 New Mexico,Malignant neoplasms,45-54,14.0
 New Mexico,Malignant neoplasms,55-64,71.0
 New Mexico,Malignant neoplasms,65-74,100.0
@@ -3243,6 +3591,7 @@ New Mexico,Malignant neoplasms,75-84,114.0
 New Mexico,Malignant neoplasms,85+,78.0
 New Mexico,Malignant neoplasms,Not stated,0.0
 New Mexico,Malignant neoplasms,All Ages,384.0
+New Mexico,Diabetes,0-24,0
 New Mexico,Diabetes,25-34,19.0
 New Mexico,Diabetes,35-44,59.0
 New Mexico,Diabetes,45-54,156.0
@@ -3250,6 +3599,7 @@ New Mexico,Diabetes,55-64,270.0
 New Mexico,Diabetes,65-74,414.0
 New Mexico,Diabetes,75-84,330.0
 New Mexico,Diabetes,85+,175.0
+New Mexico,Diabetes,Not stated,0
 New Mexico,Diabetes,All Ages,1430.0
 New Mexico,Obesity,0-24,16.0
 New Mexico,Obesity,25-34,46.0
@@ -3258,11 +3608,14 @@ New Mexico,Obesity,45-54,140.0
 New Mexico,Obesity,55-64,185.0
 New Mexico,Obesity,65-74,133.0
 New Mexico,Obesity,75-84,47.0
+New Mexico,Obesity,85+,0
+New Mexico,Obesity,Not stated,0
 New Mexico,Obesity,All Ages,690.0
 New Mexico,Alzheimer disease,0-24,0.0
 New Mexico,Alzheimer disease,25-34,0.0
 New Mexico,Alzheimer disease,35-44,0.0
 New Mexico,Alzheimer disease,45-54,0.0
+New Mexico,Alzheimer disease,55-64,0
 New Mexico,Alzheimer disease,65-74,13.0
 New Mexico,Alzheimer disease,75-84,68.0
 New Mexico,Alzheimer disease,85+,122.0
@@ -3272,11 +3625,13 @@ New Mexico,Vascular and unspecified dementia,0-24,0.0
 New Mexico,Vascular and unspecified dementia,25-34,0.0
 New Mexico,Vascular and unspecified dementia,35-44,0.0
 New Mexico,Vascular and unspecified dementia,45-54,0.0
+New Mexico,Vascular and unspecified dementia,55-64,0
 New Mexico,Vascular and unspecified dementia,65-74,42.0
 New Mexico,Vascular and unspecified dementia,75-84,175.0
 New Mexico,Vascular and unspecified dementia,85+,285.0
 New Mexico,Vascular and unspecified dementia,Not stated,0.0
 New Mexico,Vascular and unspecified dementia,All Ages,507.0
+New Mexico,Renal failure,0-24,0
 New Mexico,Renal failure,25-34,20.0
 New Mexico,Renal failure,35-44,51.0
 New Mexico,Renal failure,45-54,80.0
@@ -3305,6 +3660,7 @@ New Mexico,COVID-19,55-64,1447.0
 New Mexico,COVID-19,65-74,2053.0
 New Mexico,COVID-19,75-84,2064.0
 New Mexico,COVID-19,85+,1846.0
+New Mexico,COVID-19,Not stated,0
 New Mexico,COVID-19,All Ages,8962.0
 New York,Respiratory diseases,0-24,67.0
 New York,Respiratory diseases,25-34,237.0
@@ -3314,8 +3670,9 @@ New York,Respiratory diseases,55-64,5448.0
 New York,Respiratory diseases,65-74,9327.0
 New York,Respiratory diseases,75-84,11625.0
 New York,Respiratory diseases,85+,12943.0
-New York,Respiratory diseases,All Ages,42317.0
 New York,Respiratory diseases,Not stated,0.0
+New York,Respiratory diseases,All Ages,42317.0
+New York,Circulatory diseases,0-24,41.0
 New York,Circulatory diseases,25-34,109.0
 New York,Circulatory diseases,35-44,302.0
 New York,Circulatory diseases,45-54,1027.0
@@ -3325,7 +3682,7 @@ New York,Circulatory diseases,75-84,8709.0
 New York,Circulatory diseases,85+,13198.0
 New York,Circulatory diseases,Not stated,0.0
 New York,Circulatory diseases,All Ages,32134.0
-New York,Circulatory diseases,0-24,41.0
+New York,Sepsis,0-24,0
 New York,Sepsis,25-34,30.0
 New York,Sepsis,35-44,79.0
 New York,Sepsis,45-54,179.0
@@ -3335,6 +3692,8 @@ New York,Sepsis,75-84,912.0
 New York,Sepsis,85+,764.0
 New York,Sepsis,Not stated,0.0
 New York,Sepsis,All Ages,3275.0
+New York,Malignant neoplasms,0-24,0
+New York,Malignant neoplasms,25-34,0
 New York,Malignant neoplasms,35-44,30.0
 New York,Malignant neoplasms,45-54,81.0
 New York,Malignant neoplasms,55-64,339.0
@@ -3343,6 +3702,7 @@ New York,Malignant neoplasms,75-84,878.0
 New York,Malignant neoplasms,85+,769.0
 New York,Malignant neoplasms,Not stated,0.0
 New York,Malignant neoplasms,All Ages,2799.0
+New York,Diabetes,0-24,0
 New York,Diabetes,25-34,18.0
 New York,Diabetes,35-44,80.0
 New York,Diabetes,45-54,215.0
@@ -3365,6 +3725,7 @@ New York,Obesity,All Ages,957.0
 New York,Alzheimer disease,0-24,0.0
 New York,Alzheimer disease,25-34,0.0
 New York,Alzheimer disease,35-44,0.0
+New York,Alzheimer disease,45-54,0
 New York,Alzheimer disease,55-64,14.0
 New York,Alzheimer disease,65-74,53.0
 New York,Alzheimer disease,75-84,230.0
@@ -3374,12 +3735,14 @@ New York,Alzheimer disease,All Ages,918.0
 New York,Vascular and unspecified dementia,0-24,0.0
 New York,Vascular and unspecified dementia,25-34,0.0
 New York,Vascular and unspecified dementia,35-44,0.0
+New York,Vascular and unspecified dementia,45-54,0
 New York,Vascular and unspecified dementia,55-64,42.0
 New York,Vascular and unspecified dementia,65-74,280.0
 New York,Vascular and unspecified dementia,75-84,1067.0
 New York,Vascular and unspecified dementia,85+,2938.0
 New York,Vascular and unspecified dementia,Not stated,0.0
 New York,Vascular and unspecified dementia,All Ages,4328.0
+New York,Renal failure,0-24,0
 New York,Renal failure,25-34,17.0
 New York,Renal failure,35-44,49.0
 New York,Renal failure,45-54,165.0
@@ -3398,6 +3761,7 @@ New York,All other conditions and causes (residual),55-64,1859.0
 New York,All other conditions and causes (residual),65-74,3315.0
 New York,All other conditions and causes (residual),75-84,4427.0
 New York,All other conditions and causes (residual),85+,5838.0
+New York,All other conditions and causes (residual),Not stated,0
 New York,All other conditions and causes (residual),All Ages,16541.0
 New York,COVID-19,0-24,121.0
 New York,COVID-19,25-34,281.0
@@ -3407,6 +3771,7 @@ New York,COVID-19,55-64,4704.0
 New York,COVID-19,65-74,8249.0
 New York,COVID-19,75-84,11108.0
 New York,COVID-19,85+,15278.0
+New York,COVID-19,Not stated,0
 New York,COVID-19,All Ages,42179.0
 New York City,Respiratory diseases,0-24,72.0
 New York City,Respiratory diseases,25-34,242.0
@@ -3418,6 +3783,7 @@ New York City,Respiratory diseases,75-84,8766.0
 New York City,Respiratory diseases,85+,8332.0
 New York City,Respiratory diseases,Not stated,0.0
 New York City,Respiratory diseases,All Ages,33217.0
+New York City,Circulatory diseases,0-24,19.0
 New York City,Circulatory diseases,25-34,105.0
 New York City,Circulatory diseases,35-44,393.0
 New York City,Circulatory diseases,45-54,1131.0
@@ -3427,7 +3793,7 @@ New York City,Circulatory diseases,75-84,7448.0
 New York City,Circulatory diseases,85+,8636.0
 New York City,Circulatory diseases,Not stated,0.0
 New York City,Circulatory diseases,All Ages,26775.0
-New York City,Circulatory diseases,0-24,19.0
+New York City,Sepsis,0-24,0
 New York City,Sepsis,25-34,19.0
 New York City,Sepsis,35-44,50.0
 New York City,Sepsis,45-54,128.0
@@ -3437,6 +3803,7 @@ New York City,Sepsis,75-84,497.0
 New York City,Sepsis,85+,390.0
 New York City,Sepsis,Not stated,0.0
 New York City,Sepsis,All Ages,1879.0
+New York City,Malignant neoplasms,0-24,0
 New York City,Malignant neoplasms,25-34,10.0
 New York City,Malignant neoplasms,35-44,28.0
 New York City,Malignant neoplasms,45-54,97.0
@@ -3470,6 +3837,7 @@ New York City,Alzheimer disease,0-24,0.0
 New York City,Alzheimer disease,25-34,0.0
 New York City,Alzheimer disease,35-44,0.0
 New York City,Alzheimer disease,45-54,0.0
+New York City,Alzheimer disease,55-64,0
 New York City,Alzheimer disease,65-74,47.0
 New York City,Alzheimer disease,75-84,162.0
 New York City,Alzheimer disease,85+,289.0
@@ -3477,12 +3845,15 @@ New York City,Alzheimer disease,Not stated,0.0
 New York City,Alzheimer disease,All Ages,504.0
 New York City,Vascular and unspecified dementia,0-24,0.0
 New York City,Vascular and unspecified dementia,25-34,0.0
+New York City,Vascular and unspecified dementia,35-44,0
+New York City,Vascular and unspecified dementia,45-54,0
 New York City,Vascular and unspecified dementia,55-64,30.0
 New York City,Vascular and unspecified dementia,65-74,141.0
 New York City,Vascular and unspecified dementia,75-84,529.0
 New York City,Vascular and unspecified dementia,85+,1056.0
 New York City,Vascular and unspecified dementia,Not stated,0.0
 New York City,Vascular and unspecified dementia,All Ages,1759.0
+New York City,Renal failure,0-24,0
 New York City,Renal failure,25-34,14.0
 New York City,Renal failure,35-44,31.0
 New York City,Renal failure,45-54,106.0
@@ -3523,6 +3894,7 @@ North Carolina,Respiratory diseases,75-84,10213.0
 North Carolina,Respiratory diseases,85+,7352.0
 North Carolina,Respiratory diseases,Not stated,0.0
 North Carolina,Respiratory diseases,All Ages,37939.0
+North Carolina,Circulatory diseases,0-24,22.0
 North Carolina,Circulatory diseases,25-34,133.0
 North Carolina,Circulatory diseases,35-44,397.0
 North Carolina,Circulatory diseases,45-54,1077.0
@@ -3532,7 +3904,7 @@ North Carolina,Circulatory diseases,75-84,6023.0
 North Carolina,Circulatory diseases,85+,6008.0
 North Carolina,Circulatory diseases,Not stated,0.0
 North Carolina,Circulatory diseases,All Ages,21036.0
-North Carolina,Circulatory diseases,0-24,22.0
+North Carolina,Sepsis,0-24,0
 North Carolina,Sepsis,25-34,33.0
 North Carolina,Sepsis,35-44,86.0
 North Carolina,Sepsis,45-54,269.0
@@ -3542,6 +3914,8 @@ North Carolina,Sepsis,75-84,849.0
 North Carolina,Sepsis,85+,575.0
 North Carolina,Sepsis,Not stated,0.0
 North Carolina,Sepsis,All Ages,3447.0
+North Carolina,Malignant neoplasms,0-24,0
+North Carolina,Malignant neoplasms,25-34,0
 North Carolina,Malignant neoplasms,35-44,29.0
 North Carolina,Malignant neoplasms,45-54,89.0
 North Carolina,Malignant neoplasms,55-64,324.0
@@ -3550,6 +3924,7 @@ North Carolina,Malignant neoplasms,75-84,637.0
 North Carolina,Malignant neoplasms,85+,398.0
 North Carolina,Malignant neoplasms,Not stated,0.0
 North Carolina,Malignant neoplasms,All Ages,2084.0
+North Carolina,Diabetes,0-24,0
 North Carolina,Diabetes,25-34,28.0
 North Carolina,Diabetes,35-44,85.0
 North Carolina,Diabetes,45-54,277.0
@@ -3573,6 +3948,7 @@ North Carolina,Alzheimer disease,0-24,0.0
 North Carolina,Alzheimer disease,25-34,0.0
 North Carolina,Alzheimer disease,35-44,0.0
 North Carolina,Alzheimer disease,45-54,0.0
+North Carolina,Alzheimer disease,55-64,0
 North Carolina,Alzheimer disease,65-74,71.0
 North Carolina,Alzheimer disease,75-84,326.0
 North Carolina,Alzheimer disease,85+,632.0
@@ -3581,12 +3957,14 @@ North Carolina,Alzheimer disease,All Ages,1035.0
 North Carolina,Vascular and unspecified dementia,0-24,0.0
 North Carolina,Vascular and unspecified dementia,25-34,0.0
 North Carolina,Vascular and unspecified dementia,35-44,0.0
+North Carolina,Vascular and unspecified dementia,45-54,0
 North Carolina,Vascular and unspecified dementia,55-64,34.0
 North Carolina,Vascular and unspecified dementia,65-74,291.0
 North Carolina,Vascular and unspecified dementia,75-84,959.0
 North Carolina,Vascular and unspecified dementia,85+,1769.0
 North Carolina,Vascular and unspecified dementia,Not stated,0.0
 North Carolina,Vascular and unspecified dementia,All Ages,3057.0
+North Carolina,Renal failure,0-24,0
 North Carolina,Renal failure,25-34,46.0
 North Carolina,Renal failure,35-44,95.0
 North Carolina,Renal failure,45-54,340.0
@@ -3617,6 +3995,7 @@ North Carolina,COVID-19,75-84,9219.0
 North Carolina,COVID-19,85+,8685.0
 North Carolina,COVID-19,Not stated,0.0
 North Carolina,COVID-19,All Ages,34381.0
+North Dakota,Respiratory diseases,0-24,0.0
 North Dakota,Respiratory diseases,25-34,11.0
 North Dakota,Respiratory diseases,35-44,86.0
 North Dakota,Respiratory diseases,45-54,195.0
@@ -3626,8 +4005,9 @@ North Dakota,Respiratory diseases,75-84,990.0
 North Dakota,Respiratory diseases,85+,1012.0
 North Dakota,Respiratory diseases,Not stated,0.0
 North Dakota,Respiratory diseases,All Ages,3670.0
-North Dakota,Respiratory diseases,0-24,0.0
+North Dakota,Circulatory diseases,0-24,0.0
 North Dakota,Circulatory diseases,25-34,0.0
+North Dakota,Circulatory diseases,35-44,26.0
 North Dakota,Circulatory diseases,45-54,58.0
 North Dakota,Circulatory diseases,55-64,172.0
 North Dakota,Circulatory diseases,65-74,348.0
@@ -3635,8 +4015,8 @@ North Dakota,Circulatory diseases,75-84,565.0
 North Dakota,Circulatory diseases,85+,810.0
 North Dakota,Circulatory diseases,Not stated,0.0
 North Dakota,Circulatory diseases,All Ages,2018.0
-North Dakota,Circulatory diseases,0-24,0.0
-North Dakota,Circulatory diseases,35-44,26.0
+North Dakota,Sepsis,0-24,0
+North Dakota,Sepsis,25-34,0
 North Dakota,Sepsis,35-44,13.0
 North Dakota,Sepsis,45-54,31.0
 North Dakota,Sepsis,55-64,46.0
@@ -3646,12 +4026,18 @@ North Dakota,Sepsis,85+,42.0
 North Dakota,Sepsis,Not stated,0.0
 North Dakota,Sepsis,All Ages,305.0
 North Dakota,Malignant neoplasms,0-24,0.0
+North Dakota,Malignant neoplasms,25-34,0
+North Dakota,Malignant neoplasms,35-44,0
+North Dakota,Malignant neoplasms,45-54,0
 North Dakota,Malignant neoplasms,55-64,23.0
 North Dakota,Malignant neoplasms,65-74,61.0
 North Dakota,Malignant neoplasms,75-84,69.0
 North Dakota,Malignant neoplasms,85+,51.0
 North Dakota,Malignant neoplasms,Not stated,0.0
 North Dakota,Malignant neoplasms,All Ages,211.0
+North Dakota,Diabetes,0-24,0
+North Dakota,Diabetes,25-34,0
+North Dakota,Diabetes,35-44,0
 North Dakota,Diabetes,45-54,21.0
 North Dakota,Diabetes,55-64,41.0
 North Dakota,Diabetes,65-74,78.0
@@ -3659,6 +4045,8 @@ North Dakota,Diabetes,75-84,108.0
 North Dakota,Diabetes,85+,96.0
 North Dakota,Diabetes,Not stated,0.0
 North Dakota,Diabetes,All Ages,357.0
+North Dakota,Obesity,0-24,0
+North Dakota,Obesity,25-34,0
 North Dakota,Obesity,35-44,12.0
 North Dakota,Obesity,45-54,20.0
 North Dakota,Obesity,55-64,35.0
@@ -3671,6 +4059,7 @@ North Dakota,Alzheimer disease,0-24,0.0
 North Dakota,Alzheimer disease,25-34,0.0
 North Dakota,Alzheimer disease,35-44,0.0
 North Dakota,Alzheimer disease,45-54,0.0
+North Dakota,Alzheimer disease,55-64,0
 North Dakota,Alzheimer disease,65-74,15.0
 North Dakota,Alzheimer disease,75-84,52.0
 North Dakota,Alzheimer disease,85+,136.0
@@ -3680,11 +4069,14 @@ North Dakota,Vascular and unspecified dementia,0-24,0.0
 North Dakota,Vascular and unspecified dementia,25-34,0.0
 North Dakota,Vascular and unspecified dementia,35-44,0.0
 North Dakota,Vascular and unspecified dementia,45-54,0.0
+North Dakota,Vascular and unspecified dementia,55-64,0
 North Dakota,Vascular and unspecified dementia,65-74,13.0
 North Dakota,Vascular and unspecified dementia,75-84,54.0
 North Dakota,Vascular and unspecified dementia,85+,154.0
 North Dakota,Vascular and unspecified dementia,Not stated,0.0
 North Dakota,Vascular and unspecified dementia,All Ages,225.0
+North Dakota,Renal failure,0-24,0
+North Dakota,Renal failure,25-34,0
 North Dakota,Renal failure,35-44,11.0
 North Dakota,Renal failure,45-54,21.0
 North Dakota,Renal failure,55-64,52.0
@@ -3694,6 +4086,7 @@ North Dakota,Renal failure,85+,138.0
 North Dakota,Renal failure,Not stated,0.0
 North Dakota,Renal failure,All Ages,450.0
 North Dakota,"Intentional and unintentional injury, and other adverse events",224.0
+North Dakota,All other conditions and causes (residual),0-24,0
 North Dakota,All other conditions and causes (residual),25-34,15.0
 North Dakota,All other conditions and causes (residual),35-44,36.0
 North Dakota,All other conditions and causes (residual),45-54,80.0
@@ -3723,6 +4116,7 @@ Ohio,Respiratory diseases,75-84,15412.0
 Ohio,Respiratory diseases,85+,12922.0
 Ohio,Respiratory diseases,Not stated,0.0
 Ohio,Respiratory diseases,All Ages,54623.0
+Ohio,Circulatory diseases,0-24,27.0
 Ohio,Circulatory diseases,25-34,143.0
 Ohio,Circulatory diseases,35-44,448.0
 Ohio,Circulatory diseases,45-54,1150.0
@@ -3732,7 +4126,6 @@ Ohio,Circulatory diseases,75-84,9071.0
 Ohio,Circulatory diseases,85+,10322.0
 Ohio,Circulatory diseases,Not stated,0.0
 Ohio,Circulatory diseases,All Ages,31164.0
-Ohio,Circulatory diseases,0-24,27.0
 Ohio,Sepsis,0-24,14.0
 Ohio,Sepsis,25-34,30.0
 Ohio,Sepsis,35-44,133.0
@@ -3743,6 +4136,7 @@ Ohio,Sepsis,75-84,1231.0
 Ohio,Sepsis,85+,677.0
 Ohio,Sepsis,Not stated,0.0
 Ohio,Sepsis,All Ages,4560.0
+Ohio,Malignant neoplasms,0-24,0
 Ohio,Malignant neoplasms,25-34,13.0
 Ohio,Malignant neoplasms,35-44,26.0
 Ohio,Malignant neoplasms,45-54,127.0
@@ -3752,6 +4146,7 @@ Ohio,Malignant neoplasms,75-84,977.0
 Ohio,Malignant neoplasms,85+,668.0
 Ohio,Malignant neoplasms,Not stated,0.0
 Ohio,Malignant neoplasms,All Ages,3158.0
+Ohio,Diabetes,0-24,0
 Ohio,Diabetes,25-34,43.0
 Ohio,Diabetes,35-44,108.0
 Ohio,Diabetes,45-54,311.0
@@ -3774,6 +4169,7 @@ Ohio,Obesity,All Ages,1535.0
 Ohio,Alzheimer disease,0-24,0.0
 Ohio,Alzheimer disease,25-34,0.0
 Ohio,Alzheimer disease,35-44,0.0
+Ohio,Alzheimer disease,45-54,0
 Ohio,Alzheimer disease,55-64,18.0
 Ohio,Alzheimer disease,65-74,132.0
 Ohio,Alzheimer disease,75-84,529.0
@@ -3783,12 +4179,14 @@ Ohio,Alzheimer disease,All Ages,1768.0
 Ohio,Vascular and unspecified dementia,0-24,0.0
 Ohio,Vascular and unspecified dementia,25-34,0.0
 Ohio,Vascular and unspecified dementia,35-44,0.0
+Ohio,Vascular and unspecified dementia,45-54,0
 Ohio,Vascular and unspecified dementia,55-64,62.0
 Ohio,Vascular and unspecified dementia,65-74,376.0
 Ohio,Vascular and unspecified dementia,75-84,1336.0
 Ohio,Vascular and unspecified dementia,85+,2424.0
 Ohio,Vascular and unspecified dementia,Not stated,0.0
 Ohio,Vascular and unspecified dementia,All Ages,4199.0
+Ohio,Renal failure,0-24,0
 Ohio,Renal failure,25-34,27.0
 Ohio,Renal failure,35-44,106.0
 Ohio,Renal failure,45-54,253.0
@@ -3829,6 +4227,7 @@ Oklahoma,Respiratory diseases,75-84,4504.0
 Oklahoma,Respiratory diseases,85+,3346.0
 Oklahoma,Respiratory diseases,Not stated,0.0
 Oklahoma,Respiratory diseases,All Ages,16415.0
+Oklahoma,Circulatory diseases,0-24,0.0
 Oklahoma,Circulatory diseases,25-34,77.0
 Oklahoma,Circulatory diseases,35-44,322.0
 Oklahoma,Circulatory diseases,45-54,923.0
@@ -3838,7 +4237,7 @@ Oklahoma,Circulatory diseases,75-84,4966.0
 Oklahoma,Circulatory diseases,85+,4374.0
 Oklahoma,Circulatory diseases,Not stated,0.0
 Oklahoma,Circulatory diseases,All Ages,17158.0
-Oklahoma,Circulatory diseases,0-24,0.0
+Oklahoma,Sepsis,0-24,0
 Oklahoma,Sepsis,25-34,25.0
 Oklahoma,Sepsis,35-44,64.0
 Oklahoma,Sepsis,45-54,205.0
@@ -3848,6 +4247,7 @@ Oklahoma,Sepsis,75-84,559.0
 Oklahoma,Sepsis,85+,336.0
 Oklahoma,Sepsis,Not stated,0.0
 Oklahoma,Sepsis,All Ages,2248.0
+Oklahoma,Malignant neoplasms,0-24,0
 Oklahoma,Malignant neoplasms,25-34,12.0
 Oklahoma,Malignant neoplasms,35-44,22.0
 Oklahoma,Malignant neoplasms,45-54,67.0
@@ -3880,6 +4280,7 @@ Oklahoma,Obesity,All Ages,1661.0
 Oklahoma,Alzheimer disease,0-24,0.0
 Oklahoma,Alzheimer disease,25-34,0.0
 Oklahoma,Alzheimer disease,35-44,0.0
+Oklahoma,Alzheimer disease,45-54,0
 Oklahoma,Alzheimer disease,55-64,12.0
 Oklahoma,Alzheimer disease,65-74,70.0
 Oklahoma,Alzheimer disease,75-84,266.0
@@ -3887,13 +4288,16 @@ Oklahoma,Alzheimer disease,85+,401.0
 Oklahoma,Alzheimer disease,Not stated,0.0
 Oklahoma,Alzheimer disease,All Ages,751.0
 Oklahoma,Vascular and unspecified dementia,0-24,0.0
+Oklahoma,Vascular and unspecified dementia,25-34,0
 Oklahoma,Vascular and unspecified dementia,35-44,0.0
+Oklahoma,Vascular and unspecified dementia,45-54,0
 Oklahoma,Vascular and unspecified dementia,55-64,27.0
 Oklahoma,Vascular and unspecified dementia,65-74,199.0
 Oklahoma,Vascular and unspecified dementia,75-84,548.0
 Oklahoma,Vascular and unspecified dementia,85+,868.0
 Oklahoma,Vascular and unspecified dementia,Not stated,0.0
 Oklahoma,Vascular and unspecified dementia,All Ages,1648.0
+Oklahoma,Renal failure,0-24,0
 Oklahoma,Renal failure,25-34,15.0
 Oklahoma,Renal failure,35-44,52.0
 Oklahoma,Renal failure,45-54,123.0
@@ -3924,6 +4328,7 @@ Oklahoma,COVID-19,75-84,4892.0
 Oklahoma,COVID-19,85+,4287.0
 Oklahoma,COVID-19,Not stated,0.0
 Oklahoma,COVID-19,All Ages,18512.0
+Oregon,Respiratory diseases,0-24,10.0
 Oregon,Respiratory diseases,25-34,54.0
 Oregon,Respiratory diseases,35-44,253.0
 Oregon,Respiratory diseases,45-54,578.0
@@ -3933,8 +4338,8 @@ Oregon,Respiratory diseases,75-84,2475.0
 Oregon,Respiratory diseases,85+,2072.0
 Oregon,Respiratory diseases,Not stated,0.0
 Oregon,Respiratory diseases,All Ages,9162.0
-Oregon,Respiratory diseases,0-24,10.0
 Oregon,Circulatory diseases,0-24,0.0
+Oregon,Circulatory diseases,25-34,0
 Oregon,Circulatory diseases,35-44,100.0
 Oregon,Circulatory diseases,45-54,270.0
 Oregon,Circulatory diseases,55-64,788.0
@@ -3943,6 +4348,8 @@ Oregon,Circulatory diseases,75-84,2144.0
 Oregon,Circulatory diseases,85+,2828.0
 Oregon,Circulatory diseases,Not stated,0.0
 Oregon,Circulatory diseases,All Ages,7488.0
+Oregon,Sepsis,0-24,0
+Oregon,Sepsis,25-34,0
 Oregon,Sepsis,35-44,28.0
 Oregon,Sepsis,45-54,48.0
 Oregon,Sepsis,55-64,100.0
@@ -3951,6 +4358,8 @@ Oregon,Sepsis,75-84,153.0
 Oregon,Sepsis,85+,121.0
 Oregon,Sepsis,Not stated,0.0
 Oregon,Sepsis,All Ages,621.0
+Oregon,Malignant neoplasms,0-24,0
+Oregon,Malignant neoplasms,25-34,0
 Oregon,Malignant neoplasms,35-44,10.0
 Oregon,Malignant neoplasms,45-54,27.0
 Oregon,Malignant neoplasms,55-64,77.0
@@ -3959,6 +4368,8 @@ Oregon,Malignant neoplasms,75-84,257.0
 Oregon,Malignant neoplasms,85+,198.0
 Oregon,Malignant neoplasms,Not stated,0.0
 Oregon,Malignant neoplasms,All Ages,758.0
+Oregon,Diabetes,0-24,0
+Oregon,Diabetes,25-34,0
 Oregon,Diabetes,35-44,22.0
 Oregon,Diabetes,45-54,87.0
 Oregon,Diabetes,55-64,244.0
@@ -3967,6 +4378,7 @@ Oregon,Diabetes,75-84,453.0
 Oregon,Diabetes,85+,339.0
 Oregon,Diabetes,Not stated,0.0
 Oregon,Diabetes,All Ages,1514.0
+Oregon,Obesity,0-24,0
 Oregon,Obesity,25-34,19.0
 Oregon,Obesity,35-44,41.0
 Oregon,Obesity,45-54,81.0
@@ -3979,6 +4391,8 @@ Oregon,Obesity,All Ages,511.0
 Oregon,Alzheimer disease,0-24,0.0
 Oregon,Alzheimer disease,25-34,0.0
 Oregon,Alzheimer disease,35-44,0.0
+Oregon,Alzheimer disease,45-54,0
+Oregon,Alzheimer disease,55-64,0
 Oregon,Alzheimer disease,65-74,39.0
 Oregon,Alzheimer disease,75-84,169.0
 Oregon,Alzheimer disease,85+,343.0
@@ -3987,12 +4401,15 @@ Oregon,Alzheimer disease,All Ages,557.0
 Oregon,Vascular and unspecified dementia,0-24,0.0
 Oregon,Vascular and unspecified dementia,25-34,0.0
 Oregon,Vascular and unspecified dementia,35-44,0.0
+Oregon,Vascular and unspecified dementia,45-54,0
 Oregon,Vascular and unspecified dementia,55-64,26.0
 Oregon,Vascular and unspecified dementia,65-74,107.0
 Oregon,Vascular and unspecified dementia,75-84,382.0
 Oregon,Vascular and unspecified dementia,85+,725.0
 Oregon,Vascular and unspecified dementia,Not stated,0.0
 Oregon,Vascular and unspecified dementia,All Ages,1243.0
+Oregon,Renal failure,0-24,0
+Oregon,Renal failure,25-34,0
 Oregon,Renal failure,35-44,36.0
 Oregon,Renal failure,45-54,73.0
 Oregon,Renal failure,55-64,175.0
@@ -4032,6 +4449,7 @@ Pennsylvania,Respiratory diseases,75-84,15834.0
 Pennsylvania,Respiratory diseases,85+,15844.0
 Pennsylvania,Respiratory diseases,Not stated,0.0
 Pennsylvania,Respiratory diseases,All Ages,57144.0
+Pennsylvania,Circulatory diseases,0-24,35.0
 Pennsylvania,Circulatory diseases,25-34,102.0
 Pennsylvania,Circulatory diseases,35-44,345.0
 Pennsylvania,Circulatory diseases,45-54,1218.0
@@ -4041,7 +4459,6 @@ Pennsylvania,Circulatory diseases,75-84,10040.0
 Pennsylvania,Circulatory diseases,85+,13958.0
 Pennsylvania,Circulatory diseases,Not stated,0.0
 Pennsylvania,Circulatory diseases,All Ages,35972.0
-Pennsylvania,Circulatory diseases,0-24,35.0
 Pennsylvania,Sepsis,0-24,19.0
 Pennsylvania,Sepsis,25-34,31.0
 Pennsylvania,Sepsis,35-44,124.0
@@ -4052,6 +4469,8 @@ Pennsylvania,Sepsis,75-84,1320.0
 Pennsylvania,Sepsis,85+,987.0
 Pennsylvania,Sepsis,Not stated,0.0
 Pennsylvania,Sepsis,All Ages,4986.0
+Pennsylvania,Malignant neoplasms,0-24,0
+Pennsylvania,Malignant neoplasms,25-34,0
 Pennsylvania,Malignant neoplasms,35-44,42.0
 Pennsylvania,Malignant neoplasms,45-54,114.0
 Pennsylvania,Malignant neoplasms,55-64,469.0
@@ -4060,6 +4479,7 @@ Pennsylvania,Malignant neoplasms,75-84,1091.0
 Pennsylvania,Malignant neoplasms,85+,927.0
 Pennsylvania,Malignant neoplasms,Not stated,0.0
 Pennsylvania,Malignant neoplasms,All Ages,3612.0
+Pennsylvania,Diabetes,0-24,0
 Pennsylvania,Diabetes,25-34,23.0
 Pennsylvania,Diabetes,35-44,97.0
 Pennsylvania,Diabetes,45-54,305.0
@@ -4082,6 +4502,7 @@ Pennsylvania,Obesity,All Ages,1842.0
 Pennsylvania,Alzheimer disease,0-24,0.0
 Pennsylvania,Alzheimer disease,25-34,0.0
 Pennsylvania,Alzheimer disease,35-44,0.0
+Pennsylvania,Alzheimer disease,45-54,0
 Pennsylvania,Alzheimer disease,55-64,12.0
 Pennsylvania,Alzheimer disease,65-74,98.0
 Pennsylvania,Alzheimer disease,75-84,393.0
@@ -4091,12 +4512,14 @@ Pennsylvania,Alzheimer disease,All Ages,1560.0
 Pennsylvania,Vascular and unspecified dementia,0-24,0.0
 Pennsylvania,Vascular and unspecified dementia,25-34,0.0
 Pennsylvania,Vascular and unspecified dementia,35-44,0.0
+Pennsylvania,Vascular and unspecified dementia,45-54,0
 Pennsylvania,Vascular and unspecified dementia,55-64,66.0
 Pennsylvania,Vascular and unspecified dementia,65-74,389.0
 Pennsylvania,Vascular and unspecified dementia,75-84,1430.0
 Pennsylvania,Vascular and unspecified dementia,85+,3461.0
 Pennsylvania,Vascular and unspecified dementia,Not stated,0.0
 Pennsylvania,Vascular and unspecified dementia,All Ages,5348.0
+Pennsylvania,Renal failure,0-24,0
 Pennsylvania,Renal failure,25-34,28.0
 Pennsylvania,Renal failure,35-44,89.0
 Pennsylvania,Renal failure,45-54,258.0
@@ -4127,6 +4550,8 @@ Pennsylvania,COVID-19,75-84,14114.0
 Pennsylvania,COVID-19,85+,18361.0
 Pennsylvania,COVID-19,Not stated,0.0
 Pennsylvania,COVID-19,All Ages,53033.0
+Rhode Island,Respiratory diseases,0-24,0.0
+Rhode Island,Respiratory diseases,25-34,0.0
 Rhode Island,Respiratory diseases,35-44,29.0
 Rhode Island,Respiratory diseases,45-54,143.0
 Rhode Island,Respiratory diseases,55-64,406.0
@@ -4135,9 +4560,9 @@ Rhode Island,Respiratory diseases,75-84,1083.0
 Rhode Island,Respiratory diseases,85+,1430.0
 Rhode Island,Respiratory diseases,Not stated,0.0
 Rhode Island,Respiratory diseases,All Ages,4051.0
-Rhode Island,Respiratory diseases,25-34,0.0
-Rhode Island,Respiratory diseases,0-24,0.0
 Rhode Island,Circulatory diseases,0-24,0.0
+Rhode Island,Circulatory diseases,25-34,0.0
+Rhode Island,Circulatory diseases,35-44,0
 Rhode Island,Circulatory diseases,45-54,72.0
 Rhode Island,Circulatory diseases,55-64,249.0
 Rhode Island,Circulatory diseases,65-74,582.0
@@ -4145,7 +4570,9 @@ Rhode Island,Circulatory diseases,75-84,785.0
 Rhode Island,Circulatory diseases,85+,1375.0
 Rhode Island,Circulatory diseases,Not stated,0.0
 Rhode Island,Circulatory diseases,All Ages,3112.0
-Rhode Island,Circulatory diseases,25-34,0.0
+Rhode Island,Sepsis,0-24,0
+Rhode Island,Sepsis,25-34,0
+Rhode Island,Sepsis,35-44,0
 Rhode Island,Sepsis,45-54,17.0
 Rhode Island,Sepsis,55-64,42.0
 Rhode Island,Sepsis,65-74,70.0
@@ -4153,6 +4580,9 @@ Rhode Island,Sepsis,75-84,56.0
 Rhode Island,Sepsis,85+,50.0
 Rhode Island,Sepsis,Not stated,0.0
 Rhode Island,Sepsis,All Ages,242.0
+Rhode Island,Malignant neoplasms,0-24,0
+Rhode Island,Malignant neoplasms,25-34,0
+Rhode Island,Malignant neoplasms,35-44,0
 Rhode Island,Malignant neoplasms,45-54,12.0
 Rhode Island,Malignant neoplasms,55-64,33.0
 Rhode Island,Malignant neoplasms,65-74,79.0
@@ -4161,6 +4591,8 @@ Rhode Island,Malignant neoplasms,85+,88.0
 Rhode Island,Malignant neoplasms,Not stated,0.0
 Rhode Island,Malignant neoplasms,All Ages,320.0
 Rhode Island,Diabetes,0-24,0.0
+Rhode Island,Diabetes,25-34,0
+Rhode Island,Diabetes,35-44,0
 Rhode Island,Diabetes,45-54,24.0
 Rhode Island,Diabetes,55-64,52.0
 Rhode Island,Diabetes,65-74,123.0
@@ -4169,6 +4601,8 @@ Rhode Island,Diabetes,85+,138.0
 Rhode Island,Diabetes,Not stated,0.0
 Rhode Island,Diabetes,All Ages,479.0
 Rhode Island,Obesity,0-24,0.0
+Rhode Island,Obesity,25-34,0
+Rhode Island,Obesity,35-44,0
 Rhode Island,Obesity,45-54,17.0
 Rhode Island,Obesity,55-64,39.0
 Rhode Island,Obesity,65-74,47.0
@@ -4180,6 +4614,7 @@ Rhode Island,Alzheimer disease,0-24,0.0
 Rhode Island,Alzheimer disease,25-34,0.0
 Rhode Island,Alzheimer disease,35-44,0.0
 Rhode Island,Alzheimer disease,45-54,0.0
+Rhode Island,Alzheimer disease,55-64,0
 Rhode Island,Alzheimer disease,65-74,14.0
 Rhode Island,Alzheimer disease,75-84,67.0
 Rhode Island,Alzheimer disease,85+,141.0
@@ -4188,12 +4623,16 @@ Rhode Island,Alzheimer disease,All Ages,226.0
 Rhode Island,Vascular and unspecified dementia,0-24,0.0
 Rhode Island,Vascular and unspecified dementia,25-34,0.0
 Rhode Island,Vascular and unspecified dementia,35-44,0.0
+Rhode Island,Vascular and unspecified dementia,45-54,0
+Rhode Island,Vascular and unspecified dementia,55-64,0
 Rhode Island,Vascular and unspecified dementia,65-74,48.0
 Rhode Island,Vascular and unspecified dementia,75-84,150.0
 Rhode Island,Vascular and unspecified dementia,85+,410.0
 Rhode Island,Vascular and unspecified dementia,Not stated,0.0
 Rhode Island,Vascular and unspecified dementia,All Ages,615.0
 Rhode Island,Renal failure,0-24,0.0
+Rhode Island,Renal failure,25-34,0
+Rhode Island,Renal failure,35-44,0
 Rhode Island,Renal failure,45-54,11.0
 Rhode Island,Renal failure,55-64,55.0
 Rhode Island,Renal failure,65-74,92.0
@@ -4202,6 +4641,7 @@ Rhode Island,Renal failure,85+,161.0
 Rhode Island,Renal failure,Not stated,0.0
 Rhode Island,Renal failure,All Ages,441.0
 Rhode Island,"Intentional and unintentional injury, and other adverse events",292.0
+Rhode Island,All other conditions and causes (residual),0-24,0
 Rhode Island,All other conditions and causes (residual),25-34,17.0
 Rhode Island,All other conditions and causes (residual),35-44,20.0
 Rhode Island,All other conditions and causes (residual),45-54,63.0
@@ -4211,6 +4651,7 @@ Rhode Island,All other conditions and causes (residual),75-84,426.0
 Rhode Island,All other conditions and causes (residual),85+,680.0
 Rhode Island,All other conditions and causes (residual),Not stated,0.0
 Rhode Island,All other conditions and causes (residual),All Ages,1778.0
+Rhode Island,COVID-19,0-24,0
 Rhode Island,COVID-19,25-34,21.0
 Rhode Island,COVID-19,35-44,42.0
 Rhode Island,COVID-19,45-54,129.0
@@ -4230,6 +4671,7 @@ South Carolina,Respiratory diseases,75-84,6108.0
 South Carolina,Respiratory diseases,85+,3871.0
 South Carolina,Respiratory diseases,Not stated,0.0
 South Carolina,Respiratory diseases,All Ages,21692.0
+South Carolina,Circulatory diseases,0-24,13.0
 South Carolina,Circulatory diseases,25-34,63.0
 South Carolina,Circulatory diseases,35-44,324.0
 South Carolina,Circulatory diseases,45-54,820.0
@@ -4239,7 +4681,6 @@ South Carolina,Circulatory diseases,75-84,4702.0
 South Carolina,Circulatory diseases,85+,3843.0
 South Carolina,Circulatory diseases,Not stated,0.0
 South Carolina,Circulatory diseases,All Ages,15537.0
-South Carolina,Circulatory diseases,0-24,13.0
 South Carolina,Sepsis,0-24,11.0
 South Carolina,Sepsis,25-34,22.0
 South Carolina,Sepsis,35-44,84.0
@@ -4250,6 +4691,8 @@ South Carolina,Sepsis,75-84,595.0
 South Carolina,Sepsis,85+,339.0
 South Carolina,Sepsis,Not stated,0.0
 South Carolina,Sepsis,All Ages,2378.0
+South Carolina,Malignant neoplasms,0-24,0
+South Carolina,Malignant neoplasms,25-34,0
 South Carolina,Malignant neoplasms,35-44,13.0
 South Carolina,Malignant neoplasms,45-54,34.0
 South Carolina,Malignant neoplasms,55-64,175.0
@@ -4258,6 +4701,7 @@ South Carolina,Malignant neoplasms,75-84,358.0
 South Carolina,Malignant neoplasms,85+,214.0
 South Carolina,Malignant neoplasms,Not stated,0.0
 South Carolina,Malignant neoplasms,All Ages,1114.0
+South Carolina,Diabetes,0-24,0
 South Carolina,Diabetes,25-34,26.0
 South Carolina,Diabetes,35-44,90.0
 South Carolina,Diabetes,45-54,250.0
@@ -4281,6 +4725,7 @@ South Carolina,Alzheimer disease,0-24,0.0
 South Carolina,Alzheimer disease,25-34,0.0
 South Carolina,Alzheimer disease,35-44,0.0
 South Carolina,Alzheimer disease,45-54,0.0
+South Carolina,Alzheimer disease,55-64,0
 South Carolina,Alzheimer disease,65-74,52.0
 South Carolina,Alzheimer disease,75-84,218.0
 South Carolina,Alzheimer disease,85+,377.0
@@ -4288,12 +4733,15 @@ South Carolina,Alzheimer disease,Not stated,0.0
 South Carolina,Alzheimer disease,All Ages,654.0
 South Carolina,Vascular and unspecified dementia,0-24,0.0
 South Carolina,Vascular and unspecified dementia,25-34,0.0
+South Carolina,Vascular and unspecified dementia,35-44,0
+South Carolina,Vascular and unspecified dementia,45-54,0
 South Carolina,Vascular and unspecified dementia,55-64,35.0
 South Carolina,Vascular and unspecified dementia,65-74,206.0
 South Carolina,Vascular and unspecified dementia,75-84,695.0
 South Carolina,Vascular and unspecified dementia,85+,981.0
 South Carolina,Vascular and unspecified dementia,Not stated,0.0
 South Carolina,Vascular and unspecified dementia,All Ages,1922.0
+South Carolina,Renal failure,0-24,0
 South Carolina,Renal failure,25-34,24.0
 South Carolina,Renal failure,35-44,77.0
 South Carolina,Renal failure,45-54,218.0
@@ -4324,6 +4772,7 @@ South Carolina,COVID-19,75-84,5718.0
 South Carolina,COVID-19,85+,4600.0
 South Carolina,COVID-19,Not stated,0.0
 South Carolina,COVID-19,All Ages,20839.0
+South Dakota,Respiratory diseases,0-24,0
 South Dakota,Respiratory diseases,25-34,33.0
 South Dakota,Respiratory diseases,35-44,79.0
 South Dakota,Respiratory diseases,45-54,229.0
@@ -4333,6 +4782,9 @@ South Dakota,Respiratory diseases,75-84,1042.0
 South Dakota,Respiratory diseases,85+,966.0
 South Dakota,Respiratory diseases,Not stated,0.0
 South Dakota,Respiratory diseases,All Ages,4019.0
+South Dakota,Circulatory diseases,0-24,0.0
+South Dakota,Circulatory diseases,25-34,0.0
+South Dakota,Circulatory diseases,35-44,25.0
 South Dakota,Circulatory diseases,45-54,103.0
 South Dakota,Circulatory diseases,55-64,290.0
 South Dakota,Circulatory diseases,65-74,653.0
@@ -4340,9 +4792,8 @@ South Dakota,Circulatory diseases,75-84,782.0
 South Dakota,Circulatory diseases,85+,1138.0
 South Dakota,Circulatory diseases,Not stated,0.0
 South Dakota,Circulatory diseases,All Ages,3034.0
-South Dakota,Circulatory diseases,0-24,0.0
-South Dakota,Circulatory diseases,35-44,25.0
-South Dakota,Circulatory diseases,25-34,0.0
+South Dakota,Sepsis,0-24,0
+South Dakota,Sepsis,25-34,0
 South Dakota,Sepsis,35-44,10.0
 South Dakota,Sepsis,45-54,31.0
 South Dakota,Sepsis,55-64,53.0
@@ -4351,6 +4802,9 @@ South Dakota,Sepsis,75-84,78.0
 South Dakota,Sepsis,85+,54.0
 South Dakota,Sepsis,Not stated,0.0
 South Dakota,Sepsis,All Ages,333.0
+South Dakota,Malignant neoplasms,0-24,0
+South Dakota,Malignant neoplasms,25-34,0
+South Dakota,Malignant neoplasms,35-44,0
 South Dakota,Malignant neoplasms,45-54,16.0
 South Dakota,Malignant neoplasms,55-64,38.0
 South Dakota,Malignant neoplasms,65-74,68.0
@@ -4358,6 +4812,8 @@ South Dakota,Malignant neoplasms,75-84,84.0
 South Dakota,Malignant neoplasms,85+,66.0
 South Dakota,Malignant neoplasms,Not stated,0.0
 South Dakota,Malignant neoplasms,All Ages,279.0
+South Dakota,Diabetes,0-24,0
+South Dakota,Diabetes,25-34,0
 South Dakota,Diabetes,35-44,17.0
 South Dakota,Diabetes,45-54,41.0
 South Dakota,Diabetes,55-64,103.0
@@ -4366,17 +4822,21 @@ South Dakota,Diabetes,75-84,182.0
 South Dakota,Diabetes,85+,184.0
 South Dakota,Diabetes,Not stated,0.0
 South Dakota,Diabetes,All Ages,712.0
+South Dakota,Obesity,0-24,0
+South Dakota,Obesity,25-34,0
 South Dakota,Obesity,35-44,11.0
 South Dakota,Obesity,45-54,26.0
 South Dakota,Obesity,55-64,42.0
 South Dakota,Obesity,65-74,65.0
 South Dakota,Obesity,75-84,28.0
+South Dakota,Obesity,85+,0
 South Dakota,Obesity,Not stated,0.0
 South Dakota,Obesity,All Ages,190.0
 South Dakota,Alzheimer disease,0-24,0.0
 South Dakota,Alzheimer disease,25-34,0.0
 South Dakota,Alzheimer disease,35-44,0.0
 South Dakota,Alzheimer disease,45-54,0.0
+South Dakota,Alzheimer disease,55-64,0
 South Dakota,Alzheimer disease,65-74,14.0
 South Dakota,Alzheimer disease,75-84,61.0
 South Dakota,Alzheimer disease,85+,165.0
@@ -4386,11 +4846,14 @@ South Dakota,Vascular and unspecified dementia,0-24,0.0
 South Dakota,Vascular and unspecified dementia,25-34,0.0
 South Dakota,Vascular and unspecified dementia,35-44,0.0
 South Dakota,Vascular and unspecified dementia,45-54,0.0
+South Dakota,Vascular and unspecified dementia,55-64,0
 South Dakota,Vascular and unspecified dementia,65-74,24.0
 South Dakota,Vascular and unspecified dementia,75-84,81.0
 South Dakota,Vascular and unspecified dementia,85+,201.0
 South Dakota,Vascular and unspecified dementia,Not stated,0.0
 South Dakota,Vascular and unspecified dementia,All Ages,313.0
+South Dakota,Renal failure,0-24,0
+South Dakota,Renal failure,25-34,0
 South Dakota,Renal failure,35-44,15.0
 South Dakota,Renal failure,45-54,29.0
 South Dakota,Renal failure,55-64,63.0
@@ -4400,6 +4863,7 @@ South Dakota,Renal failure,85+,124.0
 South Dakota,Renal failure,Not stated,0.0
 South Dakota,Renal failure,All Ages,496.0
 South Dakota,"Intentional and unintentional injury, and other adverse events",177.0
+South Dakota,All other conditions and causes (residual),0-24,0
 South Dakota,All other conditions and causes (residual),25-34,25.0
 South Dakota,All other conditions and causes (residual),35-44,45.0
 South Dakota,All other conditions and causes (residual),45-54,100.0
@@ -4429,6 +4893,7 @@ Tennessee,Respiratory diseases,75-84,9171.0
 Tennessee,Respiratory diseases,85+,5740.0
 Tennessee,Respiratory diseases,Not stated,0.0
 Tennessee,Respiratory diseases,All Ages,34182.0
+Tennessee,Circulatory diseases,0-24,29.0
 Tennessee,Circulatory diseases,25-34,133.0
 Tennessee,Circulatory diseases,35-44,380.0
 Tennessee,Circulatory diseases,45-54,1095.0
@@ -4438,7 +4903,7 @@ Tennessee,Circulatory diseases,75-84,5721.0
 Tennessee,Circulatory diseases,85+,4785.0
 Tennessee,Circulatory diseases,Not stated,0.0
 Tennessee,Circulatory diseases,All Ages,19363.0
-Tennessee,Circulatory diseases,0-24,29.0
+Tennessee,Sepsis,0-24,0
 Tennessee,Sepsis,25-34,48.0
 Tennessee,Sepsis,35-44,132.0
 Tennessee,Sepsis,45-54,310.0
@@ -4448,6 +4913,8 @@ Tennessee,Sepsis,75-84,846.0
 Tennessee,Sepsis,85+,416.0
 Tennessee,Sepsis,Not stated,0.0
 Tennessee,Sepsis,All Ages,3435.0
+Tennessee,Malignant neoplasms,0-24,0
+Tennessee,Malignant neoplasms,25-34,0
 Tennessee,Malignant neoplasms,35-44,27.0
 Tennessee,Malignant neoplasms,45-54,85.0
 Tennessee,Malignant neoplasms,55-64,271.0
@@ -4479,6 +4946,8 @@ Tennessee,Obesity,All Ages,1266.0
 Tennessee,Alzheimer disease,0-24,0.0
 Tennessee,Alzheimer disease,25-34,0.0
 Tennessee,Alzheimer disease,35-44,0.0
+Tennessee,Alzheimer disease,45-54,0
+Tennessee,Alzheimer disease,55-64,0
 Tennessee,Alzheimer disease,65-74,57.0
 Tennessee,Alzheimer disease,75-84,273.0
 Tennessee,Alzheimer disease,85+,432.0
@@ -4486,12 +4955,15 @@ Tennessee,Alzheimer disease,Not stated,0.0
 Tennessee,Alzheimer disease,All Ages,767.0
 Tennessee,Vascular and unspecified dementia,0-24,0.0
 Tennessee,Vascular and unspecified dementia,25-34,0.0
+Tennessee,Vascular and unspecified dementia,35-44,0
+Tennessee,Vascular and unspecified dementia,45-54,0
 Tennessee,Vascular and unspecified dementia,55-64,23.0
 Tennessee,Vascular and unspecified dementia,65-74,193.0
 Tennessee,Vascular and unspecified dementia,75-84,748.0
 Tennessee,Vascular and unspecified dementia,85+,1101.0
 Tennessee,Vascular and unspecified dementia,Not stated,0.0
 Tennessee,Vascular and unspecified dementia,All Ages,2071.0
+Tennessee,Renal failure,0-24,0
 Tennessee,Renal failure,25-34,41.0
 Tennessee,Renal failure,35-44,81.0
 Tennessee,Renal failure,45-54,255.0
@@ -4583,7 +5055,9 @@ Texas,Obesity,85+,101.0
 Texas,Obesity,Not stated,0.0
 Texas,Obesity,All Ages,6728.0
 Texas,Alzheimer disease,0-24,0.0
+Texas,Alzheimer disease,25-34,0
 Texas,Alzheimer disease,35-44,0.0
+Texas,Alzheimer disease,45-54,0
 Texas,Alzheimer disease,55-64,32.0
 Texas,Alzheimer disease,65-74,242.0
 Texas,Alzheimer disease,75-84,889.0
@@ -4592,6 +5066,8 @@ Texas,Alzheimer disease,Not stated,0.0
 Texas,Alzheimer disease,All Ages,2887.0
 Texas,Vascular and unspecified dementia,0-24,0.0
 Texas,Vascular and unspecified dementia,25-34,0.0
+Texas,Vascular and unspecified dementia,35-44,0
+Texas,Vascular and unspecified dementia,45-54,0
 Texas,Vascular and unspecified dementia,55-64,87.0
 Texas,Vascular and unspecified dementia,65-74,607.0
 Texas,Vascular and unspecified dementia,75-84,1914.0
@@ -4629,6 +5105,7 @@ Texas,COVID-19,75-84,24967.0
 Texas,COVID-19,85+,20453.0
 Texas,COVID-19,Not stated,0.0
 Texas,COVID-19,All Ages,104397.0
+Utah,Respiratory diseases,0-24,0.0
 Utah,Respiratory diseases,25-34,149.0
 Utah,Respiratory diseases,35-44,287.0
 Utah,Respiratory diseases,45-54,529.0
@@ -4638,8 +5115,8 @@ Utah,Respiratory diseases,75-84,1785.0
 Utah,Respiratory diseases,85+,1241.0
 Utah,Respiratory diseases,Not stated,0.0
 Utah,Respiratory diseases,All Ages,6932.0
-Utah,Respiratory diseases,0-24,0.0
 Utah,Circulatory diseases,0-24,0.0
+Utah,Circulatory diseases,25-34,21.0
 Utah,Circulatory diseases,35-44,91.0
 Utah,Circulatory diseases,45-54,241.0
 Utah,Circulatory diseases,55-64,457.0
@@ -4648,7 +5125,7 @@ Utah,Circulatory diseases,75-84,934.0
 Utah,Circulatory diseases,85+,962.0
 Utah,Circulatory diseases,Not stated,0.0
 Utah,Circulatory diseases,All Ages,3510.0
-Utah,Circulatory diseases,25-34,21.0
+Utah,Sepsis,0-24,0
 Utah,Sepsis,25-34,17.0
 Utah,Sepsis,35-44,40.0
 Utah,Sepsis,45-54,68.0
@@ -4658,6 +5135,9 @@ Utah,Sepsis,75-84,151.0
 Utah,Sepsis,85+,75.0
 Utah,Sepsis,Not stated,0.0
 Utah,Sepsis,All Ages,728.0
+Utah,Malignant neoplasms,0-24,0
+Utah,Malignant neoplasms,25-34,0
+Utah,Malignant neoplasms,35-44,0
 Utah,Malignant neoplasms,45-54,22.0
 Utah,Malignant neoplasms,55-64,46.0
 Utah,Malignant neoplasms,65-74,85.0
@@ -4665,6 +5145,7 @@ Utah,Malignant neoplasms,75-84,86.0
 Utah,Malignant neoplasms,85+,64.0
 Utah,Malignant neoplasms,Not stated,0.0
 Utah,Malignant neoplasms,All Ages,317.0
+Utah,Diabetes,0-24,0
 Utah,Diabetes,25-34,10.0
 Utah,Diabetes,35-44,34.0
 Utah,Diabetes,45-54,65.0
@@ -4674,17 +5155,21 @@ Utah,Diabetes,75-84,210.0
 Utah,Diabetes,85+,132.0
 Utah,Diabetes,Not stated,0.0
 Utah,Diabetes,All Ages,830.0
+Utah,Obesity,0-24,0
 Utah,Obesity,25-34,41.0
 Utah,Obesity,35-44,67.0
 Utah,Obesity,45-54,115.0
 Utah,Obesity,55-64,125.0
 Utah,Obesity,65-74,120.0
 Utah,Obesity,75-84,44.0
+Utah,Obesity,85+,0
 Utah,Obesity,Not stated,0.0
 Utah,Obesity,All Ages,528.0
 Utah,Alzheimer disease,0-24,0.0
 Utah,Alzheimer disease,25-34,0.0
+Utah,Alzheimer disease,35-44,0
 Utah,Alzheimer disease,45-54,0.0
+Utah,Alzheimer disease,55-64,0
 Utah,Alzheimer disease,65-74,15.0
 Utah,Alzheimer disease,75-84,76.0
 Utah,Alzheimer disease,85+,128.0
@@ -4693,6 +5178,8 @@ Utah,Alzheimer disease,All Ages,221.0
 Utah,Vascular and unspecified dementia,0-24,0.0
 Utah,Vascular and unspecified dementia,25-34,0.0
 Utah,Vascular and unspecified dementia,35-44,0.0
+Utah,Vascular and unspecified dementia,45-54,0
+Utah,Vascular and unspecified dementia,55-64,0
 Utah,Vascular and unspecified dementia,65-74,32.0
 Utah,Vascular and unspecified dementia,75-84,148.0
 Utah,Vascular and unspecified dementia,85+,204.0
@@ -4729,7 +5216,9 @@ Utah,COVID-19,75-84,1486.0
 Utah,COVID-19,85+,1361.0
 Utah,COVID-19,Not stated,0.0
 Utah,COVID-19,All Ages,5868.0
+Vermont,Respiratory diseases,0-24,0.0
 Vermont,Respiratory diseases,25-34,0.0
+Vermont,Respiratory diseases,35-44,0.0
 Vermont,Respiratory diseases,45-54,20.0
 Vermont,Respiratory diseases,55-64,87.0
 Vermont,Respiratory diseases,65-74,167.0
@@ -4737,19 +5226,21 @@ Vermont,Respiratory diseases,75-84,264.0
 Vermont,Respiratory diseases,85+,282.0
 Vermont,Respiratory diseases,Not stated,0.0
 Vermont,Respiratory diseases,All Ages,885.0
-Vermont,Respiratory diseases,0-24,0.0
-Vermont,Respiratory diseases,35-44,0.0
 Vermont,Circulatory diseases,0-24,0.0
 Vermont,Circulatory diseases,25-34,0.0
+Vermont,Circulatory diseases,35-44,0.0
+Vermont,Circulatory diseases,45-54,0
 Vermont,Circulatory diseases,55-64,35.0
 Vermont,Circulatory diseases,65-74,110.0
 Vermont,Circulatory diseases,75-84,274.0
 Vermont,Circulatory diseases,85+,460.0
 Vermont,Circulatory diseases,Not stated,0.0
 Vermont,Circulatory diseases,All Ages,934.0
-Vermont,Circulatory diseases,35-44,0.0
 Vermont,Sepsis,0-24,0.0
 Vermont,Sepsis,25-34,0.0
+Vermont,Sepsis,35-44,0
+Vermont,Sepsis,45-54,0
+Vermont,Sepsis,55-64,0
 Vermont,Sepsis,65-74,10.0
 Vermont,Sepsis,75-84,23.0
 Vermont,Sepsis,85+,17.0
@@ -4758,6 +5249,7 @@ Vermont,Sepsis,All Ages,60.0
 Vermont,Malignant neoplasms,0-24,0.0
 Vermont,Malignant neoplasms,25-34,0.0
 Vermont,Malignant neoplasms,35-44,0.0
+Vermont,Malignant neoplasms,45-54,0
 Vermont,Malignant neoplasms,55-64,15.0
 Vermont,Malignant neoplasms,65-74,14.0
 Vermont,Malignant neoplasms,75-84,39.0
@@ -4766,6 +5258,8 @@ Vermont,Malignant neoplasms,Not stated,0.0
 Vermont,Malignant neoplasms,All Ages,98.0
 Vermont,Diabetes,0-24,0.0
 Vermont,Diabetes,25-34,0.0
+Vermont,Diabetes,35-44,0
+Vermont,Diabetes,45-54,0
 Vermont,Diabetes,55-64,16.0
 Vermont,Diabetes,65-74,22.0
 Vermont,Diabetes,75-84,57.0
@@ -4774,9 +5268,11 @@ Vermont,Diabetes,Not stated,0.0
 Vermont,Diabetes,All Ages,156.0
 Vermont,Obesity,0-24,0.0
 Vermont,Obesity,25-34,0.0
+Vermont,Obesity,35-44,0
 Vermont,Obesity,45-54,12.0
 Vermont,Obesity,55-64,15.0
 Vermont,Obesity,65-74,13.0
+Vermont,Obesity,75-84,0
 Vermont,Obesity,85+,0.0
 Vermont,Obesity,Not stated,0.0
 Vermont,Obesity,All Ages,56.0
@@ -4785,6 +5281,7 @@ Vermont,Alzheimer disease,25-34,0.0
 Vermont,Alzheimer disease,35-44,0.0
 Vermont,Alzheimer disease,45-54,0.0
 Vermont,Alzheimer disease,55-64,0.0
+Vermont,Alzheimer disease,65-74,0
 Vermont,Alzheimer disease,75-84,19.0
 Vermont,Alzheimer disease,85+,54.0
 Vermont,Alzheimer disease,Not stated,0.0
@@ -4793,17 +5290,26 @@ Vermont,Vascular and unspecified dementia,0-24,0.0
 Vermont,Vascular and unspecified dementia,25-34,0.0
 Vermont,Vascular and unspecified dementia,35-44,0.0
 Vermont,Vascular and unspecified dementia,45-54,0.0
+Vermont,Vascular and unspecified dementia,55-64,0
+Vermont,Vascular and unspecified dementia,65-74,0
 Vermont,Vascular and unspecified dementia,75-84,44.0
 Vermont,Vascular and unspecified dementia,85+,115.0
 Vermont,Vascular and unspecified dementia,Not stated,0.0
 Vermont,Vascular and unspecified dementia,All Ages,172.0
+Vermont,Renal failure,0-24,0
 Vermont,Renal failure,25-34,0.0
+Vermont,Renal failure,35-44,0
+Vermont,Renal failure,45-54,0
+Vermont,Renal failure,55-64,0
 Vermont,Renal failure,65-74,14.0
 Vermont,Renal failure,75-84,29.0
 Vermont,Renal failure,85+,34.0
 Vermont,Renal failure,Not stated,0.0
 Vermont,Renal failure,All Ages,85.0
 Vermont,"Intentional and unintentional injury, and other adverse events",83.0
+Vermont,All other conditions and causes (residual),0-24,0
+Vermont,All other conditions and causes (residual),25-34,0
+Vermont,All other conditions and causes (residual),35-44,0
 Vermont,All other conditions and causes (residual),45-54,29.0
 Vermont,All other conditions and causes (residual),55-64,53.0
 Vermont,All other conditions and causes (residual),65-74,94.0
@@ -4811,6 +5317,8 @@ Vermont,All other conditions and causes (residual),75-84,194.0
 Vermont,All other conditions and causes (residual),85+,244.0
 Vermont,All other conditions and causes (residual),Not stated,0.0
 Vermont,All other conditions and causes (residual),All Ages,623.0
+Vermont,COVID-19,0-24,0
+Vermont,COVID-19,25-34,0
 Vermont,COVID-19,35-44,17.0
 Vermont,COVID-19,45-54,39.0
 Vermont,COVID-19,55-64,79.0
@@ -4829,6 +5337,7 @@ Virginia,Respiratory diseases,75-84,5767.0
 Virginia,Respiratory diseases,85+,4607.0
 Virginia,Respiratory diseases,Not stated,0.0
 Virginia,Respiratory diseases,All Ages,20828.0
+Virginia,Circulatory diseases,0-24,0
 Virginia,Circulatory diseases,25-34,59.0
 Virginia,Circulatory diseases,35-44,155.0
 Virginia,Circulatory diseases,45-54,504.0
@@ -4838,6 +5347,7 @@ Virginia,Circulatory diseases,75-84,3674.0
 Virginia,Circulatory diseases,85+,4514.0
 Virginia,Circulatory diseases,Not stated,0.0
 Virginia,Circulatory diseases,All Ages,13065.0
+Virginia,Sepsis,0-24,0
 Virginia,Sepsis,25-34,19.0
 Virginia,Sepsis,35-44,49.0
 Virginia,Sepsis,45-54,145.0
@@ -4847,6 +5357,8 @@ Virginia,Sepsis,75-84,583.0
 Virginia,Sepsis,85+,395.0
 Virginia,Sepsis,Not stated,0.0
 Virginia,Sepsis,All Ages,2182.0
+Virginia,Malignant neoplasms,0-24,0
+Virginia,Malignant neoplasms,25-34,0
 Virginia,Malignant neoplasms,35-44,15.0
 Virginia,Malignant neoplasms,45-54,59.0
 Virginia,Malignant neoplasms,55-64,197.0
@@ -4855,6 +5367,7 @@ Virginia,Malignant neoplasms,75-84,414.0
 Virginia,Malignant neoplasms,85+,299.0
 Virginia,Malignant neoplasms,Not stated,0.0
 Virginia,Malignant neoplasms,All Ages,1345.0
+Virginia,Diabetes,0-24,0
 Virginia,Diabetes,25-34,15.0
 Virginia,Diabetes,35-44,40.0
 Virginia,Diabetes,45-54,154.0
@@ -4864,6 +5377,7 @@ Virginia,Diabetes,75-84,683.0
 Virginia,Diabetes,85+,497.0
 Virginia,Diabetes,Not stated,0.0
 Virginia,Diabetes,All Ages,2466.0
+Virginia,Obesity,0-24,0
 Virginia,Obesity,25-34,30.0
 Virginia,Obesity,35-44,49.0
 Virginia,Obesity,45-54,82.0
@@ -4877,6 +5391,7 @@ Virginia,Alzheimer disease,0-24,0.0
 Virginia,Alzheimer disease,25-34,0.0
 Virginia,Alzheimer disease,35-44,0.0
 Virginia,Alzheimer disease,45-54,0.0
+Virginia,Alzheimer disease,55-64,0
 Virginia,Alzheimer disease,65-74,39.0
 Virginia,Alzheimer disease,75-84,176.0
 Virginia,Alzheimer disease,85+,355.0
@@ -4885,12 +5400,14 @@ Virginia,Alzheimer disease,All Ages,573.0
 Virginia,Vascular and unspecified dementia,0-24,0.0
 Virginia,Vascular and unspecified dementia,25-34,0.0
 Virginia,Vascular and unspecified dementia,35-44,0.0
+Virginia,Vascular and unspecified dementia,45-54,0
 Virginia,Vascular and unspecified dementia,55-64,25.0
 Virginia,Vascular and unspecified dementia,65-74,167.0
 Virginia,Vascular and unspecified dementia,75-84,634.0
 Virginia,Vascular and unspecified dementia,85+,1347.0
 Virginia,Vascular and unspecified dementia,Not stated,0.0
 Virginia,Vascular and unspecified dementia,All Ages,2176.0
+Virginia,Renal failure,0-24,0
 Virginia,Renal failure,25-34,15.0
 Virginia,Renal failure,35-44,40.0
 Virginia,Renal failure,45-54,161.0
@@ -4941,6 +5458,7 @@ Washington,Circulatory diseases,75-84,3222.0
 Washington,Circulatory diseases,85+,3790.0
 Washington,Circulatory diseases,Not stated,0.0
 Washington,Circulatory diseases,All Ages,11836.0
+Washington,Sepsis,0-24,0
 Washington,Sepsis,25-34,11.0
 Washington,Sepsis,35-44,37.0
 Washington,Sepsis,45-54,146.0
@@ -4950,6 +5468,8 @@ Washington,Sepsis,75-84,404.0
 Washington,Sepsis,85+,301.0
 Washington,Sepsis,Not stated,0.0
 Washington,Sepsis,All Ages,1657.0
+Washington,Malignant neoplasms,0-24,0
+Washington,Malignant neoplasms,25-34,0
 Washington,Malignant neoplasms,35-44,14.0
 Washington,Malignant neoplasms,45-54,41.0
 Washington,Malignant neoplasms,55-64,127.0
@@ -4958,6 +5478,7 @@ Washington,Malignant neoplasms,75-84,347.0
 Washington,Malignant neoplasms,85+,241.0
 Washington,Malignant neoplasms,Not stated,0.0
 Washington,Malignant neoplasms,All Ages,1138.0
+Washington,Diabetes,0-24,0
 Washington,Diabetes,25-34,14.0
 Washington,Diabetes,35-44,51.0
 Washington,Diabetes,45-54,157.0
@@ -4967,6 +5488,7 @@ Washington,Diabetes,75-84,676.0
 Washington,Diabetes,85+,491.0
 Washington,Diabetes,Not stated,0.0
 Washington,Diabetes,All Ages,2457.0
+Washington,Obesity,0-24,0
 Washington,Obesity,25-34,51.0
 Washington,Obesity,35-44,88.0
 Washington,Obesity,45-54,157.0
@@ -4979,6 +5501,8 @@ Washington,Obesity,All Ages,963.0
 Washington,Alzheimer disease,0-24,0.0
 Washington,Alzheimer disease,25-34,0.0
 Washington,Alzheimer disease,35-44,0.0
+Washington,Alzheimer disease,45-54,0
+Washington,Alzheimer disease,55-64,0
 Washington,Alzheimer disease,65-74,62.0
 Washington,Alzheimer disease,75-84,282.0
 Washington,Alzheimer disease,85+,623.0
@@ -4987,12 +5511,15 @@ Washington,Alzheimer disease,All Ages,976.0
 Washington,Vascular and unspecified dementia,0-24,0.0
 Washington,Vascular and unspecified dementia,25-34,0.0
 Washington,Vascular and unspecified dementia,35-44,0.0
+Washington,Vascular and unspecified dementia,45-54,0
 Washington,Vascular and unspecified dementia,55-64,13.0
 Washington,Vascular and unspecified dementia,65-74,122.0
 Washington,Vascular and unspecified dementia,75-84,464.0
 Washington,Vascular and unspecified dementia,85+,814.0
 Washington,Vascular and unspecified dementia,Not stated,0.0
 Washington,Vascular and unspecified dementia,All Ages,1414.0
+Washington,Renal failure,0-24,0
+Washington,Renal failure,25-34,0
 Washington,Renal failure,35-44,46.0
 Washington,Renal failure,45-54,148.0
 Washington,Renal failure,55-64,306.0
@@ -5033,6 +5560,7 @@ West Virginia,Respiratory diseases,85+,1576.0
 West Virginia,Respiratory diseases,Not stated,0.0
 West Virginia,Respiratory diseases,All Ages,8972.0
 West Virginia,Circulatory diseases,0-24,0.0
+West Virginia,Circulatory diseases,25-34,0.0
 West Virginia,Circulatory diseases,35-44,75.0
 West Virginia,Circulatory diseases,45-54,239.0
 West Virginia,Circulatory diseases,55-64,618.0
@@ -5041,7 +5569,8 @@ West Virginia,Circulatory diseases,75-84,1659.0
 West Virginia,Circulatory diseases,85+,1465.0
 West Virginia,Circulatory diseases,Not stated,0.0
 West Virginia,Circulatory diseases,All Ages,5318.0
-West Virginia,Circulatory diseases,25-34,0.0
+West Virginia,Sepsis,0-24,0
+West Virginia,Sepsis,25-34,0
 West Virginia,Sepsis,35-44,20.0
 West Virginia,Sepsis,45-54,83.0
 West Virginia,Sepsis,55-64,169.0
@@ -5060,6 +5589,8 @@ West Virginia,Malignant neoplasms,75-84,171.0
 West Virginia,Malignant neoplasms,85+,100.0
 West Virginia,Malignant neoplasms,Not stated,0.0
 West Virginia,Malignant neoplasms,All Ages,584.0
+West Virginia,Diabetes,0-24,0
+West Virginia,Diabetes,25-34,0
 West Virginia,Diabetes,35-44,16.0
 West Virginia,Diabetes,45-54,83.0
 West Virginia,Diabetes,55-64,182.0
@@ -5068,18 +5599,21 @@ West Virginia,Diabetes,75-84,318.0
 West Virginia,Diabetes,85+,173.0
 West Virginia,Diabetes,Not stated,0.0
 West Virginia,Diabetes,All Ages,1090.0
+West Virginia,Obesity,0-24,0
 West Virginia,Obesity,25-34,11.0
 West Virginia,Obesity,35-44,27.0
 West Virginia,Obesity,45-54,67.0
 West Virginia,Obesity,55-64,57.0
 West Virginia,Obesity,65-74,79.0
 West Virginia,Obesity,75-84,28.0
+West Virginia,Obesity,85+,0
 West Virginia,Obesity,Not stated,0.0
 West Virginia,Obesity,All Ages,274.0
 West Virginia,Alzheimer disease,0-24,0.0
 West Virginia,Alzheimer disease,25-34,0.0
 West Virginia,Alzheimer disease,35-44,0.0
 West Virginia,Alzheimer disease,45-54,0.0
+West Virginia,Alzheimer disease,55-64,0
 West Virginia,Alzheimer disease,65-74,18.0
 West Virginia,Alzheimer disease,75-84,71.0
 West Virginia,Alzheimer disease,85+,107.0
@@ -5089,11 +5623,14 @@ West Virginia,Vascular and unspecified dementia,0-24,0.0
 West Virginia,Vascular and unspecified dementia,25-34,0.0
 West Virginia,Vascular and unspecified dementia,35-44,0.0
 West Virginia,Vascular and unspecified dementia,45-54,0.0
+West Virginia,Vascular and unspecified dementia,55-64,0
 West Virginia,Vascular and unspecified dementia,65-74,37.0
 West Virginia,Vascular and unspecified dementia,75-84,230.0
 West Virginia,Vascular and unspecified dementia,85+,327.0
 West Virginia,Vascular and unspecified dementia,Not stated,0.0
 West Virginia,Vascular and unspecified dementia,All Ages,601.0
+West Virginia,Renal failure,0-24,0
+West Virginia,Renal failure,25-34,0
 West Virginia,Renal failure,35-44,19.0
 West Virginia,Renal failure,45-54,69.0
 West Virginia,Renal failure,55-64,149.0
@@ -5133,6 +5670,7 @@ Wisconsin,Respiratory diseases,75-84,4257.0
 Wisconsin,Respiratory diseases,85+,3827.0
 Wisconsin,Respiratory diseases,Not stated,0.0
 Wisconsin,Respiratory diseases,All Ages,14336.0
+Wisconsin,Circulatory diseases,0-24,0.0
 Wisconsin,Circulatory diseases,25-34,28.0
 Wisconsin,Circulatory diseases,35-44,213.0
 Wisconsin,Circulatory diseases,45-54,559.0
@@ -5142,7 +5680,8 @@ Wisconsin,Circulatory diseases,75-84,4668.0
 Wisconsin,Circulatory diseases,85+,5885.0
 Wisconsin,Circulatory diseases,Not stated,0.0
 Wisconsin,Circulatory diseases,All Ages,16179.0
-Wisconsin,Circulatory diseases,0-24,0.0
+Wisconsin,Sepsis,0-24,0
+Wisconsin,Sepsis,25-34,0
 Wisconsin,Sepsis,35-44,29.0
 Wisconsin,Sepsis,45-54,65.0
 Wisconsin,Sepsis,55-64,126.0
@@ -5151,6 +5690,8 @@ Wisconsin,Sepsis,75-84,267.0
 Wisconsin,Sepsis,85+,168.0
 Wisconsin,Sepsis,Not stated,0.0
 Wisconsin,Sepsis,All Ages,938.0
+Wisconsin,Malignant neoplasms,0-24,0
+Wisconsin,Malignant neoplasms,25-34,0
 Wisconsin,Malignant neoplasms,35-44,13.0
 Wisconsin,Malignant neoplasms,45-54,61.0
 Wisconsin,Malignant neoplasms,55-64,163.0
@@ -5159,6 +5700,7 @@ Wisconsin,Malignant neoplasms,75-84,525.0
 Wisconsin,Malignant neoplasms,85+,391.0
 Wisconsin,Malignant neoplasms,Not stated,0.0
 Wisconsin,Malignant neoplasms,All Ages,1581.0
+Wisconsin,Diabetes,0-24,0
 Wisconsin,Diabetes,25-34,18.0
 Wisconsin,Diabetes,35-44,78.0
 Wisconsin,Diabetes,45-54,200.0
@@ -5181,6 +5723,8 @@ Wisconsin,Obesity,All Ages,1604.0
 Wisconsin,Alzheimer disease,0-24,0.0
 Wisconsin,Alzheimer disease,25-34,0.0
 Wisconsin,Alzheimer disease,35-44,0.0
+Wisconsin,Alzheimer disease,45-54,0
+Wisconsin,Alzheimer disease,55-64,0
 Wisconsin,Alzheimer disease,65-74,48.0
 Wisconsin,Alzheimer disease,75-84,226.0
 Wisconsin,Alzheimer disease,85+,552.0
@@ -5188,12 +5732,16 @@ Wisconsin,Alzheimer disease,Not stated,0.0
 Wisconsin,Alzheimer disease,All Ages,832.0
 Wisconsin,Vascular and unspecified dementia,0-24,0.0
 Wisconsin,Vascular and unspecified dementia,25-34,0.0
+Wisconsin,Vascular and unspecified dementia,35-44,0
+Wisconsin,Vascular and unspecified dementia,45-54,0
 Wisconsin,Vascular and unspecified dementia,55-64,17.0
 Wisconsin,Vascular and unspecified dementia,65-74,168.0
 Wisconsin,Vascular and unspecified dementia,75-84,569.0
 Wisconsin,Vascular and unspecified dementia,85+,1212.0
 Wisconsin,Vascular and unspecified dementia,Not stated,0.0
 Wisconsin,Vascular and unspecified dementia,All Ages,1971.0
+Wisconsin,Renal failure,0-24,0
+Wisconsin,Renal failure,25-34,0
 Wisconsin,Renal failure,35-44,30.0
 Wisconsin,Renal failure,45-54,77.0
 Wisconsin,Renal failure,55-64,185.0
@@ -5234,6 +5782,8 @@ Wyoming,Respiratory diseases,85+,438.0
 Wyoming,Respiratory diseases,Not stated,0.0
 Wyoming,Respiratory diseases,All Ages,2034.0
 Wyoming,Circulatory diseases,0-24,0.0
+Wyoming,Circulatory diseases,25-34,0.0
+Wyoming,Circulatory diseases,35-44,0.0
 Wyoming,Circulatory diseases,45-54,32.0
 Wyoming,Circulatory diseases,55-64,147.0
 Wyoming,Circulatory diseases,65-74,285.0
@@ -5241,10 +5791,10 @@ Wyoming,Circulatory diseases,75-84,390.0
 Wyoming,Circulatory diseases,85+,408.0
 Wyoming,Circulatory diseases,Not stated,0.0
 Wyoming,Circulatory diseases,All Ages,1330.0
-Wyoming,Circulatory diseases,35-44,0.0
-Wyoming,Circulatory diseases,25-34,0.0
 Wyoming,Sepsis,0-24,0.0
 Wyoming,Sepsis,25-34,0.0
+Wyoming,Sepsis,35-44,0
+Wyoming,Sepsis,45-54,0
 Wyoming,Sepsis,55-64,15.0
 Wyoming,Sepsis,65-74,34.0
 Wyoming,Sepsis,75-84,21.0
@@ -5254,6 +5804,7 @@ Wyoming,Sepsis,All Ages,95.0
 Wyoming,Malignant neoplasms,0-24,0.0
 Wyoming,Malignant neoplasms,25-34,0.0
 Wyoming,Malignant neoplasms,35-44,0.0
+Wyoming,Malignant neoplasms,45-54,0
 Wyoming,Malignant neoplasms,55-64,15.0
 Wyoming,Malignant neoplasms,65-74,35.0
 Wyoming,Malignant neoplasms,75-84,44.0
@@ -5261,6 +5812,8 @@ Wyoming,Malignant neoplasms,85+,22.0
 Wyoming,Malignant neoplasms,Not stated,0.0
 Wyoming,Malignant neoplasms,All Ages,121.0
 Wyoming,Diabetes,0-24,0.0
+Wyoming,Diabetes,25-34,0
+Wyoming,Diabetes,35-44,0
 Wyoming,Diabetes,45-54,17.0
 Wyoming,Diabetes,55-64,58.0
 Wyoming,Diabetes,65-74,64.0
@@ -5269,11 +5822,13 @@ Wyoming,Diabetes,85+,59.0
 Wyoming,Diabetes,Not stated,0.0
 Wyoming,Diabetes,All Ages,272.0
 Wyoming,Obesity,0-24,0.0
+Wyoming,Obesity,25-34,0
 Wyoming,Obesity,35-44,10.0
 Wyoming,Obesity,45-54,26.0
 Wyoming,Obesity,55-64,48.0
 Wyoming,Obesity,65-74,39.0
 Wyoming,Obesity,75-84,14.0
+Wyoming,Obesity,85+,0
 Wyoming,Obesity,Not stated,0.0
 Wyoming,Obesity,All Ages,155.0
 Wyoming,Alzheimer disease,0-24,0.0
@@ -5281,6 +5836,7 @@ Wyoming,Alzheimer disease,25-34,0.0
 Wyoming,Alzheimer disease,35-44,0.0
 Wyoming,Alzheimer disease,45-54,0.0
 Wyoming,Alzheimer disease,55-64,0.0
+Wyoming,Alzheimer disease,65-74,0
 Wyoming,Alzheimer disease,75-84,26.0
 Wyoming,Alzheimer disease,85+,41.0
 Wyoming,Alzheimer disease,Not stated,0.0
@@ -5289,12 +5845,16 @@ Wyoming,Vascular and unspecified dementia,0-24,0.0
 Wyoming,Vascular and unspecified dementia,25-34,0.0
 Wyoming,Vascular and unspecified dementia,35-44,0.0
 Wyoming,Vascular and unspecified dementia,45-54,0.0
+Wyoming,Vascular and unspecified dementia,55-64,0
 Wyoming,Vascular and unspecified dementia,65-74,18.0
 Wyoming,Vascular and unspecified dementia,75-84,51.0
 Wyoming,Vascular and unspecified dementia,85+,103.0
 Wyoming,Vascular and unspecified dementia,Not stated,0.0
 Wyoming,Vascular and unspecified dementia,All Ages,173.0
 Wyoming,Renal failure,0-24,0.0
+Wyoming,Renal failure,25-34,0
+Wyoming,Renal failure,35-44,0
+Wyoming,Renal failure,45-54,0
 Wyoming,Renal failure,55-64,19.0
 Wyoming,Renal failure,65-74,36.0
 Wyoming,Renal failure,75-84,37.0
@@ -5333,6 +5893,7 @@ Puerto Rico,Respiratory diseases,85+,2131.0
 Puerto Rico,Respiratory diseases,Not stated,0.0
 Puerto Rico,Respiratory diseases,All Ages,7812.0
 Puerto Rico,Circulatory diseases,0-24,0.0
+Puerto Rico,Circulatory diseases,25-34,0.0
 Puerto Rico,Circulatory diseases,35-44,45.0
 Puerto Rico,Circulatory diseases,45-54,171.0
 Puerto Rico,Circulatory diseases,55-64,387.0
@@ -5341,7 +5902,7 @@ Puerto Rico,Circulatory diseases,75-84,1108.0
 Puerto Rico,Circulatory diseases,85+,1156.0
 Puerto Rico,Circulatory diseases,Not stated,0.0
 Puerto Rico,Circulatory diseases,All Ages,3588.0
-Puerto Rico,Circulatory diseases,25-34,0.0
+Puerto Rico,Sepsis,0-24,0
 Puerto Rico,Sepsis,25-34,14.0
 Puerto Rico,Sepsis,35-44,30.0
 Puerto Rico,Sepsis,45-54,105.0
@@ -5349,9 +5910,11 @@ Puerto Rico,Sepsis,55-64,192.0
 Puerto Rico,Sepsis,65-74,315.0
 Puerto Rico,Sepsis,75-84,481.0
 Puerto Rico,Sepsis,85+,419.0
+Puerto Rico,Sepsis,Not stated,0
 Puerto Rico,Sepsis,All Ages,1561.0
 Puerto Rico,Malignant neoplasms,0-24,0.0
 Puerto Rico,Malignant neoplasms,25-34,0.0
+Puerto Rico,Malignant neoplasms,35-44,0
 Puerto Rico,Malignant neoplasms,45-54,21.0
 Puerto Rico,Malignant neoplasms,55-64,58.0
 Puerto Rico,Malignant neoplasms,65-74,102.0
@@ -5359,6 +5922,8 @@ Puerto Rico,Malignant neoplasms,75-84,118.0
 Puerto Rico,Malignant neoplasms,85+,75.0
 Puerto Rico,Malignant neoplasms,Not stated,0.0
 Puerto Rico,Malignant neoplasms,All Ages,379.0
+Puerto Rico,Diabetes,0-24,0
+Puerto Rico,Diabetes,25-34,0
 Puerto Rico,Diabetes,35-44,36.0
 Puerto Rico,Diabetes,45-54,73.0
 Puerto Rico,Diabetes,55-64,115.0
@@ -5367,17 +5932,21 @@ Puerto Rico,Diabetes,75-84,268.0
 Puerto Rico,Diabetes,85+,219.0
 Puerto Rico,Diabetes,Not stated,0.0
 Puerto Rico,Diabetes,All Ages,930.0
+Puerto Rico,Obesity,0-24,0
 Puerto Rico,Obesity,25-34,15.0
 Puerto Rico,Obesity,35-44,30.0
 Puerto Rico,Obesity,45-54,45.0
 Puerto Rico,Obesity,55-64,55.0
 Puerto Rico,Obesity,65-74,40.0
 Puerto Rico,Obesity,75-84,31.0
+Puerto Rico,Obesity,85+,0
+Puerto Rico,Obesity,Not stated,0
 Puerto Rico,Obesity,All Ages,227.0
 Puerto Rico,Alzheimer disease,0-24,0.0
 Puerto Rico,Alzheimer disease,25-34,0.0
 Puerto Rico,Alzheimer disease,35-44,0.0
 Puerto Rico,Alzheimer disease,45-54,0.0
+Puerto Rico,Alzheimer disease,55-64,0
 Puerto Rico,Alzheimer disease,65-74,25.0
 Puerto Rico,Alzheimer disease,75-84,97.0
 Puerto Rico,Alzheimer disease,85+,191.0
@@ -5387,11 +5956,14 @@ Puerto Rico,Vascular and unspecified dementia,0-24,0.0
 Puerto Rico,Vascular and unspecified dementia,25-34,0.0
 Puerto Rico,Vascular and unspecified dementia,35-44,0.0
 Puerto Rico,Vascular and unspecified dementia,45-54,0.0
+Puerto Rico,Vascular and unspecified dementia,55-64,0
 Puerto Rico,Vascular and unspecified dementia,65-74,23.0
 Puerto Rico,Vascular and unspecified dementia,75-84,65.0
 Puerto Rico,Vascular and unspecified dementia,85+,132.0
 Puerto Rico,Vascular and unspecified dementia,Not stated,0.0
 Puerto Rico,Vascular and unspecified dementia,All Ages,226.0
+Puerto Rico,Renal failure,0-24,0
+Puerto Rico,Renal failure,25-34,0
 Puerto Rico,Renal failure,35-44,25.0
 Puerto Rico,Renal failure,45-54,73.0
 Puerto Rico,Renal failure,55-64,127.0
@@ -5409,6 +5981,7 @@ Puerto Rico,All other conditions and causes (residual),55-64,361.0
 Puerto Rico,All other conditions and causes (residual),65-74,551.0
 Puerto Rico,All other conditions and causes (residual),75-84,823.0
 Puerto Rico,All other conditions and causes (residual),85+,862.0
+Puerto Rico,All other conditions and causes (residual),Not stated,0
 Puerto Rico,All other conditions and causes (residual),All Ages,2946.0
 Puerto Rico,COVID-19,0-24,37.0
 Puerto Rico,COVID-19,25-34,81.0
@@ -5418,4 +5991,5 @@ Puerto Rico,COVID-19,55-64,798.0
 Puerto Rico,COVID-19,65-74,1279.0
 Puerto Rico,COVID-19,75-84,1755.0
 Puerto Rico,COVID-19,85+,1824.0
+Puerto Rico,COVID-19,Not stated,0
 Puerto Rico,COVID-19,All Ages,6416.0

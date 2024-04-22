@@ -9,12 +9,13 @@ data = {}
 
 for line in lines[1:]:
     line = line.split(",")
-    if line[-1] == "\n":
-        continue
-    state,condition,age,deaths = line[0],line[1],line[3],float(line[-1])
+    state,condition,age = line[0],line[1],line[3]
     key = f"{state},{condition},{age}"
     if key not in data.keys():
         data[key] = 0
+    if line[-1] == "\n":
+        continue
+    deaths = float(line[-1])
     data[key] += deaths
 
 #pprint.pprint(data)
