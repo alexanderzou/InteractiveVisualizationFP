@@ -712,7 +712,7 @@ function bar(state, mode, colors) {
             const maxdeath = 20;//fix this
             var mapcolor = null
             const colors = d3.scaleSequentialLog(d3.interpolateReds).domain([1, maxdeath]);
-            const colorbrewercolorblind = d3.interpolateRgbBasis(["#eff3ff", "#bdd7e7", "#6baed6", "#3182bd", "#08519c"]);
+            const colorbrewercolorblind = d3.interpolateRgbBasis(["rgb(254,229,217)", "rgb(252,174,145)", "rgb(251,106,74)", "rgb(222,45,38)", "rgb(165,15,21)"]);
             const colors2 = d3.scaleSequentialLog(colorbrewercolorblind).domain([1, maxdeath]);
             const statesdata = topojson.feature(us, us.objects.states).features;
             var lastClickedState = null;
@@ -730,7 +730,7 @@ function bar(state, mode, colors) {
                 console.log(d.properties.name)
                 console.log(statedeath.get(d.properties.name))
                 const deaths = percapitastatedeathmap.get(d.properties.name);
-                return colors(deaths);
+                return colors2(deaths);
             }
 
             g.selectAll("path")
