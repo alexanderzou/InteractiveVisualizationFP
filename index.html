@@ -277,13 +277,13 @@
                 svg1.append("g")
                     .call(d3.axisLeft(y));
                 svg1.append("text")
-                    .attr("y", -35)
-                    .attr("dy", "0.71em")
+                    .attr("y", -30)
                     .attr("text-anchor", "end")
                     .attr("x", -25)
                     .text("In Percent (%)")
                     .attr("transform", "rotate(-90)")
-                    .attr("font-family","Lato");
+                    .attr("font-family","Lato")
+                    .attr("font-size", "12px");
 
                 svg1.selectAll(".line")
                     .data(Array.from(sumstat))
@@ -361,13 +361,13 @@
                     .call(d3.axisLeft(y));
 
                 svg2.append("text")
-                    .attr("y", -32)
-                    .attr("dy", "0.71em")
+                    .attr("y", -20)
                     .attr("text-anchor", "end")
                     .attr("x", -25)
                     .text("In Percent (%)")
                     .attr("transform", "rotate(-90)")
-                    .attr("font-family","Lato");
+                    .attr("font-family","Lato")
+                    .attr("font-size","12px");
                 svg2.append("path")
                     .datum(data)
                     .attr("fill", "none")
@@ -429,13 +429,13 @@
                 svg3.append("g")
                     .call(d3.axisLeft(yScale).tickFormat(d => d));
                 svg3.append("text")
-                    .attr("y", -32)
-                    .attr("dy", "0.71em")
+                    .attr("y", -30)
                     .attr("text-anchor", "end")
                     .attr("x", -25)
                     .text("In Percent (%)")
                     .attr("transform", "rotate(-90)")
-                    .attr("font-family","Lato");
+                    .attr("font-family","Lato")
+                    .attr("font-size", "12px");
                 svg3.selectAll(".bar")
                     .data(data)
                     .enter().append("rect")
@@ -498,9 +498,10 @@ function makeConditions(file, mode, tag, colors) {
             .attr("y", -58)
             .attr("dy", "0.71em")
             .attr("text-anchor", "end")
-            .attr("x", -25)
+            .attr("x",-100)
             .text("deaths")
-            .attr("transform", "rotate(-90)");
+            .attr("transform", "rotate(-90)")
+            .attr("font-size", "12px");
 
         svg4.selectAll(".bar")
             .data(data)
@@ -547,9 +548,10 @@ function bar(state, mode, colors) {
             .attr("y", -58)
             .attr("dy", "0.71em")
             .attr("text-anchor", "end")
-            .attr("x", -25)
+            .attr("x", -100)
             .text("deaths")
-            .attr("transform", "rotate(-90)");
+            .attr("transform", "rotate(-90)")
+            .attr("font-size", "12px");
 
         svg4.selectAll(".bar")
             .data(data)
