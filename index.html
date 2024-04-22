@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>US Map with D3</title>
     <script src="https://d3js.org/d3.v7.js"></script>
     <script src="https://d3js.org/topojson.v3.js"></script>
     <style>
@@ -675,7 +674,21 @@ function bar(state, mode, colors) {
             bar(stateS, Cmode, color);
             legendcond(color);
         }
-
+    const popfile = "pop2023.csv"
+    const popmap = new Map()
+    const percapitastatedeathmap = new Map()
+    d3.csv(popfile).then(function(popdata) 
+        {
+            //console.log(popdata);
+            popdata.forEach(popdat =>
+            {
+                var state = popdat["NAME"];
+                var pop = +popdat["POPESTIMATE2023"];
+                state = state;
+                popmap.set(state, pop);
+            });
+            //console.log(popmap);
+        });
     d3.json("states-albers-10m.json").then(function(us) {
         d3.csv(conditionsFile).then(function(conddata) {
             const agedata = conddata.filter(age => age.AgeGroup === 'All Ages');
@@ -693,29 +706,31 @@ function bar(state, mode, colors) {
                 statedeath.set(state, deaths);
                 }
             });
-            console.log(statedeath)
-            const maxdeath = 10000000000;//fix this
+            console.log(statedeath);
+            const maxdeath = 20;//fix this
             var mapcolor = null
             const colors = d3.scaleSequentialLog(d3.interpolateReds).domain([1, maxdeath]);
             const colorbrewercolorblind = d3.interpolateRgbBasis(["#eff3ff", "#bdd7e7", "#6baed6", "#3182bd", "#08519c"]);
             const colors2 = d3.scaleSequentialLog(colorbrewercolorblind).domain([1, maxdeath]);
             const statesdata = topojson.feature(us, us.objects.states).features;
             var lastClickedState = null;
-           // const popfile = "pop2023.csv"
-           // var percapitastatedeathmap = new Map()
-          //  d3.csv(popfile).then(function(popdata) 
-          //  {
-            //    popdata.forEach(popdat =>
-            //    {
-              //      var state = popdata["STATE"];
-              //      var pop = popdata["POPESTIMATE2023"]
-              //  }
-           // });
+            popmap.forEach((pop, state) => 
+            {
+                var statedeaths = statedeath.get(state);
+                //console.log(state + " " + statedeaths);
+                var pop = popmap.get(state);
+                var capitadeath = (statedeaths/pop) * 1000;
+                percapitastatedeathmap.set(state,capitadeath)
+            });
+            console.log(percapitastatedeathmap)
             function statecolor(d) 
             {
-                const deaths = statedeath.get(d.properties.name);
+                console.log(d.properties.name)
+                console.log(statedeath.get(d.properties.name))
+                const deaths = percapitastatedeathmap.get(d.properties.name);
                 return colors(deaths);
             }
+
             g.selectAll("path")
                 .data(statesdata)
                 .enter()
@@ -747,7 +762,7 @@ function bar(state, mode, colors) {
                     console.log(statedata)
                     updatedetail(stateS, statedata,Cmode);
                 });
-            var mapstate = new Map([  ["Alabama", "AL"],  ["Alaska", "AK"],  ["Arizona", "AZ"],  ["Arkansas", "AR"],  ["California", "CA"],  ["Colorado", "CO"],  ["Connecticut", "CT"],  ["Delaware", "DE"],  ["Florida", "FL"], ["Georgia", "GA"], ["Hawaii", "HI"], ["Idaho", "ID"], ["Illinois", "IL"], ["Indiana", "IN"], ["Iowa", "IA"], ["Kansas", "KS"], ["Kentucky", "KY"], ["Louisiana", "LA"], ["Maine", "ME"],  ["Maryland", "MD"],  ["Massachusetts", "MA"],  ["Michigan", "MI"],   ["Minnesota", "MN"],  ["Mississippi", "MS"],   ["Missouri", "MO"],   ["Montana", "MT"],  ["Nebraska", "NE"], ["Nevada", "NV"], ["New Hampshire", "NH"], ["New Jersey", "NJ"],  ["New Mexico", "NM"],  ["New York", "NY"],  ["North Carolina", "NC"],  ["North Dakota", "ND"],["Ohio", "OH"],["Oklahoma", "OK"],["Oregon", "OR"], ["Pennsylvania", "PA"], ["Rhode Island", "RI"], ["South Carolina", "SC"], ["South Dakota", "SD"],["Tennessee", "TN"],["Texas", "TX"], ["Utah", "UT"], ["Vermont", "VT"],["Virginia", "VA"], ["Washington", "WA"],["West Virginia", "WV"],["Wisconsin", "WI"],["Wyoming", "WY"]]);
+            var mapstate = new Map([["Alabama", "AL"],  ["Alaska", "AK"],  ["Arizona", "AZ"],  ["Arkansas", "AR"],  ["California", "CA"],  ["Colorado", "CO"],  ["Connecticut", "CT"],  ["Delaware", "DE"],  ["Florida", "FL"], ["Georgia", "GA"], ["Hawaii", "HI"], ["Idaho", "ID"], ["Illinois", "IL"], ["Indiana", "IN"], ["Iowa", "IA"], ["Kansas", "KS"], ["Kentucky", "KY"], ["Louisiana", "LA"], ["Maine", "ME"],  ["Maryland", "MD"],  ["Massachusetts", "MA"],  ["Michigan", "MI"],   ["Minnesota", "MN"],  ["Mississippi", "MS"],   ["Missouri", "MO"],   ["Montana", "MT"],  ["Nebraska", "NE"], ["Nevada", "NV"], ["New Hampshire", "NH"], ["New Jersey", "NJ"],  ["New Mexico", "NM"],  ["New York", "NY"],  ["North Carolina", "NC"],  ["North Dakota", "ND"],["Ohio", "OH"],["Oklahoma", "OK"],["Oregon", "OR"], ["Pennsylvania", "PA"], ["Rhode Island", "RI"], ["South Carolina", "SC"], ["South Dakota", "SD"],["Tennessee", "TN"],["Texas", "TX"], ["Utah", "UT"], ["Vermont", "VT"],["Virginia", "VA"], ["Washington", "WA"],["West Virginia", "WV"],["Wisconsin", "WI"],["Wyoming", "WY"]]);
             g.selectAll("text")
                 .data(statesdata)
                 .enter()
