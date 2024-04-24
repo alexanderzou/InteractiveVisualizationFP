@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://d3js.org/d3.v7.js"></script>
+    <script src="https://d3js.org/topojson.v3.js"></script>
+    <style>
+        body {
+            display: block;
+            justify-content: right;
+            align-items: center;
+            /* margin: 150px; */
+            margin-top: 150px;
+            margin-left: 450px;
+        } 
+        .over {
+             
+            position: relative;
+            
+        }
+        .map {
+            border: 2px solid black;
+            width: 1000px;
+            height: 660px;
+            position: relative;
+            right: 3%;
+            border-radius: 5px;
+            font-family: "Lato";
+        }
+
+        .chart {
+            border: 2px solid black; 
+            position: absolute;
+            left: 79%;
+            top: 38%;
+            width: 400px;
+            height: 45%;
+        }
+        
+        .legend {
+            font-size: 15px;
+        }
+        .placeholder-box {
+            border: 2px solid black; 
+            width: 400px; 
+            height: 45%; 
+            position: absolute;
+            left: 79%; 
+            top: -8%;
+            font-size: 20px; 
+        }
+        .placeholder-box2 {
+            border: 2px solid black;
+            width: 400px; 
+            height: 50%; 
+            position: absolute;
+            left: 79%; 
+            top: 85%;
+            border-radius: 5px;
+        }
+        .placeholder-box3 {
+            border: 2px solid black; 
+            width: 1000px; 
+            height: 18%; 
+            position: absolute;
+            right: 22%;
+            top: -19%;
+            font-size: 40px; 
+            display: flex;           
+            justify-content: center; 
+            align-items: center;  
+            font-family: "Lato";
+            font-weight: bold;
+        }
+        .placeholder-box4 {
+            border: 2px solid black; 
+            width: 1000px; 
+            height: 34%;
+            position: absolute;
+            right: 22%;
+            top: 101%;
+        }
+        .placeholder-box5 {
+            border: 2px solid black;
+            width: 30%;
+            height: 153%;
+            position: absolute;
+            right: 104%;
+            top: -18%;
+        }
+        .placeholder-box6 {
+            border: 2px solid black; 
+            width: 400px; 
+            height: 10%; 
+            position: absolute;
+            left: 79%;  
+            top: -19%;
+            font-size: 16px; 
+        }
+        .placeholder-box7 {
+            border: 2px solid black;
+            width: 28%;
+            height: 48%;
+            position: absolute;
+            right: 105%;
+            top: 35%;
+        }
+        .placeholder-box8 {
+            border: 2px solid black;
+            width: 28%;
+            height: 48%;
+            position: absolute;
+            right: 105%;
+            top: 85%;
+        }
+        .placeholder-box9 {
+            border: 2px solid black;
+            width: 28%;
+            height: 48%;
+            position: absolute;
+            right: 105%;
+            top: -15%;
+            font-size: 20px;
+            font-family: "Lato";
+        }
+        svg {
+            height: auto;
+        }
+        .legendcond {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="over">
+        <div class="map"> Deaths per 1000 residents by State Min: 0 Max: 20
+            <svg width=1000px height=660px></svg>
+        </div>
+        <div class="chart">
+            <div id="statetitle">Click a State</div>
+            <div id="stateChart"></div>
+        </div>
+
+        <div class="placeholder-box">
+            <div id="legend"></div>
+            <div class="selection">
+                <label for="conditionSelect">Age Group:</label>
+                <select id="conditionSelect">
+                    <option value=0>All Ages</option>
+                    <option value=1>0-24 years</option>
+                    <option value=2>25-34 years</option>
+                    <option value=3>35-44 years</option>
+                    <option value=4>45-54 years</option>
+                    <option value=5>55-64 years</option>
+                    <option value=6>65-74 years</option>
+                    <option value=7>75-84 years</option>
+                    <option value=8>85+ years</option>
+                </select>
+            </div>
+            <div id="conditions"></div>
+        </div> 
+        <div class="placeholder-box2">Legend
+            <div id="legendcond"></div>
+        </div> 
+        <div class="placeholder-box3">COVID Age Gauge
+        </div> 
+        <div class="placeholder-box4"></div>
+       
+        <div class="placeholder-box5">
+            National Graphs
+        </div> 
+        <div class="placeholder-box6">
+            Authors: Christian Stec & Alex Zou<br>
+            Death stats from data.gov; 2020-2023<br>
+            <form style="text-align: center;">
+                Colorblind Mode
+                <input type="radio" id="CBMode" name="CB" value="on">
+                <label for="CBMode">On</label> 
+                <input type="radio" id="CBMode" name="CB" value="off" checked="checked">
+                <label for="CBMode">Off</label>
+            </form>
+        </div> 
+        <div class="placeholder-box7"> Unemployment Rate, 2014-2024
+            <div id="unemploy_graph"></div>
+         
+        </div>
+        <div class="placeholder-box9"> Vaccination Rate by Age Group
+            <div id="vax_graph"></div>
+        </div>
+        <div class="placeholder-box8"> Loss of Work (2023)
+            <select id="LoWselect">
+                <option value=0>Age</option>
+                <option value=1>Chronic Conditions</option>
+                <option value=2>Education</option>
+                <option value=3>Gender</option>
+                <option value=4>Race</option>
+            </select>
+            <div id="loss_of_work"></div>
+        </div>
+    </div>
+    <script>
+        const vaxFile = "../datafiles/processed_vax.csv";
+        var color = d3.scaleOrdinal()
+        .range(["rgb(255,215,0)", "rgb(0,0,255)", "rgb(0,128,0)", "rgb(255,0,0)", "rgb(255,0,255)", "rgb(165,42,42)", "rgb(128,128,0)", "rgb(255,127,80)", "rgb(128,0,128)", "rgb(128,128,128)", "rgb(0,255,0)", "rgb(255,255,0)"]);
+        const unemployFile = "../datafiles/processed_unemploy.csv"
+        const LoWFile = "../datafiles/processed_loss.csv"
+        const unemTag = "#unemploy_graph"
+        const conditionsFile = "../datafiles/processed_conditions.csv";
+        const path = d3.geoPath();
+        const svg = d3.select("svg");
+        const g = svg.append("g").call(d3.zoom().on("zoom", event => {
+            g.attr('transform', event.transform);
+        }));
+      
+
+        function makeVax(file, colors) {
+            var margin = {top: 10, right: 30, bottom: 30, left: 43},
+                width = 300 - margin.left - margin.right,
+                height = 305 - margin.top - margin.bottom;
+
+            var svg1 = d3.select("#vax_graph")
+                .append("svg")
+                    .attr("width", width + margin.left + margin.right)
+                    .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+            d3.csv(file).then(function(data) {
+                var sumstat = d3.group(data, d => d.ageGroup);
+
+                var x = d3.scaleTime()
+                    .domain(d3.extent(data, d => new Date(d.date)))
+                    .range([ 0, width ]);
+                svg1.append("g")
+                    .attr("transform", "translate(0," + height + ")")
+                    .call(d3.axisBottom(x).ticks(5));
+
+                var y = d3.scaleLinear()
+                    .domain([0, d3.max(data, d => d.vaxxed)])
+                    .range([ height, 0 ]);
+                svg1.append("g")
+                    .call(d3.axisLeft(y));
+                svg1.append("text")
+                    .attr("y", -30)
+                    .attr("text-anchor", "end")
+                    .attr("x", -25)
+                    .text("In Percent (%)")
+                    .attr("transform", "rotate(-90)")
+                    .attr("font-family","Lato")
+                    .attr("font-size", "12px");
+
+                svg1.selectAll(".line")
+                    .data(Array.from(sumstat))
+                    .enter()
+                    .append("path")
+                        .attr("fill", "none")
+                        .attr("stroke", d => colors(d[0]))
+                        .attr("stroke-width", 1.5)
+                        .attr("d", d => {
+                            return d3.line()
+                                .x(d => x(new Date(d.date)))
+                                .y(d => y(d.vaxxed))
+                                (d[1])
+                        });
+
+                const legendSize = 10;
+                const legendSpacing = 4;
+                svg1.selectAll("legend-dots")
+                    .data(Array.from(sumstat))
+                    .enter()
+                    .append("rect")
+                    .attr("x", margin.right)
+                    .attr("y", (d, i) => i * (legendSize + legendSpacing))
+                    .attr("width", legendSize)
+                    .attr("height", legendSize)
+                    .style("fill", d => colors(d[0]));
+
+                svg1.selectAll("legend-labels")
+                    .data(Array.from(sumstat))
+                    .enter()
+                    .append("text")
+                    .attr("x", margin.right + legendSize * 1.2)
+                    .attr("y", (d, i) => i * (legendSize + legendSpacing) + (legendSize / 2))
+                    .style("fill", d => colors(d[0]))
+                    .text(d => d[0])
+                    .attr("text-anchor", "left")
+                    .style("alignment-baseline", "middle")
+                    .attr("class", "legend");
+            });
+        }
+
+        makeVax(vaxFile, color);
+
+        function makeUnemploy(file, tag) {
+            var margin = {top: 10, right: 30, bottom: 30, left: 34},
+                        width = 320 - margin.left - margin.right,
+                        height = 300 - margin.top - margin.bottom;
+            var svg2 = d3.select(tag)
+                .append("svg")
+                    .attr("width", width + margin.left + margin.right)
+                    .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                    .attr("transform",
+                        "translate(" + margin.left + "," + margin.top + ")");
+
+            d3.csv(file).then(function(data) {
+                data.forEach(function(d) {
+                    d.year = new Date(d.year); 
+                    d.ur = +d.ur; 
+                });
+
+            
+                var x = d3.scaleTime()
+                    .domain(d3.extent(data, function(d) { return d.year; }))
+                    .range([0, width]);
+                svg2.append("g")
+                    .attr("transform", "translate(0," + height + ")")
+                    .call(d3.axisBottom(x).ticks(5));
+
+        
+                var y = d3.scaleLinear()
+                    .domain([0, d3.max(data, function(d) { return d.ur; })])
+                    .range([height, 0]);
+                svg2.append("g")
+                    .call(d3.axisLeft(y));
+
+                svg2.append("text")
+                    .attr("y", -20)
+                    .attr("text-anchor", "end")
+                    .attr("x", -25)
+                    .text("In Percent (%)")
+                    .attr("transform", "rotate(-90)")
+                    .attr("font-family","Lato")
+                    .attr("font-size","12px");
+                svg2.append("path")
+                    .datum(data)
+                    .attr("fill", "none")
+                    .attr("stroke", "black")
+                    .attr("stroke-width", 1.5)
+                    .attr("d", d3.line()
+                        .x(function(d) { return x(d.year) })
+                        .y(function(d) { return y(d.ur) })
+                    );
+            });
+        };
+        makeUnemploy(unemployFile, unemTag);
+
+        var tag = "#loss_of_work",
+        LoW = d3.select(tag),
+        file = "../datafiles/processed_loss.csv",
+        Lmode = "age";
+        d3.select("#LoWselect").on("change", change);
+        function change() {
+            if (this.value == 0) {Lmode = "age";}
+            if (this.value == 1) {Lmode = "chronic";}
+            if (this.value == 2) {Lmode = "education";}
+            if (this.value == 3) {Lmode = "gender";}
+            if (this.value == 4) {Lmode = "race";}
+            LoW.selectAll("*").remove();
+            makeLoW(file, Lmode, tag, color);
+        }
+
+        function makeLoW(file, mode, tag, colors) {
+            var margin = { top: 10, right: 30, bottom: 30, left: 45 },
+                width = 300 - margin.left - margin.right,
+                height = 300 - margin.top - margin.bottom;
+
+
+            var svg3 = d3.select(tag)
+                .append("svg")
+                    .attr("width", width + margin.left + margin.right)
+                    .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                    .attr("transform", `translate(${margin.left},${margin.top})`);
+
+            var xScale = d3.scaleBand().range([0, width]).padding(0.4),
+                yScale = d3.scaleLinear().range([height, 0]);
+
+            d3.csv(file).then(function(data) {
+
+                data = data.filter(d => d.group === mode);
+                xScale.domain(data.map(function(d) { return d.subgroup; }));
+                yScale.domain([0, d3.max(data, function(d) { return +d.percent; })]);
+
+                svg3.append("g")
+                    .attr("transform", `translate(0,${height})`)
+                    .call(d3.axisBottom(xScale))
+                    .selectAll("text")
+                       .style("text-anchor", "end")
+                       .attr("transform", "rotate(-8)")
+                       .style("font-size","8px");
+
+                svg3.append("g")
+                    .call(d3.axisLeft(yScale).tickFormat(d => d));
+                svg3.append("text")
+                    .attr("y", -30)
+                    .attr("text-anchor", "end")
+                    .attr("x", -25)
+                    .text("In Percent (%)")
+                    .attr("transform", "rotate(-90)")
+                    .attr("font-family","Lato")
+                    .attr("font-size", "12px");
+                svg3.selectAll(".bar")
+                    .data(data)
+                    .enter().append("rect")
+                    .attr("class", "bar")
+                    .attr("x", d => xScale(d.subgroup))
+                    .attr("y", d => yScale(+d.percent))
+                    .attr("fill", d => colors(d.subgroup))
+                    .attr("width", xScale.bandwidth())
+                    .attr("height", d => height - yScale(+d.percent));
+            });
+        }
+
+        var margin = {top: 10, right: 20, bottom: 30, left: 60},
+        width = 750 - margin.left - margin.right,
+        height = 400 - margin.top - margin.bottom;
+        var xScale1 = d3.scaleBand().range([0, width]).padding(0.4),
+        yScale1 = d3.scaleLinear().range([height, 0]),
+        condTag = "#conditions",
+        condition = d3.select(condTag),
+        Cmode = "All Ages";
+
+        //size for conditions graphs
+        var margin1 = { top: 10, right: 40, bottom: 30, left: 60 },
+            width1 = 400 - margin1.left - margin1.right,
+            height1 = 301 - margin1.top - margin1.bottom;
+        var xScale2 = d3.scaleBand().range([0, width1]).padding(0.4),
+            yScale2 = d3.scaleLinear().range([height1, 0]);
+
+    function makeConditions(file, mode, tag, colors) {
+        var svg4 = d3.select(tag)
+            .append("svg")
+                .attr("width", width1 + margin1.left + margin1.right)
+                .attr("height", height1 + margin1.top + margin1.bottom + 75)
+            .append("g")
+                .attr("transform", "translate(" + margin1.left + "," + margin1.top + ")");
+        var legend = svg.append("g")
+        //console.log(colors)
+        colors.domain([]);
+        console.log(colors.domain())
+
+        d3.csv(file).then(function(data) {
+            data = data.filter(d => d.AgeGroup === mode && d.State === "United States");
+            // console.log(data);
+            //console.log(mode);
+            xScale2.domain(data.map(function(d) { return d.ConditionGroup; }));
+            yScale2.domain([0, d3.max(data, function(d) { return Number(d.COVID19Deaths); })]);
+
+            svg4.append("g")
+                .attr("transform", "translate(0," + height1 + ")")
+            //  .call(d3.axisBottom(xScale2))
+            //    .selectAll("text")
+            //      .style("text-anchor", "end")
+            //       .attr("transform", "rotate(-15)");
+
+            svg4.append("g")
+                .call(d3.axisLeft(yScale2).tickFormat(function(d) { return d; }))
+            svg4.append("text")
+                .attr("y", -58)
+                .attr("dy", "0.71em")
+                .attr("text-anchor", "end")
+                .attr("x",-100)
+                .text("deaths")
+                .attr("transform", "rotate(-90)")
+                .attr("font-size", "12px");
+
+            svg4.selectAll(".bar")
+                .data(data)
+                .enter().append("rect")
+                .attr("class", "bar")
+                .attr("x", function(d) { return xScale2(d.ConditionGroup); })
+                .attr("y", function(d) { return yScale2(Number(d.COVID19Deaths)); })
+                .attr("fill", function(d) { console.log(colors.domain()); return colors(d.ConditionGroup) })
+                .attr("width", xScale2.bandwidth())
+                .attr("height", function(d) { return height1 - yScale2(Number(d.COVID19Deaths)); });
+        
+        });
+    };
+
+    function bar(state, mode, colors) {
+    var svg4 = d3.select("#stateChart")
+        .append("svg")
+            .attr("width", width1 + margin1.left + margin1.right)
+            .attr("height", height1 + margin1.top + margin1.bottom + 75)
+        .append("g")
+            .attr("transform", "translate(" + margin1.left + "," + margin1.top + ")");
+
+    d3.csv(conditionsFile).then(function(data) {
+        data = data.filter(d => d.AgeGroup === mode && d.State === state);
+        //console.log(mode);
+        xScale2.domain(data.map(function(d) { return d.ConditionGroup; }));
+        yScale2.domain([0, d3.max(data, function(d) { return Number(d.COVID19Deaths); })]);
+
+        svg4.append("g")
+            .attr("transform", "translate(0," + height1 + ")")
+           // .call(d3.axisBottom(xScale2))
+            .selectAll("text")
+                .style("text-anchor", "end")
+                .attr("transform", "rotate(-15)");
+
+        svg4.append("g")
+            .call(d3.axisLeft(yScale2).tickFormat(function(d) { return d; }))
+            .append("text")
+            .attr("y", 6)
+            .attr("dy", "0.71em")
+            .attr("text-anchor", "end")
+            .text("deaths");
+        svg4.append("text")
+            .attr("y", -58)
+            .attr("dy", "0.71em")
+            .attr("text-anchor", "end")
+            .attr("x", -100)
+            .text("deaths")
+            .attr("transform", "rotate(-90)")
+            .attr("font-size", "12px");
+
+        svg4.selectAll(".bar")
+            .data(data)
+            .enter().append("rect")
+            .attr("class", "bar")
+            .attr("x", function(d) { return xScale2(d.ConditionGroup); })
+            .attr("y", function(d) { return yScale2(Number(d.COVID19Deaths)); })
+            .attr("fill", function(d) { return colors(d.ConditionGroup) })
+            .attr("width", xScale2.bandwidth())
+            .attr("height", function(d) { return height1 - yScale2(Number(d.COVID19Deaths)); });
+    });
+}
+
+        function makeAll(LoWMode,LoWtag,unemTag,condMode,condTag,color) {
+      //  makeVax(vaxFile,color);
+      //  makeUnemploy(unemployFile,unemTag);
+        makeLoW(LoWFile,Lmode,tag,color);
+        makeConditions(conditionsFile,Cmode,condTag,color);
+        //legendcond(color);
+        
+    };
+    makeAll(Lmode,"#loss_of_work","#unemploy_graph",Cmode,"#conditions",color);
+    function updatedetail(state, data,Cmode) {
+        const detailbox = d3.select(".placeholder-box4");
+        detailbox.html(""); //clear
+        var mapdeathage = new Map();
+        //console.log(statedata)
+        data.forEach(stategroupcond => 
+        {
+            var condition = stategroupcond['ConditionGroup'];
+            var deaths = +stategroupcond['COVID19Deaths'];
+            var age = stategroupcond['AgeGroup'];
+            var mapkey = `${condition},${age}`;
+            if (mapdeathage.has(mapkey)==true) 
+            {
+                mapdeathage.set(mapkey, mapdeathage.get(mapkey) + deaths);
+            } 
+            else if(mapdeathage.has(mapkey)==false) 
+            {
+                mapdeathage.set(mapkey, deaths);
+            }
+        });
+        //console.log(mapdeathage)
+        detailbox.append("div")
+            .text("COVID-19 Related Deaths In " + state + " By Age and Condition Group:")
+            .style("font-family","Lato");
+        mapdeathage.forEach((deaths,mapkey) => 
+        {
+            var [condition,age] = mapkey.split(",")
+            if(age==Cmode)
+            {
+                detailbox.append("div")
+                    .text(`${condition} (${age}): ${deaths} deaths`)
+                    .style("font-size","14px")
+                    .style("font-family","Lato");
+            }
+        });
+    }
+    var stateS = "";
+    var statedata = ""
+    function legendcond(colors)
+    {
+        const legend = d3.select("#legendcond")
+        var conds = ["Respiratory diseases","Circulatory diseases","Sepsis","Malignant neoplasms","Diabetes","Obesity","Alzheimer disease","Vascular and unspecified dementia","Renal failure","Adverse Events","All other conditions and causes (residual)","COVID-19"]
+        
+        conds.forEach(condition => 
+        {
+        const legendbox = legend.append("div")
+            .style("display", "flex")
+            .style("align-items", "center")
+            .style("margin-bottom", "5px")
+        legendbox.append("div")
+            .style("width", "10px")
+            .style("height", "10px")
+            .style("background-color", colors(condition))
+            .style("margin-right", "5px")
+            .style("margin-left","10px");
+        legendbox.append("div")
+            .text(condition)
+            .style("font-size", "16px")
+            .style("font-family","Lato");
+         });
+    }
+    legendcond(color);
+    var mainColors = d3.scaleOrdinal()
+        .range(["rgb(255,215,0)", "rgb(0,0,255)", "rgb(0,128,0)", "rgb(255,0,0)", "rgb(255,0,255)", "rgb(165,42,42)", "rgb(128,128,0)", "rgb(255,127,80)", "rgb(128,0,128)", "rgb(128,128,128)", "rgb(0,255,0)", "rgb(255,255,0)"]),
+    deutColors = d3.scaleOrdinal()
+        .range(["rgb(213,94,0)","rgb(204,121,167)","rgb(0,114,178)","rgb(240,228,66)","rgb(0,158,115)","rgb(148,203,236)","rgb(126,041,084)","rgb(187,187,187)"]);
+    d3.select("#conditionSelect").on("change", function(event) {
+    var selectedValue = event.target.value;
+        if (selectedValue == 1) { Cmode = "0-24"; }
+        if (selectedValue == 2) { Cmode = "25-34"; }
+        if (selectedValue == 3) { Cmode = "35-44"; }
+        if (selectedValue == 4) { Cmode = "45-54"; }
+        if (selectedValue == 5) { Cmode = "55-64"; }
+        if (selectedValue == 6) { Cmode = "65-74"; }
+        if (selectedValue == 7) { Cmode = "75-84"; }
+        if (selectedValue == 8) { Cmode = "85+"; }
+        if (selectedValue == 0) { Cmode = "All Ages"; }
+        condition.selectAll("*").remove();
+        d3.selectAll(".chart").selectAll("svg").remove();
+        bar(stateS, Cmode, color);
+        makeConditions(conditionsFile, Cmode, condTag, color);
+        console.log(statedata)
+        updatedetail(stateS, statedata, Cmode)
+        });
+    d3.selectAll("#CBMode").on("change", changeColor)
+        function changeColor() {
+            //console.log(this.value)
+            if (this.value === "on") {
+                color = deutColors;
+                //colors.domain()
+            };
+            if (this.value === "off") {
+                color = mainColors;
+            };
+            d3.selectAll("#conditions").selectAll("svg").remove();
+            d3.selectAll("#stateChart").selectAll("svg").remove();
+            d3.selectAll("#legendcond").selectAll("div").remove();
+            d3.selectAll("#loss_of_work").selectAll("svg").remove();
+            d3.selectAll("#vax_graph").selectAll("svg").remove();
+            makeAll(Lmode,"#loss_of_work","#unemploy_graph",Cmode,"#conditions",color);
+            makeVax(vaxFile,color);
+            bar(stateS, Cmode, color);
+            legendcond(color);
+        }
+        const popfile = "../datafiles/pop2023.csv"
+        const popmap = new Map()
+        const percapitastatedeathmap = new Map()
+        d3.csv(popfile).then(function(popdata) 
+            {
+                //console.log(popdata);
+                popdata.forEach(popdat =>
+                {
+                    var state = popdat["NAME"];
+                    var pop = +popdat["POPESTIMATE2023"];
+                    state = state;
+                    popmap.set(state, pop);
+                });
+                //console.log(popmap);
+            });
+        const mapfile = "../datafiles/states-albers-10m.json"
+        d3.json(mapfile).then(function(us) {
+            d3.csv(conditionsFile).then(function(conddata) {
+                const agedata = conddata.filter(age => age.AgeGroup === 'All Ages');
+                var statedeath = new Map();
+                agedata.forEach(conddat => 
+                {
+                    var state = conddat["State"];
+                    var deaths = +conddat["COVID19Deaths"]; 
+                    if (statedeath.has(state)==true) 
+                    {
+                        statedeath.set(state, statedeath.get(state) + deaths);
+                    } 
+                    else if(statedeath.has(state)==false)
+                    {
+                    statedeath.set(state, deaths);
+                    }
+                });
+                console.log(statedeath);
+                const maxdeath = 20;//fix this
+                //var mapcolor = null
+                //const colors = d3.scaleSequentialLog(d3.interpolateReds).domain([1, maxdeath]);
+                const colorbrewercolorblind = d3.interpolateRgbBasis(["rgb(254,229,217)", "rgb(252,174,145)", "rgb(251,106,74)", "rgb(222,45,38)", "rgb(165,15,21)"]);
+                const colors2 = d3.scaleSequentialLog(colorbrewercolorblind).domain([1, maxdeath]);
+                const statesdata = topojson.feature(us, us.objects.states).features;
+                var lastclick = null;
+                popmap.forEach((pop, state) => 
+                {
+                    var statedeaths = statedeath.get(state);
+                    //console.log(state + " " + statedeaths);
+                    var pop = popmap.get(state);
+                    var capitadeath = (statedeaths/pop) * 1000;
+                    percapitastatedeathmap.set(state,capitadeath)
+                });
+                console.log(percapitastatedeathmap)
+                function statecolor(d) 
+                {
+                    console.log(d.properties.name)
+                    console.log(statedeath.get(d.properties.name))
+                    const deaths = percapitastatedeathmap.get(d.properties.name);
+                    return colors2(deaths);
+                }
+
+                g.selectAll("path")
+                    .data(statesdata)
+                    .enter()
+                    .append("path")
+                    .attr("fill", statecolor)
+                    .attr("d", path)
+                    .attr("stroke","white")
+                    .attr("stroke-width", .5) 
+                    .on("click", (event, d) => 
+                    {
+                        const clicked = d3.select(event.currentTarget);
+                        if (lastclick!=null) {
+                            lastclick
+                                .transition()
+                                .duration(450)
+                                .attr("fill", statecolor);
+                        }
+                        lastclick = clicked;
+                        lastclick
+                            .transition()
+                            .duration(450)
+                            .attr("fill", "#9e9ac8"); //from one of the colorbrewer colorblind scheme i just think itt look nice
+                        statedata = conddata.filter(state => state.State === d.properties.name);
+                        d3.selectAll(".chart").selectAll("svg").remove();
+                        stateS = d.properties.name;
+                        bar(stateS, Cmode, color);
+                        d3.select("#statetitle").html("Deaths by Condition for " + stateS)
+                        console.log(statedata)
+                        updatedetail(stateS, statedata,Cmode);
+                    });
+                var mapstate = new Map([["Alabama", "AL"],["Alaska", "AK"],["Arizona", "AZ"],["Arkansas", "AR"],["California", "CA"],["Colorado", "CO"],["Connecticut", "CT"],["Delaware", "DE"],["Florida", "FL"],["Georgia", "GA"],["Hawaii", "HI"],["Idaho", "ID"],["Illinois", "IL"],["Indiana", "IN"],["Iowa", "IA"],["Kansas", "KS"],["Kentucky", "KY"],["Louisiana", "LA"],["Maine", "ME"],["Maryland", "MD"],["Massachusetts", "MA"],["Michigan", "MI"],["Minnesota", "MN"],["Mississippi", "MS"],["Missouri", "MO"],["Montana", "MT"],["Nebraska", "NE"],["Nevada", "NV"],["New Hampshire", "NH"],["New Jersey", "NJ"],["New Mexico", "NM"],["New York", "NY"],["North Carolina", "NC"],["North Dakota", "ND"],["Ohio", "OH"],["Oklahoma", "OK"],["Oregon", "OR"],["Pennsylvania", "PA"],["Rhode Island", "RI"],["South Carolina", "SC"],["South Dakota", "SD"],["Tennessee", "TN"],["Texas", "TX"],["Utah", "UT"],["Vermont", "VT"],["Virginia", "VA"],["Washington", "WA"],["West Virginia", "WV"],["Wisconsin", "WI"],["Wyoming", "WY"]]);
+                g.selectAll("text")
+                    .data(statesdata)
+                    .enter()
+                    .append("text")
+                    .attr("text-anchor", "middle")
+                    .attr("x",d =>
+                    {
+                        var abbreviation = mapstate.get(d.properties.name)
+                        if(abbreviation == "LA")
+                        {
+                            return path.centroid(d)[0] - 10;
+                        }
+                        if(abbreviation == "FL")
+                        {
+                            return path.centroid(d)[0] + 20;
+                        }
+                        if(abbreviation == "MD")
+                        {
+                            return path.centroid(d)[0] + 25;
+                        }
+                    //  if(abbreviation == "DC")
+                    //  {
+                        //return path.centroid(d)[0] + 24;
+                    //  }
+                        if(abbreviation == "HI")
+                        {
+                            return path.centroid(d)[0] + 17;
+                        }
+                        if(abbreviation == "NJ")
+                        {
+                            return path.centroid(d)[0] + 3;
+                        }
+                        else
+                        {
+                            return path.centroid(d)[0]
+                        }
+                    })
+                    .attr("y",d =>
+                    {
+                        var abbreviation = mapstate.get(d.properties.name)
+                        if(abbreviation == "LA")
+                        {
+                            return path.centroid(d)[1]
+                        }
+                        if(abbreviation == "MD")
+                        {
+                            return path.centroid(d)[1] + 16;
+                        }
+                        if(abbreviation == "DC")
+                        {
+                            return path.centroid(d)[1] - 10;
+                        }
+                        if(abbreviation == "HI")
+                        {
+                            return path.centroid(d)[1] + 15;
+                        }
+                        else
+                        {
+                            return path.centroid(d)[1]
+                        }
+                    })
+                    .text(d => 
+                    {   
+                        return mapstate.get(d.properties.name);
+                    })
+                    .style("font-size", "6px")
+                    .style("font-family", "Lato");
+                
+            });
+        });
+
+    </script>
+</body>
+</html>
